@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { TypeStudio } from './components/TypeStudio';
 import { ProjectGrid } from './components/ProjectGrid';
 import { ProjectModal } from './components/ProjectModal';
 import { About } from './components/About';
@@ -72,8 +71,6 @@ export default function App() {
           shortlist={shortlist}
           onToggleShortlist={handleToggleShortlist}
         />
-
-        <TypeStudio />
 
         <About />
 
