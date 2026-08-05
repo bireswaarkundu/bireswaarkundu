@@ -455,7 +455,7 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
   };
 
   return (
-    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-20">
+    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-24">
       {/* Anchor for Navbar link */}
       <div id="pricing-strategy" className="scroll-mt-24"></div>
 

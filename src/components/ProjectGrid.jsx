@@ -18,7 +18,7 @@ export const ProjectGrid = ({
   });
 
   return (
-    <section id="work" className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-20">
+    <section id="work" className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-24">
       {/* Scroll Anchor Target for Case Studies link in Nav Bar */}
       <div id="case-studies" className="scroll-mt-24"></div>
       {/* Section Top Header & Metadata */}
