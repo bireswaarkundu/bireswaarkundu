@@ -180,12 +180,12 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
                     {/* Timeline Item 1: Techscholars */}
                     <div className="group cursor-pointer transition-all duration-300 hover:translate-x-1.5 relative">
                       <span className="absolute left-[-15px] top-1 flex h-3 w-3 items-center justify-center -translate-x-1/2">
-                        <span className="absolute inline-flex h-4 w-4 rounded-full border border-dashed border-[#5D5CDE]/60 animate-spin" style={{animationDuration:'3s'}}></span>
+                        <span className="absolute inline-flex h-4 w-4 rounded-full border border-dashed border-[#5D5CDE]/60 animate-spin" style={{ animationDuration: '3s' }}></span>
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-[#5D5CDE] shadow-[0_0_6px_rgba(93,92,222,0.8)]"></span>
                       </span>
                       <div className="flex items-center justify-between">
                         <span className="font-bold text-[#1A1A1A] group-hover:text-[#5D5CDE] transition-colors">Techscholars™</span>
-                        <span className="text-[10px] text-[#1A1A1A]/60 font-semibold">May–May 2024</span>
+                        <span className="text-[10px] text-[#1A1A1A]/60 font-semibold">May 2024</span>
                       </div>
                       <span className="text-[11px] text-[#1A1A1A]/70 block">Graphic Designer Intern</span>
                     </div>
@@ -217,7 +217,7 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
                     {/* Timeline Item 4: GrnLYFT */}
                     <div className="group cursor-pointer transition-all duration-300 hover:translate-x-1.5 relative">
                       <span className="absolute left-[-15px] top-1 flex h-3 w-3 items-center justify-center -translate-x-1/2">
-                        <span className="absolute inline-flex h-4 w-4 rounded-full border border-dashed border-[#5D5CDE]/60 animate-spin" style={{animationDuration:'3s'}}></span>
+                        <span className="absolute inline-flex h-4 w-4 rounded-full border border-dashed border-[#5D5CDE]/60 animate-spin" style={{ animationDuration: '3s' }}></span>
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-[#5D5CDE] shadow-[0_0_6px_rgba(93,92,222,0.8)]"></span>
                       </span>
                       <div className="flex items-center justify-between">
