@@ -9,7 +9,7 @@ import { Testimonials } from './components/Testimonials';
 import { InquiryForm } from './components/InquiryForm';
 import { ShortlistDrawer } from './components/ShortlistDrawer';
 import { Footer } from './components/Footer';
-import { BookingModal } from './components/BookingModal';
+import { CustomQuoteModal } from './components/CustomQuoteModal';
 
 export default function App() {
   const [shortlist, setShortlist] = useState(['weld-layers-happiness', 'happy-holi-color-picker']);
@@ -112,9 +112,9 @@ export default function App() {
           setInquiryModalOpen(true);
         }}
       />
-      {/* Booking / Meeting Modal (triggered by header Inquire button) */}
+      {/* Custom Quote Modal (triggered by header Inquire button) */}
       {bookingModalOpen && (
-        <BookingModal onClose={() => setBookingModalOpen(false)} />
+        <CustomQuoteModal onClose={() => setBookingModalOpen(false)} />
       )}
     </div>
   );
