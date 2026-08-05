@@ -133,52 +133,29 @@ export const ProjectModal = ({
             </div>
           )}
 
-          {/* Process Breakdown & Gallery */}
-          {caseStudy && caseStudy.processSteps && (
-            <div className="space-y-6">
-              <div className="border-b border-[#1A1A1A]/10 pb-3">
-                <h3 className="font-syne font-bold text-2xl text-[#1A1A1A]">
-                  Process &amp; Visual Execution
-                </h3>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {caseStudy.processSteps.map((step, idx) => (
-                  <div key={step.title} className="p-5 bg-white rounded-xs border border-[#1A1A1A]/15 space-y-2">
-                    <span className="text-xs font-mono-display text-[#1A1A1A]/50 font-bold">
-                      PHASE 0{idx + 1}
-                    </span>
-                    <h4 className="font-syne font-bold text-base text-[#1A1A1A]">{step.title}</h4>
-                    <p className="text-xs font-mono-display text-[#1A1A1A]/70 leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Visual Gallery */}
-              <div className="space-y-8 pt-4">
-                {caseStudy.gallery.map((imgItem, idx) => {
-                  const imgSrc = typeof imgItem === 'string' ? imgItem : imgItem.url;
-                  const imgCaption = typeof imgItem === 'string' ? `Final Campaign Artwork 0${idx + 1}` : imgItem.caption;
-                  return (
-                    <figure key={idx} className="space-y-2">
-                      <div className="rounded-xs overflow-hidden border border-[#1A1A1A]/10 bg-[#1A1A1A] p-4 shadow-sm flex items-center justify-center">
-                        <img
-                          src={imgSrc}
-                          alt={imgCaption}
-                          referrerPolicy="no-referrer"
-                          className="max-h-[700px] w-auto h-auto object-contain mx-auto rounded-xs shadow-md"
-                        />
-                      </div>
-                      <figcaption className="text-xs font-mono-display text-[#1A1A1A]/60 italic flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-[#5D5CDE] rounded-full"></span>
-                        <span>FIG 0{idx + 1}: {imgCaption}</span>
-                      </figcaption>
-                    </figure>
-                  );
-                })}
-              </div>
+          {/* Visual Gallery */}
+          {caseStudy && caseStudy.gallery && (
+            <div className="space-y-8 pt-4">
+              {caseStudy.gallery.map((imgItem, idx) => {
+                const imgSrc = typeof imgItem === 'string' ? imgItem : imgItem.url;
+                const imgCaption = typeof imgItem === 'string' ? `Final Campaign Artwork 0${idx + 1}` : imgItem.caption;
+                return (
+                  <figure key={idx} className="space-y-2">
+                    <div className="rounded-xs overflow-hidden border border-[#1A1A1A]/10 bg-[#1A1A1A] p-2 sm:p-3 shadow-sm flex items-center justify-center aspect-[4/5] max-w-2xl mx-auto w-full">
+                      <img
+                        src={imgSrc}
+                        alt={imgCaption}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover rounded-xs shadow-md"
+                      />
+                    </div>
+                    <figcaption className="text-xs font-mono-display text-[#1A1A1A]/60 italic flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#5D5CDE] rounded-full"></span>
+                      <span>FIG 0{idx + 1}: {imgCaption}</span>
+                    </figcaption>
+                  </figure>
+                );
+              })}
             </div>
           )}
 
