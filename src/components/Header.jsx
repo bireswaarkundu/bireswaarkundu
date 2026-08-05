@@ -57,11 +57,6 @@ export const Header = ({
               </div>
             </a>
 
-            {/* Availability Badge */}
-            <div className="hidden lg:flex items-center gap-2 px-2.5 py-1 bg-[#1A1A1A]/5 rounded-full border border-[#1A1A1A]/10 text-xs text-[#1A1A1A]/80">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span className="font-medium text-[11px]">Available Q3/Q4</span>
-            </div>
           </div>
 
           {/* Desktop Nav */}
