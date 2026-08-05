@@ -11,26 +11,12 @@ export const ASSET_PATHS = {
 
   // BRANDING - INNOFUSION
   INNOFUSION_1: safePath('/assets/Branding/Innofusion/in1.png'),
-  INNOFUSION_2: safePath('/assets/Branding/Innofusion/in2.png'),
-  INNOFUSION_3: safePath('/assets/Branding/Innofusion/in3.png'),
-  INNOFUSION_4: safePath('/assets/Branding/Innofusion/in4.webp'),
 
   // BRANDING - PHOENIX
-  PHOENIX_LOGO: safePath('/assets/Branding/Phoenix/Phoenix_LOGO-01.png'),
-  PHOENIX_1: safePath('/assets/Branding/Phoenix/1.png'),
-  PHOENIX_2: safePath('/assets/Branding/Phoenix/2.png'),
-  PHOENIX_3: safePath('/assets/Branding/Phoenix/3.png'),
-  PHOENIX_4: safePath('/assets/Branding/Phoenix/4.png'),
-  PHOENIX_5: safePath('/assets/Branding/Phoenix/5.png'),
-  PHOENIX_6: safePath('/assets/Branding/Phoenix/6.png'),
-  PHOENIX_7: safePath('/assets/Branding/Phoenix/7.png'),
-  PHOENIX_8: safePath('/assets/Branding/Phoenix/8.png'),
-  PHOENIX_9: safePath('/assets/Branding/Phoenix/9.png'),
-  PHOENIX_10: safePath('/assets/Branding/Phoenix/10.png'),
-  PHOENIX_ASSET2: safePath('/assets/Branding/Phoenix/Asset 2.png'),
+  PHOENIX_LOGO: safePath('/assets/Branding/Phoenix/4.png'),
 
   // BRANDING - WELD
-  WELD_1: safePath('/assets/Branding/Weld/weld 1.png'),
+  WELD_1: safePath('/assets/Branding/Weld/braand identity-01.webp'),
   WELD_2: safePath('/assets/Branding/Weld/weld 2.png'),
   WELD_3: safePath('/assets/Branding/Weld/weld 3.png'),
   WELD_G: safePath('/assets/Branding/Weld/g.png'),
