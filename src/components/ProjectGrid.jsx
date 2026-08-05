@@ -149,13 +149,13 @@ export const ProjectGrid = ({
                 {/* UNIFORM 4:5 ASPECT RATIO FRAME FOR OTHER DOMAIN CARDS */}
                 <div
                   onClick={() => onSelectProject(project.id)}
-                  className="relative cursor-pointer overflow-hidden bg-[#1A1A1A] aspect-[4/5] w-full flex items-center justify-center p-2.5 border-b border-[#1A1A1A]/10"
+                  className="relative cursor-pointer overflow-hidden bg-[#1A1A1A] aspect-[4/5] w-full flex items-center justify-center border-b border-[#1A1A1A]/10"
                 >
                   <img
                     src={project.thumbnail}
                     alt={project.title}
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded-xs"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
 
                   {/* Hover Details Overlay */}
