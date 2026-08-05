@@ -92,21 +92,6 @@ export const Header = ({
           {/* Header Controls & CTAs */}
           <div className="flex items-center gap-3">
 
-            {/* Shortlist Drawer Trigger */}
-            <button
-              onClick={onOpenShortlist}
-              className="relative p-2 rounded-full bg-[#1A1A1A]/5 hover:bg-[#1A1A1A]/10 text-[#1A1A1A] transition-colors border border-[#1A1A1A]/10"
-              title="Saved Project Shortlist"
-              aria-label="Saved Project Shortlist"
-            >
-              <Bookmark className="w-4 h-4 text-[#1A1A1A]" />
-              {shortlistCount > 0 && (
-                <span className="absolute -top-1 -right-1 w-4 h-4 bg-[#5D5CDE] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
-                  {shortlistCount}
-                </span>
-              )}
-            </button>
-
             {/* Inquiry CTA */}
             <button
               onClick={onOpenInquiry}

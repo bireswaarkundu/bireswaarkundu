@@ -65,23 +65,6 @@ export const BrandingBentoCanvas = ({
                     BRANDING // {brand.subBrand.toUpperCase()}
                   </span>
                 </div>
-
-                <div className="flex items-center gap-1.5 shrink-0">
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onToggleShortlist(brand.id);
-                    }}
-                    className={`p-1.5 rounded-xs border transition-all ${
-                      isBookmarked
-                        ? 'bg-[#5D5CDE] text-white border-[#5D5CDE]'
-                        : 'bg-white hover:bg-neutral-100 text-[#1A1A1A]/70 border-[#1A1A1A]/15 hover:text-[#5D5CDE]'
-                    }`}
-                    title={isBookmarked ? 'Remove from Shortlist' : 'Add to Shortlist'}
-                  >
-                    {isBookmarked ? <BookmarkCheck className="w-3.5 h-3.5" /> : <Bookmark className="w-3.5 h-3.5" />}
-                  </button>
-                </div>
               </div>
 
               {/* LANDSCAPE 16:9 ASPECT RATIO THUMBNAIL CONTAINER FOR BRANDING */}

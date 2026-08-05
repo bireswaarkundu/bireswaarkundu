@@ -105,23 +105,6 @@ export const ProjectGrid = ({
                       {project.bentoTag || project.category}
                     </span>
                   </div>
-
-                  <div className="flex items-center gap-1.5 shrink-0">
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        onToggleShortlist(project.id);
-                      }}
-                      className={`p-1 rounded-xs border transition-all ${
-                        isBookmarked
-                          ? 'bg-[#5D5CDE] text-white border-[#5D5CDE]'
-                          : 'bg-white hover:bg-neutral-100 text-[#1A1A1A]/70 border-[#1A1A1A]/15 hover:text-[#5D5CDE]'
-                      }`}
-                      title={isBookmarked ? 'Remove from Shortlist' : 'Add to Shortlist'}
-                    >
-                      {isBookmarked ? <BookmarkCheck className="w-3.5 h-3.5" /> : <Bookmark className="w-3.5 h-3.5" />}
-                    </button>
-                  </div>
                 </div>
 
                 {/* UNIFORM 4:5 ASPECT RATIO FRAME FOR OTHER DOMAIN CARDS */}

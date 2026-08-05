@@ -105,8 +105,8 @@ export default function App() {
         />
       )}
 
-      {/* Saved Projects Shortlist Drawer */}
-      <ShortlistDrawer
+      {/* Saved Projects Shortlist Drawer (Disabled) */}
+      {/* <ShortlistDrawer
         isOpen={shortlistDrawerOpen}
         onClose={() => setShortlistDrawerOpen(false)}
         shortlist={shortlist}
@@ -117,7 +117,7 @@ export default function App() {
           setShortlistDrawerOpen(false);
           setInquiryModalOpen(true);
         }}
-      />
+      /> */}
       {/* Custom Quote Modal (triggered by header Inquire button) */}
       {bookingModalOpen && (
         <CustomQuoteModal onClose={() => setBookingModalOpen(false)} />
