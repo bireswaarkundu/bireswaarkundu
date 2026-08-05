@@ -164,41 +164,62 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
 
               {/* Sub-Column 2: Experience Timeline, Values, Fields, Skills */}
               <div className="md:col-span-5 space-y-5 md:border-l md:border-[#1A1A1A]/10 md:pl-6">
-                {/* Experience Section */}
+                {/* Experience Section with Motion Effects */}
                 <div className="space-y-3">
-                  <span className="text-[#1A1A1A]/50 font-bold uppercase tracking-wider block">EXPERIENCE</span>
-                  <div className="relative border-l border-[#1A1A1A]/20 pl-4 space-y-3">
-                    <div>
-                      <span className="w-2 h-2 rounded-full bg-[#5D5CDE] absolute -left-[4.5px] top-1"></span>
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-[#5D5CDE] animate-pulse"></span>
+                    <span className="text-[#1A1A1A]/50 font-bold uppercase tracking-wider block">EXPERIENCE</span>
+                  </div>
+
+                  <div className="relative border-l-2 border-[#1A1A1A]/15 pl-5 space-y-4">
+                    {/* Animated Light Beam Traveling Down the Timeline */}
+                    <span className="absolute left-[-2px] w-[2px] bg-gradient-to-b from-[#5D5CDE] via-[#5D5CDE]/90 to-transparent rounded-full animate-timeline-beam shadow-[0_0_10px_#5D5CDE] pointer-events-none"></span>
+
+                    {/* Timeline Item 1: Techscholars */}
+                    <div className="group cursor-pointer transition-all duration-300 hover:translate-x-1.5 relative">
+                      <span className="absolute -left-[25px] top-1 flex h-3 w-3 items-center justify-center">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5D5CDE] opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#5D5CDE] shadow-[0_0_8px_rgba(93,92,222,0.9)]"></span>
+                      </span>
                       <div className="flex items-center justify-between">
-                        <span className="font-bold text-[#1A1A1A]">Techscholars™</span>
+                        <span className="font-bold text-[#1A1A1A] group-hover:text-[#5D5CDE] transition-colors">Techscholars™</span>
                         <span className="text-[10px] text-[#1A1A1A]/60 font-semibold">May–May 2024</span>
                       </div>
                       <span className="text-[11px] text-[#1A1A1A]/70 block">Graphic Designer Intern</span>
                     </div>
 
-                    <div>
-                      <span className="w-2 h-2 rounded-full bg-[#1A1A1A]/40 absolute -left-[4.5px] top-11"></span>
+                    {/* Timeline Item 2: School Root Education */}
+                    <div className="group cursor-pointer transition-all duration-300 hover:translate-x-1.5 relative">
+                      <span className="absolute -left-[25px] top-1 flex h-3 w-3 items-center justify-center">
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#1A1A1A]/50 group-hover:bg-[#5D5CDE] group-hover:scale-125 transition-all shadow-xs"></span>
+                      </span>
                       <div className="flex items-center justify-between">
-                        <span className="font-bold text-[#1A1A1A]">School Root Education</span>
+                        <span className="font-bold text-[#1A1A1A] group-hover:text-[#5D5CDE] transition-colors">School Root Education</span>
                         <span className="text-[10px] text-[#1A1A1A]/60 font-semibold">June–Aug 2024</span>
                       </div>
                       <span className="text-[11px] text-[#1A1A1A]/70 block">Graphic Designer Intern</span>
                     </div>
 
-                    <div>
-                      <span className="w-2 h-2 rounded-full bg-[#1A1A1A]/40 absolute -left-[4.5px] top-20"></span>
+                    {/* Timeline Item 3: The Agenc-E */}
+                    <div className="group cursor-pointer transition-all duration-300 hover:translate-x-1.5 relative">
+                      <span className="absolute -left-[25px] top-1 flex h-3 w-3 items-center justify-center">
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#1A1A1A]/50 group-hover:bg-[#5D5CDE] group-hover:scale-125 transition-all shadow-xs"></span>
+                      </span>
                       <div className="flex items-center justify-between">
-                        <span className="font-bold text-[#1A1A1A]">The Agenc-E</span>
+                        <span className="font-bold text-[#1A1A1A] group-hover:text-[#5D5CDE] transition-colors">The Agenc-E</span>
                         <span className="text-[10px] text-[#1A1A1A]/60 font-semibold">Dec &apos;24–Mar &apos;25</span>
                       </div>
                       <span className="text-[11px] text-[#1A1A1A]/70 block">Graphic Designer</span>
                     </div>
 
-                    <div>
-                      <span className="w-2 h-2 rounded-full bg-[#5D5CDE] absolute -left-[4.5px] top-31"></span>
+                    {/* Timeline Item 4: GrnLYFT */}
+                    <div className="group cursor-pointer transition-all duration-300 hover:translate-x-1.5 relative">
+                      <span className="absolute -left-[25px] top-1 flex h-3 w-3 items-center justify-center">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5D5CDE] opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#5D5CDE] shadow-[0_0_8px_rgba(93,92,222,0.9)]"></span>
+                      </span>
                       <div className="flex items-center justify-between">
-                        <span className="font-bold text-[#1A1A1A]">GrnLYFT</span>
+                        <span className="font-bold text-[#1A1A1A] group-hover:text-[#5D5CDE] transition-colors">GrnLYFT</span>
                         <span className="text-[10px] text-[#5D5CDE] font-bold">Sep &apos;25–Mar &apos;26</span>
                       </div>
                       <span className="text-[11px] text-[#1A1A1A]/80 font-medium block">Brand Designer &amp; Graphic Designer</span>
@@ -251,12 +272,6 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
           <span className="hover:text-[#5D5CDE] cursor-default transition-colors font-bold">BRAND IDENTITY</span>
           <span>/</span>
           <span className="hover:text-[#5D5CDE] cursor-default transition-colors font-bold">CONCEPT DRIVEN DESIGN</span>
-        </div>
-
-        <div className="flex items-center gap-3 text-[11px] font-mono-display text-[#1A1A1A]/60">
-          <span>PARIS • ZURICH • REMOTE</span>
-          <span>•</span>
-          <span>EST. 2016</span>
         </div>
       </div>
     </section>

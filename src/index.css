@@ -60,6 +60,28 @@
   border: 1px solid #1A1A1A;
 }
 
+/* Timeline Motion Effects */
+@keyframes beamTravel {
+  0% {
+    top: 0%;
+    opacity: 0.2;
+    height: 20px;
+  }
+  50% {
+    opacity: 1;
+    height: 40px;
+  }
+  100% {
+    top: 85%;
+    opacity: 0.2;
+    height: 20px;
+  }
+}
+
+.animate-timeline-beam {
+  animation: beamTravel 2.5s ease-in-out infinite;
+}
+
 .bento-card-neutral {
   background-color: #E4E3E0;
   border: 1px solid #1A1A1A;

@@ -46,7 +46,7 @@ export const Footer = () => {
               STUDIO LOCATION &amp; BASE
             </span>
             <p className="text-white/80 leading-relaxed font-mono-display">
-              MUMBAI / NEW DELHI / REMOTE (INDIA)<br />
+              KOLKATA / REMOTE (INDIA)<br />
               GLOBAL COLLABORATIONS &amp; COMMISSIONS WELCOME
             </p>
           </div>
