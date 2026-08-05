@@ -4,7 +4,7 @@ export const DOMAIN_CATEGORIES = [
   { id: 'Ad Campaign', label: 'AD CAMPAIGN', count: 3 },
   { id: 'Branding', label: 'BRANDING IDENTITY', count: 3, subCategories: ['Innofusion', 'Phoenix', 'Weld'] },
   { id: 'Concept-driven design', label: 'CONCEPT-DRIVEN DESIGN', count: 5 },
-  { id: 'Social Media Poster', label: 'SOCIAL MEDIA POSTERS', count: 11 },
+  { id: 'Social Media Poster', label: 'SOCIAL MEDIA POSTERS', count: 13 },
 ];
 
 export const TYPE_SPECIMENS = [
@@ -896,50 +896,6 @@ export const PROJECTS = [
     },
   },
   {
-    id: 'social-ureckon-fest',
-    title: 'Ureckon Annual Tech Fest — Event Promotion Suite',
-    category: 'Social Media Design',
-    domain: 'Social Media Poster',
-    client: 'Ureckon Tech Fest',
-    year: '2025',
-    medium: '5-Part Event Poster Suite',
-    thumbnail: ASSET_PATHS.URECKON_1,
-    bentoSize: 'normal',
-    bentoTag: '14 // SOCIAL POSTER • EVENT',
-    shortDescription:
-      'Futuristic 5-part promotional poster series designed for Ureckon annual tech fest with dark neon aesthetics, cyber grid elements, and event schedules.',
-    deliverables: [
-      '5 Tech Fest Event Posters',
-      'Cyberpunk Visual System',
-      'Event Lineup Graphics',
-      'Social Ad Kit',
-    ],
-    caseStudy: {
-      brief: 'Create a high-energy, futuristic event campaign for a national university engineering fest.',
-      constraint: 'Display extensive event schedules and speaker names without cluttering the futuristic visual theme.',
-      processSteps: [
-        {
-          title: '01. Neon Cyber Grid',
-          description: 'Constructing high contrast dark background grids with electric blue and purple highlights.',
-        },
-      ],
-      colorPalette: [
-        { name: 'Cyber Neon Blue', hex: '#00F0FF' },
-        { name: 'Deep Void', hex: '#0A0A12' },
-      ],
-      typographyUsed: ['Syne ExtraBold', 'JetBrains Mono'],
-      keyMetric: '5,000+ Fest Registrations',
-      outcome: 'Drove record student attendance and sponsor engagement.',
-      gallery: [
-        { url: ASSET_PATHS.URECKON_1, caption: 'Ureckon Tech Fest Poster 01' },
-        { url: ASSET_PATHS.URECKON_2, caption: 'Ureckon Tech Fest Poster 02' },
-        { url: ASSET_PATHS.URECKON_3, caption: 'Ureckon Tech Fest Poster 03' },
-        { url: ASSET_PATHS.URECKON_4, caption: 'Ureckon Tech Fest Poster 04' },
-        { url: ASSET_PATHS.URECKON_5, caption: 'Ureckon Tech Fest Poster 05' },
-      ],
-    },
-  },
-  {
     id: 'social-world-design-day',
     title: 'World Design Day — Allure of Design Graphic',
     category: 'Social Media Design',
@@ -949,7 +905,7 @@ export const PROJECTS = [
     medium: 'Editorial Design Tribute Poster',
     thumbnail: ASSET_PATHS.WORLD_DESIGN_DAY,
     bentoSize: 'normal',
-    bentoTag: '18 // SOCIAL POSTER • EDITORIAL',
+    bentoTag: '08 // SOCIAL POSTER • EDITORIAL',
     shortDescription:
       'Sophisticated poster honoring World Design Day celebrating creativity, grid precision, and visual storytelling aesthetics.',
     deliverables: ['Design Tribute Graphic', 'Grid System Artwork', 'Creative Manifesto Layout'],
@@ -965,6 +921,191 @@ export const PROJECTS = [
       keyMetric: 'Designer Community Highlight',
       outcome: 'Shared by prominent design portals.',
       gallery: [{ url: ASSET_PATHS.WORLD_DESIGN_DAY, caption: 'World Design Day Poster' }],
+    },
+  },
+  {
+    id: 'social-ureckon-1',
+    title: 'Ureckon Annual Tech Fest — Event Poster 01',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Ureckon Tech Fest',
+    year: '2025',
+    medium: 'Event Poster Design 01',
+    thumbnail: ASSET_PATHS.URECKON_1,
+    bentoSize: 'normal',
+    bentoTag: '09 // SOCIAL POSTER • EVENT',
+    shortDescription:
+      'Futuristic promotional poster designed for Ureckon annual tech fest with dark neon aesthetics and cyber grid elements.',
+    deliverables: [
+      'Tech Fest Event Poster 01',
+      'Cyberpunk Visual System',
+      'Social Ad Asset',
+    ],
+    caseStudy: {
+      brief: 'Create a high-energy, futuristic event poster for a national university engineering fest.',
+      constraint: 'Display event details cleanly on dark cyber grid aesthetics.',
+      processSteps: [
+        {
+          title: '01. Neon Cyber Grid',
+          description: 'Constructing high contrast dark background grids with electric blue and purple highlights.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Cyber Neon Blue', hex: '#00F0FF' },
+        { name: 'Deep Void', hex: '#0A0A12' },
+      ],
+      typographyUsed: ['Syne ExtraBold', 'JetBrains Mono'],
+      keyMetric: '5,000+ Fest Registrations',
+      outcome: 'Drove record student attendance and sponsor engagement.',
+      gallery: [{ url: ASSET_PATHS.URECKON_1, caption: 'Ureckon Tech Fest Poster 01' }],
+    },
+  },
+  {
+    id: 'social-ureckon-2',
+    title: 'Ureckon Annual Tech Fest — Event Poster 02',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Ureckon Tech Fest',
+    year: '2025',
+    medium: 'Event Poster Design 02',
+    thumbnail: ASSET_PATHS.URECKON_2,
+    bentoSize: 'normal',
+    bentoTag: '10 // SOCIAL POSTER • EVENT',
+    shortDescription:
+      'High-impact event graphic for Ureckon tech fest featuring futuristic typography and lineup lockups.',
+    deliverables: [
+      'Tech Fest Event Poster 02',
+      'Lineup Graphic System',
+      'Social Ad Asset',
+    ],
+    caseStudy: {
+      brief: 'Design a secondary promotional poster variant for event lineups.',
+      constraint: 'Maintain visual consistency with primary event key visual.',
+      processSteps: [
+        {
+          title: '01. Lineup Compositing',
+          description: 'Styling high contrast typography for maximum readability.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Cyber Neon Blue', hex: '#00F0FF' },
+        { name: 'Deep Void', hex: '#0A0A12' },
+      ],
+      typographyUsed: ['Syne ExtraBold', 'JetBrains Mono'],
+      keyMetric: 'Event Promotion Reach',
+      outcome: 'Widespread social media sharing.',
+      gallery: [{ url: ASSET_PATHS.URECKON_2, caption: 'Ureckon Tech Fest Poster 02' }],
+    },
+  },
+  {
+    id: 'social-ureckon-3',
+    title: 'Ureckon Annual Tech Fest — Event Poster 03',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Ureckon Tech Fest',
+    year: '2025',
+    medium: 'Event Poster Design 03',
+    thumbnail: ASSET_PATHS.URECKON_3,
+    bentoSize: 'normal',
+    bentoTag: '11 // SOCIAL POSTER • EVENT',
+    shortDescription:
+      'Cyberpunk event schedule graphic designed for Ureckon annual tech fest promotions.',
+    deliverables: [
+      'Tech Fest Event Poster 03',
+      'Schedule Grid Layout',
+      'Social Ad Asset',
+    ],
+    caseStudy: {
+      brief: 'Format complex competition schedules into a sleek poster visual.',
+      constraint: 'High density typography on dark background grid.',
+      processSteps: [
+        {
+          title: '01. Grid Formatting',
+          description: 'Organizing track schedules with clear visual hierarchy.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Cyber Neon Blue', hex: '#00F0FF' },
+        { name: 'Deep Void', hex: '#0A0A12' },
+      ],
+      typographyUsed: ['Syne ExtraBold', 'JetBrains Mono'],
+      keyMetric: 'Track Registration Peak',
+      outcome: 'Streamlined schedule awareness for participants.',
+      gallery: [{ url: ASSET_PATHS.URECKON_3, caption: 'Ureckon Tech Fest Poster 03' }],
+    },
+  },
+  {
+    id: 'social-ureckon-4',
+    title: 'Ureckon Annual Tech Fest — Event Poster 04',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Ureckon Tech Fest',
+    year: '2025',
+    medium: 'Event Poster Design 04',
+    thumbnail: ASSET_PATHS.URECKON_4,
+    bentoSize: 'normal',
+    bentoTag: '12 // SOCIAL POSTER • EVENT',
+    shortDescription:
+      'Sleek neon promotional poster highlighting keynote speakers and workshops.',
+    deliverables: [
+      'Tech Fest Event Poster 04',
+      'Speaker Showcase Graphics',
+      'Social Ad Asset',
+    ],
+    caseStudy: {
+      brief: 'Feature workshop mentors and keynote speakers in a futuristic poster format.',
+      constraint: 'Balance photo portraits with cyber neon styling.',
+      processSteps: [
+        {
+          title: '01. Portrait Masking',
+          description: 'Applying duotone cyan/purple filters to speaker photos.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Cyber Neon Blue', hex: '#00F0FF' },
+        { name: 'Deep Void', hex: '#0A0A12' },
+      ],
+      typographyUsed: ['Syne ExtraBold', 'JetBrains Mono'],
+      keyMetric: 'Workshop Capacity Filled',
+      outcome: 'Full registrations across all technical workshops.',
+      gallery: [{ url: ASSET_PATHS.URECKON_4, caption: 'Ureckon Tech Fest Poster 04' }],
+    },
+  },
+  {
+    id: 'social-ureckon-5',
+    title: 'Ureckon Annual Tech Fest — Event Poster 05',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Ureckon Tech Fest',
+    year: '2025',
+    medium: 'Event Poster Design 05',
+    thumbnail: ASSET_PATHS.URECKON_5,
+    bentoSize: 'normal',
+    bentoTag: '13 // SOCIAL POSTER • EVENT',
+    shortDescription:
+      'Grand finale promotional poster for Ureckon tech fest closing ceremony and prize announcement.',
+    deliverables: [
+      'Tech Fest Event Poster 05',
+      'Finale Ceremony Visuals',
+      'Social Campaign Asset',
+    ],
+    caseStudy: {
+      brief: 'Announce final hackathon prizes and closing night ceremony.',
+      constraint: 'High impact call-to-action lockup.',
+      processSteps: [
+        {
+          title: '01. Finale Compositing',
+          description: 'Creating high contrast neon glow effects for grand prize reveal.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Cyber Neon Blue', hex: '#00F0FF' },
+        { name: 'Deep Void', hex: '#0A0A12' },
+      ],
+      typographyUsed: ['Syne ExtraBold', 'JetBrains Mono'],
+      keyMetric: 'Closing Ceremony Audience',
+      outcome: 'Maximum turnout for awards presentation.',
+      gallery: [{ url: ASSET_PATHS.URECKON_5, caption: 'Ureckon Tech Fest Poster 05' }],
     },
   },
 ];
