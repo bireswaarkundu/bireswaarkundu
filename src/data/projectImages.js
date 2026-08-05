@@ -33,11 +33,11 @@ export const ASSET_PATHS = {
   WELD_MASTER_BENTO: safePath('/assets/Branding/Weld/weld_master_bento.jpg'),
 
   // CONCEPT DRIVEN DESIGN
-  CONCEPT_WORDSWORTH: safePath('/assets/Concept-driven design/A slumber did my spirit seal_I had no human fears...— William Wordsworth— Not all rest, thoug.webp'),
-  CONCEPT_HOLI: safePath('/assets/Concept-driven design/Splash colors, spread joy—Holi is where art meets festivity! Let the vibrant shades tell a stor.webp'),
-  CONCEPT_BENGAL_BUSINESS: safePath('/assets/Concept-driven design/_Bengal Means Business #april #aprilfools #1stapril #troll.webp'),
-  CONCEPT_BHASHA_DIVAS: safePath('/assets/Concept-driven design/বা ং লাআন্তর্জাতিক মাতৃভাষা দিবসের শুভেচ্ছা। ...#bengaliভাবনায়- @ad_viced.webp'),
-  CONCEPT_WOMEN_RESPECT: safePath('/assets/Concept-driven design/রঙে রঙে ভরুক প্রাণ,থাকুক সবার মান-সম্মান।নারীর প্রতি শ্রদ্ধা রাখুন,অবহেলা নয়, পাশে থাকুন.webp'),
+  CONCEPT_WORDSWORTH: safePath('/assets/Concept-driven design/wordsworth.webp'),
+  CONCEPT_HOLI: safePath('/assets/Concept-driven design/holi_concept.webp'),
+  CONCEPT_BENGAL_BUSINESS: safePath('/assets/Concept-driven design/bengal_business.webp'),
+  CONCEPT_BHASHA_DIVAS: safePath('/assets/Concept-driven design/bhasha_divas.webp'),
+  CONCEPT_WOMEN_RESPECT: safePath('/assets/Concept-driven design/women_respect.webp'),
 
   // SOCIAL MEDIA POSTERS - NAHOUM'S SERIES
   NAHOUM_1: safePath('/assets/Social Media Poster/From rich fruit cakes to almond pastries and fudgy delights, Nahoum’s iconic treats areflying o (1).webp'),
