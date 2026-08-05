@@ -659,16 +659,26 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
                 onSubmit={(e) => {
                   e.preventDefault();
                   emailjs.send(
-                    'service_bireswaarkundu15',
-                    'template_e9ekdah',
+                    import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+                    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                     {
                       name: cqName,
                       email: cqEmail,
                       title: 'Custom Quote Request',
                       message: cqMessage,
                       date: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
-                    }
-                  ).finally(() => setCustomSubmitted(true));
+                    },
+                    import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+                  )
+                  .then((response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                    setCustomSubmitted(true);
+                  })
+                  .catch((error) => {
+                    console.error('FAILED...', error);
+                    alert('Failed to send the request. Please try again later.');
+                  })
+                  .finally(() => setCustomSubmitted(true));
                 }}
                 className="space-y-4 bg-white p-5 rounded-xs border border-[#1A1A1A]/15 shadow-xs"
               >
