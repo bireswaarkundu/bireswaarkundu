@@ -52,7 +52,7 @@ export const Header = ({
                   Bireswaar Kundu
                 </span>
                 <span className="font-mono-display text-[10px] text-[#1A1A1A]/60 tracking-wider">
-                  STUDIO KUNDU ©2026
+                  BIRESWAAR KUNDU ©2026
                 </span>
               </div>
             </a>

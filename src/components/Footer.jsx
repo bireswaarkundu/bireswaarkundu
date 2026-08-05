@@ -23,8 +23,8 @@ export const Footer = () => {
             <span className="font-mono-display text-xs text-[#5D5CDE] font-bold uppercase tracking-widest block mb-2">
               ● CURRENT STATUS: ACCEPTING Q3/Q4 COMMISSION COMMISSIONS
             </span>
-            <h2 className="font-syne text-4xl sm:text-6xl font-extrabold tracking-tight text-white">
-              STUDIO KUNDU
+            <h2 className="font-syne-mono text-4xl sm:text-5xl lg:text-6xl font-normal tracking-wide text-white">
+              BIRESWAAR KUNDU
             </h2>
           </div>
 
