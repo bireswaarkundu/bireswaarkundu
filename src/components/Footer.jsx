@@ -8,7 +8,7 @@ export const Footer = () => {
 
   const socialLinks = [
     { name: 'Instagram', url: 'https://www.instagram.com/bireswaarkundu/', icon: Instagram },
-    { name: 'Behance', url: 'https://behance.net/bireshwarkundu', icon: Globe },
+    { name: 'Behance', url: 'https://behance.net/bireswaarkundu', icon: Globe },
     { name: 'LinkedIn', url: 'https://linkedin.com/in/bireswaarkundu', icon: Linkedin }
   ];
 

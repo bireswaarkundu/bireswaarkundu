@@ -117,8 +117,8 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
                     </div>
                     <div>
                       <span className="text-[#1A1A1A]/50 block">Behance</span>
-                      <a href="https://behance.net/bireshwarkundu" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#1A1A1A] hover:text-[#5D5CDE] truncate block">
-                        behance.net/bireshwarkundu
+                      <a href="https://behance.net/bireswaarkundu" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#1A1A1A] hover:text-[#5D5CDE] truncate block">
+                        behance.net/bireswaarkundu
                       </a>
                     </div>
                     <div className="col-span-2">
