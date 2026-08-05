@@ -13,7 +13,7 @@ export const ASSET_PATHS = {
   INNOFUSION_1: safePath('/assets/Branding/Innofusion/in1.png'),
 
   // BRANDING - PHOENIX
-  PHOENIX_LOGO: safePath('/assets/Branding/Phoenix/4.png'),
+  PHOENIX_LOGO: safePath('/assets/Branding/Phoenix/4.webp'),
 
   // BRANDING - WELD
   WELD_1: safePath('/assets/Branding/Weld/braand identity-01.webp'),
