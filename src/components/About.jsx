@@ -29,7 +29,7 @@ export const About = () => {
               BACKGROUND &amp; PHILOSOPHY
             </span>
           </div>
-          <h2 className="font-syne text-4xl sm:text-5xl font-extrabold tracking-tight text-[#1A1A1A]">
+          <h2 className="font-syne-mono text-4xl sm:text-5xl font-normal tracking-wide text-[#1A1A1A]">
             About Bireswaar Kundu
           </h2>
         </div>
@@ -50,7 +50,7 @@ export const About = () => {
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
             />
             <div className="absolute bottom-4 left-4 right-4 p-4 bg-[#1A1A1A]/90 backdrop-blur-md text-white rounded-xs border border-white/10">
-              <span className="block font-syne font-bold text-sm">Bireswaar Kundu</span>
+              <span className="block font-syne-mono font-normal text-sm">Bireswaar Kundu</span>
               <span className="block font-mono-display text-[11px] text-white/70">
                 Principal Designer • Studio Kundu
               </span>
@@ -91,7 +91,7 @@ export const About = () => {
 
           {/* Software Stack & Capabilities */}
           <div className="space-y-4">
-            <h3 className="font-syne font-bold text-xl text-[#1A1A1A] flex items-center gap-2">
+            <h3 className="font-syne-mono font-normal text-xl text-[#1A1A1A] flex items-center gap-2">
               <PenTool className="w-5 h-5 text-[#5D5CDE]" />
               <span>Technical Stack &amp; Software Mastery</span>
             </h3>
@@ -103,7 +103,7 @@ export const About = () => {
                   className="p-3 bg-white rounded-xs border border-[#1A1A1A]/15 flex items-center justify-between"
                 >
                   <div>
-                    <span className="block font-syne font-bold text-xs text-[#1A1A1A]">
+                    <span className="block font-syne-mono font-normal text-xs text-[#1A1A1A]">
                       {t.name}
                     </span>
                     <span className="block font-mono-display text-[10px] text-[#1A1A1A]/50">
@@ -120,7 +120,7 @@ export const About = () => {
 
           {/* Recognition & Awards */}
           <div className="space-y-4">
-            <h3 className="font-syne font-bold text-xl text-[#1A1A1A] flex items-center gap-2">
+            <h3 className="font-syne-mono font-normal text-xl text-[#1A1A1A] flex items-center gap-2">
               <Award className="w-5 h-5 text-[#5D5CDE]" />
               <span>Selected Recognition &amp; Awards</span>
             </h3>

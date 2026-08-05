@@ -43,7 +43,7 @@ export const Testimonials = () => {
             <span className="text-xs font-mono-display text-white/60">VERIFIED PARTNER</span>
           </div>
 
-          <p className="font-editorial text-2xl sm:text-4xl text-white font-normal leading-snug italic">
+          <p className="font-editorial text-base sm:text-lg text-white font-normal leading-relaxed italic">
             &ldquo;{current.quote}&rdquo;
           </p>
         </div>
@@ -58,7 +58,7 @@ export const Testimonials = () => {
               className="w-12 h-12 rounded-full object-cover border border-white/20"
             />
             <div>
-              <span className="block font-syne font-bold text-base text-white">
+              <span className="block font-syne-mono font-normal text-base text-white">
                 {current.author}
               </span>
               <span className="block font-mono-display text-xs text-white/70">

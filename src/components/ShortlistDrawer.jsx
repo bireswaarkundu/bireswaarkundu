@@ -22,7 +22,7 @@ export const ShortlistDrawer = ({
         <div className="p-6 bg-[#1A1A1A] text-white flex items-center justify-between border-b border-white/10">
           <div className="flex items-center gap-2">
             <Bookmark className="w-4 h-4 text-[#5D5CDE]" />
-            <span className="font-syne font-bold text-base">
+            <span className="font-syne-mono font-normal text-base">
               Saved Shortlist ({savedProjects.length})
             </span>
           </div>
@@ -76,7 +76,7 @@ export const ShortlistDrawer = ({
                       onClose();
                       onSelectProject(proj.id);
                     }}
-                    className="font-syne font-bold text-xs text-[#1A1A1A] truncate cursor-pointer hover:text-[#5D5CDE]"
+                    className="font-syne-mono font-normal text-xs text-[#1A1A1A] truncate cursor-pointer hover:text-[#5D5CDE]"
                   >
                     {proj.title}
                   </h4>

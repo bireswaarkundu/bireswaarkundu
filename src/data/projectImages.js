@@ -9,6 +9,9 @@ export const ASSET_PATHS = {
   AIR_INDIA_02: safePath('/assets/Ad Campaign/Air india-02.webp'),
   INDIGO_01: safePath('/assets/Ad Campaign/indigo1.png'),
 
+  // TESTIMONIALS
+  SOURODEEP_GHOSH: safePath('/assets/Testimonials/Sourodeep Ghosh.png'),
+
   // BRANDING - INNOFUSION
   INNOFUSION_1: safePath('/assets/Branding/Innofusion/in1.png'),
 

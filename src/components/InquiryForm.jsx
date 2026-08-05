@@ -299,7 +299,7 @@ export const InquiryForm = ({
               <Check className="w-6 h-6" />
             </div>
             <div>
-              <h3 className="font-syne font-bold text-2xl text-[#1A1A1A]">
+              <h3 className="font-syne-mono font-normal text-2xl text-[#1A1A1A]">
                 Inquiry Successfully Transmitted
               </h3>
               <p className="font-mono-display text-xs text-[#1A1A1A]/70">
