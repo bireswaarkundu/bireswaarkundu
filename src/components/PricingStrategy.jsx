@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, Clock, RefreshCw, Zap, Sparkles, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Check, Clock, RefreshCw, Zap, Sparkles, ArrowRight, ShieldCheck, Mail, Phone, MessageSquare, X, Send, CheckCircle2 } from 'lucide-react';
 
 export const PRICING_SERVICES = [
   {
@@ -422,6 +422,8 @@ export const PRICING_SERVICES = [
 export const PricingStrategy = ({ onOpenInquiry }) => {
   const [selectedServiceId, setSelectedServiceId] = useState('logo-design');
   const [viewMode, setViewMode] = useState('tabs'); // 'tabs' or 'all'
+  const [customQuoteModalOpen, setCustomQuoteModalOpen] = useState(false);
+  const [customSubmitted, setCustomSubmitted] = useState(false);
 
   const activeService = PRICING_SERVICES.find((s) => s.id === selectedServiceId) || PRICING_SERVICES[0];
 
@@ -532,28 +534,174 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
         </div>
       )}
 
-      {/* Bottom Guarantee Banner */}
+      {/* Bottom Guarantee & Custom Quote Banner */}
       <div className="mt-12 bg-white p-6 sm:p-8 rounded-xs border border-[#1A1A1A]/15 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-[#5D5CDE]/10 flex items-center justify-center shrink-0">
             <ShieldCheck className="w-6 h-6 text-[#5D5CDE]" />
           </div>
           <div>
-            <h4 className="font-syne font-bold text-base text-[#1A1A1A]">Need a Custom Scope or Bulk Retainer?</h4>
+            <h4 className="font-syne font-bold text-base text-[#1A1A1A]">Need a Custom Scope or Retainer?</h4>
             <p className="font-editorial text-sm text-[#1A1A1A]/70 italic">
-              All packages include full commercial usage rights, transparent revisions, &amp; high-resolution vector deliverables.
+              Skip pre-configured segments — contact Bireswaar Kundu directly for custom specifications, bulk packages, or retainers.
             </p>
           </div>
         </div>
 
         <button
-          onClick={() => onOpenInquiry && onOpenInquiry()}
+          onClick={() => setCustomQuoteModalOpen(true)}
           className="px-6 py-3 bg-[#1A1A1A] hover:bg-[#5D5CDE] text-white text-xs font-mono-display uppercase tracking-wider font-bold rounded-xs transition-colors shadow-xs flex items-center gap-2 shrink-0"
         >
           <span>Get Custom Project Quote</span>
           <ArrowRight className="w-4 h-4" />
         </button>
       </div>
+
+      {/* Direct Contact & Custom Quote Modal */}
+      {customQuoteModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
+          <div className="bg-[#F5F5F0] rounded-xs border border-[#1A1A1A] shadow-2xl max-w-xl w-full p-6 sm:p-8 relative overflow-y-auto max-h-[90vh]">
+            {/* Close Button */}
+            <button
+              onClick={() => {
+                setCustomQuoteModalOpen(false);
+                setCustomSubmitted(false);
+              }}
+              className="absolute top-4 right-4 p-2 text-[#1A1A1A]/60 hover:text-[#1A1A1A] hover:bg-[#1A1A1A]/5 rounded-full transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {/* Header */}
+            <div className="mb-6 border-b border-[#1A1A1A]/15 pb-4">
+              <span className="font-mono-display text-xs font-bold text-[#5D5CDE] uppercase tracking-wider block">
+                DIRECT CUSTOM QUOTE INQUIRY
+              </span>
+              <h3 className="font-syne text-2xl sm:text-3xl font-bold text-[#1A1A1A] mt-1">
+                Contact Bireswaar Kundu
+              </h3>
+              <p className="font-editorial text-sm text-[#1A1A1A]/80 italic mt-1">
+                Direct contact methods for custom design scopes, retainers, or specific project requirements.
+              </p>
+            </div>
+
+            {/* Direct Contact Channel Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+              <a
+                href="mailto:bireswaarkundu@gmail.com"
+                className="p-4 bg-white rounded-xs border border-[#1A1A1A]/15 hover:border-[#5D5CDE] hover:bg-[#5D5CDE]/5 transition-all group flex items-center gap-3"
+              >
+                <div className="w-9 h-9 rounded-full bg-[#5D5CDE]/10 flex items-center justify-center group-hover:bg-[#5D5CDE] group-hover:text-white transition-colors text-[#5D5CDE]">
+                  <Mail className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="block font-mono-display text-[10px] text-[#1A1A1A]/60 font-bold uppercase">DIRECT EMAIL</span>
+                  <span className="block font-mono-display text-xs text-[#1A1A1A] font-bold group-hover:text-[#5D5CDE] transition-colors truncate">
+                    bireswaarkundu@gmail.com
+                  </span>
+                </div>
+              </a>
+
+              <a
+                href="https://wa.me/917439575294"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 bg-white rounded-xs border border-[#1A1A1A]/15 hover:border-[#5D5CDE] hover:bg-[#5D5CDE]/5 transition-all group flex items-center gap-3"
+              >
+                <div className="w-9 h-9 rounded-full bg-emerald-500/10 flex items-center justify-center group-hover:bg-emerald-500 group-hover:text-white transition-colors text-emerald-600">
+                  <Phone className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="block font-mono-display text-[10px] text-[#1A1A1A]/60 font-bold uppercase">PHONE / WHATSAPP</span>
+                  <span className="block font-mono-display text-xs text-[#1A1A1A] font-bold group-hover:text-emerald-600 transition-colors">
+                    (+91) 74395 75294
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            {/* Quick Custom Quote Brief Form */}
+            {!customSubmitted ? (
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  setCustomSubmitted(true);
+                }}
+                className="space-y-4 bg-white p-5 rounded-xs border border-[#1A1A1A]/15 shadow-xs"
+              >
+                <span className="font-mono-display text-xs text-[#1A1A1A] font-bold block uppercase tracking-wider border-b border-[#1A1A1A]/10 pb-2">
+                  SEND CUSTOM PROJECT BRIEF DIRECTLY
+                </span>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label className="block text-[10px] font-mono-display uppercase tracking-wider font-bold text-[#1A1A1A]/70 mb-1">
+                      Your Name *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="e.g. Rahul Sharma"
+                      className="w-full p-2.5 bg-[#F5F5F0] border border-[#1A1A1A]/20 rounded-xs text-xs font-mono-display text-[#1A1A1A] focus:outline-none focus:border-[#5D5CDE]"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[10px] font-mono-display uppercase tracking-wider font-bold text-[#1A1A1A]/70 mb-1">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      placeholder="rahul@brand.com"
+                      className="w-full p-2.5 bg-[#F5F5F0] border border-[#1A1A1A]/20 rounded-xs text-xs font-mono-display text-[#1A1A1A] focus:outline-none focus:border-[#5D5CDE]"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-[10px] font-mono-display uppercase tracking-wider font-bold text-[#1A1A1A]/70 mb-1">
+                    Describe Your Custom Project / Scope *
+                  </label>
+                  <textarea
+                    required
+                    rows={4}
+                    placeholder="Describe your custom design requirements, timeline, budget expectations, or retainer details..."
+                    className="w-full p-2.5 bg-[#F5F5F0] border border-[#1A1A1A]/20 rounded-xs text-xs font-mono-display text-[#1A1A1A] focus:outline-none focus:border-[#5D5CDE]"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full py-3 bg-[#1A1A1A] hover:bg-[#5D5CDE] text-white text-xs font-mono-display uppercase tracking-wider font-bold rounded-xs transition-colors shadow-xs flex items-center justify-center gap-2"
+                >
+                  <Send className="w-3.5 h-3.5" />
+                  <span>Send Custom Quote Request</span>
+                </button>
+              </form>
+            ) : (
+              <div className="bg-white p-6 rounded-xs border border-emerald-500/30 text-center space-y-3">
+                <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                  <CheckCircle2 className="w-6 h-6" />
+                </div>
+                <h4 className="font-syne font-bold text-lg text-[#1A1A1A]">Custom Quote Request Received!</h4>
+                <p className="font-editorial text-xs text-[#1A1A1A]/80 italic">
+                  Thank you! Bireswaar Kundu will review your custom project requirements and reply directly to your email within 24 hours.
+                </p>
+                <button
+                  onClick={() => {
+                    setCustomQuoteModalOpen(false);
+                    setCustomSubmitted(false);
+                  }}
+                  className="px-4 py-2 bg-[#1A1A1A] text-white text-xs font-mono-display rounded-xs font-bold"
+                >
+                  Close Window
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 };
