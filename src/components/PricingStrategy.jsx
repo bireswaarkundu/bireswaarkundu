@@ -954,7 +954,7 @@ const ServicePricingCard = ({ service, onSelectPackage }) => {
           >
             {/* Standard Tier Highlighted Badge */}
             {isStandard && (
-              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 bg-[#5D5CDE] text-white text-[10px] font-mono-display font-bold uppercase tracking-widest rounded-xs shadow-md flex items-center gap-1.5 shrink-0 z-20">
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 bg-[#5D5CDE] text-white text-[10px] font-mono-display font-bold uppercase tracking-widest rounded-xs shadow-md flex items-center gap-1.5 shrink-0 z-20 whitespace-nowrap">
                 <Sparkles className="w-3 h-3 text-amber-300" />
                 <span>★ HIGHLIGHTED / MOST POPULAR</span>
               </div>
