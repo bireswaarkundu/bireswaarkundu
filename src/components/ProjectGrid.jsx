@@ -69,37 +69,10 @@ export const ProjectGrid = ({
         </div>
       </div>
 
-      {/* Sub-Brand Filters for Branding Domain */}
-      {activeCategory === 'Branding' && (
-        <div className="mb-6 p-3 bg-white rounded-2xl border border-[#1A1A1A]/15 flex items-center gap-3 overflow-x-auto shadow-xs">
-          <div className="flex items-center gap-1.5 text-xs font-mono-display text-[#1A1A1A]/60 font-bold uppercase tracking-wider shrink-0 pl-2">
-            <Filter className="w-3.5 h-3.5 text-[#5D5CDE]" />
-            <span>SUB-BRAND BENTO CANVAS:</span>
-          </div>
-          <div className="flex items-center gap-2">
-            {['Innofusion', 'Phoenix', 'Weld'].map((sub) => (
-              <button
-                key={sub}
-                onClick={() => setActiveSubBrand(sub)}
-                className={`px-4 py-1.5 text-xs font-mono-display uppercase tracking-wider rounded-xl border transition-all ${
-                  activeSubBrand === sub
-                    ? 'bg-[#5D5CDE] text-white border-[#5D5CDE] font-bold shadow-xs'
-                    : 'bg-[#F5F5F0] text-[#1A1A1A]/80 hover:bg-white border-[#1A1A1A]/15'
-                }`}
-              >
-                {sub}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* RENDER MODE: BRANDING SINGLE-SCREEN BENTO CANVAS vs STANDARD 4:5 DOMAIN GRID */}
+      {/* RENDER MODE: BRANDING 3-BOX SHOWCASE vs STANDARD DOMAIN GRID */}
       {activeCategory === 'Branding' ? (
-        /* SINGLE-SCREEN BENTO GRID CANVAS FOR BRANDING (NO SCROLLING) */
+        /* 3-BOX SHOWCASE FOR BRANDING WITH DIRECT BEHANCE PORTFOLIO BUTTONS */
         <BrandingBentoCanvas
-          activeSubBrand={activeSubBrand}
-          onSelectProject={onSelectProject}
           shortlist={shortlist}
           onToggleShortlist={onToggleShortlist}
         />
