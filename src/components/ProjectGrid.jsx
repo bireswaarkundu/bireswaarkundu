@@ -127,7 +127,15 @@ export const ProjectGrid = ({
         </div>
       ) : (
         /* Uniform Grid with 4:5 Aspect Ratio Cards for Other Domains */
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className={`grid gap-6 ${
+          filteredProjects.length === 3
+            ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+            : filteredProjects.length === 2
+            ? 'grid-cols-1 sm:grid-cols-2'
+            : filteredProjects.length === 1
+            ? 'grid-cols-1 max-w-md mx-auto'
+            : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+        }`}>
           {filteredProjects.map((project) => {
             const isBookmarked = shortlist.includes(project.id);
 
