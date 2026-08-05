@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, Bookmark, BookmarkCheck, Eye, Sparkles, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, Bookmark, BookmarkCheck, Eye, CheckCircle2 } from 'lucide-react';
 import { ASSET_PATHS } from '../data/projectImages.js';
 
 export const BrandingBentoCanvas = ({
@@ -8,7 +8,7 @@ export const BrandingBentoCanvas = ({
   shortlist,
   onToggleShortlist
 }) => {
-  // Brand Specific Configurations
+  // Brand Configurations
   const getBrandData = () => {
     switch (activeSubBrand) {
       case 'Weld':
@@ -16,13 +16,16 @@ export const BrandingBentoCanvas = ({
           id: 'branding-weld',
           brandName: 'WELD — VEGETARIAN PASTRIES',
           barcode: 'BK-2025-WELD-9914',
-          masterBentoImg: ASSET_PATHS.WELD_MASTER_BENTO,
-          logoImg: ASSET_PATHS.WELD_1,
-          upMockup: ASSET_PATHS.WELD_2,
-          leftMockup: ASSET_PATHS.WELD_3,
-          rightMockup: ASSET_PATHS.WELD_ASSET_7,
-          downMockup: ASSET_PATHS.WELD_G,
-          bottomRightMockup: ASSET_PATHS.WELD_ASSET_8,
+          logoImg: ASSET_PATHS.WELD_G,
+          deliveryImg: ASSET_PATHS.WELD_2,
+          receiptImg: ASSET_PATHS.WELD_ASSET_12 || ASSET_PATHS.WELD_ASSET_14 || ASSET_PATHS.WELD_2,
+          vanImg: ASSET_PATHS.WELD_2,
+          boxImg: ASSET_PATHS.WELD_ASSET_7 || ASSET_PATHS.WELD_1,
+          cartonImg: ASSET_PATHS.WELD_ASSET_8 || ASSET_PATHS.WELD_1,
+          posterLayersImg: ASSET_PATHS.WELD_3,
+          laptopImg: ASSET_PATHS.WELD_ASSET_5 || ASSET_PATHS.WELD_1,
+          apparelImg: ASSET_PATHS.WELD_ASSET_9 || ASSET_PATHS.WELD_1,
+          bagImg: ASSET_PATHS.WELD_ASSET_10 || ASSET_PATHS.WELD_1,
           typefaceName: 'Syne & JetBrains Mono',
           colors: [
             { hex: '#F68B2E', name: 'Weld Orange' },
@@ -91,10 +94,10 @@ export const BrandingBentoCanvas = ({
   const isWeld = activeSubBrand === 'Weld';
 
   return (
-    <div className={`w-full rounded-3xl p-4 sm:p-6 lg:p-8 shadow-inner border border-[#1A1A1A]/10 transition-colors ${
+    <div className={`w-full rounded-3xl p-4 sm:p-6 lg:p-7 shadow-inner border border-[#1A1A1A]/10 transition-colors ${
       isWeld ? 'bg-[#F7F4EE]' : 'bg-[#E8EEF4]'
     }`}>
-      {/* Top Action Bar */}
+      {/* Canvas Top Bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-[#1A1A1A]/15">
         <div className="flex items-center gap-3">
           <span className={`w-3 h-3 rounded-full animate-pulse ${isWeld ? 'bg-[#F68B2E]' : 'bg-[#5D5CDE]'}`}></span>
@@ -133,48 +136,231 @@ export const BrandingBentoCanvas = ({
         </div>
       </div>
 
-      {/* CONDITIONAL RENDER: WELD OFFICIAL BENTO GRID CANVAS vs BRAND BENTO COMPOSITION */}
+      {/* LIVE BENTO GRID LAYOUT */}
       {isWeld ? (
-        /* WELD MASTER BENTO CANVAS (EXACT MATCHING REFERENCE IMAGE GRID & MOCKUPS) */
-        <div className="space-y-6">
+        /* LIVE WELD BENTO CANVAS COMPOSED OF INDIVIDUAL ASSETS IN REACT CODE */
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+          
+          {/* ROW 1: TOP 4 TILES */}
+          {/* Tile 1: Delivery Executive (Cols 1-3) */}
           <div
             onClick={() => onSelectProject(brand.id)}
-            className="group relative bg-white rounded-2xl p-3 cursor-pointer border border-[#1A1A1A]/15 shadow-md overflow-hidden"
+            className="md:col-span-3 bg-white rounded-2xl p-3 cursor-pointer border border-[#1A1A1A]/15 shadow-xs flex items-center justify-center min-h-[160px] relative overflow-hidden group"
           >
             <img
-              src={brand.masterBentoImg}
-              alt="Weld Official Branding Bento Grid"
+              src={brand.deliveryImg}
+              alt="Weld Delivery Executive"
               referrerPolicy="no-referrer"
-              className="w-full h-auto object-contain rounded-xl group-hover:scale-[1.01] transition-transform duration-500 shadow-sm"
+              className="w-full h-full object-contain max-h-[150px] rounded-xl group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute top-6 left-6 px-3 py-1 bg-[#F68B2E] text-white text-xs font-mono-display font-bold uppercase tracking-wider rounded-lg shadow-md">
-              ★ OFFICIAL WELD BRANDING BENTO GRID
+            <span className="absolute top-3 left-3 text-[9px] font-mono-display text-white bg-[#1A1A1A]/80 px-2 py-0.5 rounded-md uppercase">
+              DELIVERY EXECUTIVE
+            </span>
+          </div>
+
+          {/* Tile 2: Bill Receipt & Tray (Cols 4-6) */}
+          <div
+            onClick={() => onSelectProject(brand.id)}
+            className="md:col-span-3 bg-white rounded-2xl p-3 cursor-pointer border border-[#1A1A1A]/15 shadow-xs flex items-center justify-center min-h-[160px] relative overflow-hidden group"
+          >
+            <img
+              src={brand.receiptImg}
+              alt="Weld Receipt Mockup"
+              referrerPolicy="no-referrer"
+              className="w-full h-full object-contain max-h-[150px] rounded-xl group-hover:scale-105 transition-transform duration-500"
+            />
+            <span className="absolute top-3 left-3 text-[9px] font-mono-display text-[#1A1A1A] bg-[#F7F4EE] border border-[#1A1A1A]/15 px-2 py-0.5 rounded-md uppercase font-bold">
+              BILL RECEIPT TRAY
+            </span>
+          </div>
+
+          {/* Tile 3: Weld Delivery Van (Cols 7-9) */}
+          <div
+            onClick={() => onSelectProject(brand.id)}
+            className="md:col-span-3 bg-white rounded-2xl p-3 cursor-pointer border border-[#1A1A1A]/15 shadow-xs flex items-center justify-center min-h-[160px] relative overflow-hidden group"
+          >
+            <img
+              src={brand.vanImg}
+              alt="Weld Delivery Van"
+              referrerPolicy="no-referrer"
+              className="w-full h-full object-contain max-h-[150px] rounded-xl group-hover:scale-105 transition-transform duration-500"
+            />
+            <span className="absolute top-3 left-3 text-[9px] font-mono-display text-white bg-[#F68B2E] px-2 py-0.5 rounded-md uppercase font-bold">
+              DELIVERY VAN
+            </span>
+          </div>
+
+          {/* Tile 4: Address Bar URL Lockup (Cols 10-12) */}
+          <div className="md:col-span-3 bg-white rounded-2xl p-5 border border-[#1A1A1A]/15 shadow-xs flex flex-col justify-between min-h-[160px]">
+            <div className="flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]"></span>
+              <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]"></span>
+              <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F]"></span>
+            </div>
+            <div className="bg-[#F7F4EE] rounded-xl p-3 border border-[#1A1A1A]/10 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <span className="w-5 h-5 rounded-md bg-[#F68B2E] text-white flex items-center justify-center font-bold text-xs font-mono-display">w</span>
+                <span className="font-mono-display text-xs font-bold text-[#1A1A1A]">weld.com</span>
+              </div>
+              <span className="text-[10px] font-mono-display text-[#1A1A1A]/50">HTTPS // SECURE</span>
+            </div>
+            <span className="text-[10px] font-mono-display text-[#1A1A1A]/60">DIGITAL DOMAIN SPEC</span>
+          </div>
+
+          {/* ROW 2: MIDDLE HERO SECTION */}
+          {/* Left Stacked Column: Product Boxes & Cartons (Cols 1-3) */}
+          <div className="md:col-span-3 flex flex-col gap-4">
+            <div
+              onClick={() => onSelectProject(brand.id)}
+              className="bg-white rounded-2xl p-3 cursor-pointer border border-[#1A1A1A]/15 shadow-xs flex items-center justify-center min-h-[135px] relative overflow-hidden group"
+            >
+              <img
+                src={brand.boxImg}
+                alt="Weld Product Boxes"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain max-h-[125px] rounded-xl group-hover:scale-105 transition-transform duration-500"
+              />
+              <span className="absolute top-2 left-2 text-[9px] font-mono-display text-white bg-[#1A1A1A]/80 px-2 py-0.5 rounded-md uppercase">
+                PASTRY BOX PACKAGING
+              </span>
+            </div>
+            <div
+              onClick={() => onSelectProject(brand.id)}
+              className="bg-white rounded-2xl p-3 cursor-pointer border border-[#1A1A1A]/15 shadow-xs flex items-center justify-center min-h-[135px] relative overflow-hidden group"
+            >
+              <img
+                src={brand.cartonImg}
+                alt="Weld Shipping Cartons"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain max-h-[125px] rounded-xl group-hover:scale-105 transition-transform duration-500"
+              />
+              <span className="absolute top-2 left-2 text-[9px] font-mono-display text-[#1A1A1A] bg-[#F7F4EE] border border-[#1A1A1A]/15 px-2 py-0.5 rounded-md uppercase font-bold">
+                SHIPPING CARTONS
+              </span>
             </div>
           </div>
 
-          {/* Weld Feature Icons & Color Palette Bar */}
-          <div className="bg-white rounded-2xl p-5 border border-[#1A1A1A]/15 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-6 overflow-x-auto py-1">
-              <span className="text-xs font-mono-display font-bold text-[#F68B2E] uppercase">BRAND COLOR SWATCHES:</span>
-              <div className="flex items-center gap-3">
+          {/* HERO CENTER LOGO LOCKUP TILE (Cols 4-9) */}
+          <div
+            onClick={() => onSelectProject(brand.id)}
+            className="md:col-span-6 bg-white rounded-2xl p-6 cursor-pointer border-2 border-[#F68B2E]/40 shadow-md flex flex-col items-center justify-center text-center min-h-[285px] relative group"
+          >
+            <img
+              src={brand.logoImg}
+              alt="Weld Primary Logo Lockup"
+              referrerPolicy="no-referrer"
+              className="max-h-[190px] w-auto object-contain group-hover:scale-105 transition-transform duration-500 my-auto"
+            />
+            <div className="absolute top-4 left-4 px-3 py-1 bg-[#F68B2E] text-white text-[10px] font-mono-display uppercase tracking-wider rounded-lg font-bold shadow-xs">
+              PRIMARY WELD LOGO LOCKUP
+            </div>
+            <span className="text-xs font-mono-display text-[#F68B2E] font-bold uppercase tracking-widest mt-2">
+              VEGETARIAN PASTRIES MADE WITH LOVE.
+            </span>
+          </div>
+
+          {/* Right Stacked Column: Posters (Cols 10-12) */}
+          <div className="md:col-span-3 flex flex-col gap-4">
+            <div
+              onClick={() => onSelectProject(brand.id)}
+              className="bg-white rounded-2xl p-3 cursor-pointer border border-[#1A1A1A]/15 shadow-xs flex items-center justify-center min-h-[285px] relative overflow-hidden group"
+            >
+              <img
+                src={brand.posterLayersImg}
+                alt="Layers of Happiness Poster"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain max-h-[265px] rounded-xl group-hover:scale-105 transition-transform duration-500"
+              />
+              <span className="absolute top-2 left-2 text-[9px] font-mono-display text-white bg-[#F68B2E] px-2 py-0.5 rounded-md uppercase font-bold">
+                LAYERS OF HAPPINESS
+              </span>
+            </div>
+          </div>
+
+          {/* ROW 3: BOTTOM 5 TILES */}
+          {/* Tile 8: Laptop Website Mockup (Cols 1-3) */}
+          <div
+            onClick={() => onSelectProject(brand.id)}
+            className="md:col-span-3 bg-white rounded-2xl p-3 cursor-pointer border border-[#1A1A1A]/15 shadow-xs flex items-center justify-center min-h-[170px] relative overflow-hidden group"
+          >
+            <img
+              src={brand.laptopImg}
+              alt="Weld Laptop Website Mockup"
+              referrerPolicy="no-referrer"
+              className="w-full h-full object-contain max-h-[155px] rounded-xl group-hover:scale-105 transition-transform duration-500"
+            />
+            <span className="absolute top-3 left-3 text-[9px] font-mono-display text-white bg-[#1A1A1A]/80 px-2 py-0.5 rounded-md uppercase">
+              WEBSITE STOREFRONT
+            </span>
+          </div>
+
+          {/* Tile 9: Mobile App Icon (Cols 4-5) */}
+          <div className="md:col-span-2 bg-white rounded-2xl p-4 border border-[#1A1A1A]/15 shadow-xs flex flex-col items-center justify-center min-h-[170px] text-center">
+            <div className="w-14 h-14 rounded-2xl bg-[#F68B2E] text-white flex items-center justify-center font-bold text-2xl font-mono-display shadow-md relative mb-2">
+              w
+              <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#D71921] text-white text-[10px] flex items-center justify-center font-bold">2</span>
+            </div>
+            <span className="font-mono-display text-xs font-bold text-[#1A1A1A]">Weld App Icon</span>
+            <span className="text-[10px] font-mono-display text-[#1A1A1A]/50">IOS / ANDROID</span>
+          </div>
+
+          {/* Tile 10: Staff Apparel (Cols 6-7) */}
+          <div
+            onClick={() => onSelectProject(brand.id)}
+            className="md:col-span-2 bg-white rounded-2xl p-3 cursor-pointer border border-[#1A1A1A]/15 shadow-xs flex items-center justify-center min-h-[170px] relative overflow-hidden group"
+          >
+            <img
+              src={brand.apparelImg}
+              alt="Weld Staff Apparel"
+              referrerPolicy="no-referrer"
+              className="w-full h-full object-contain max-h-[155px] rounded-xl group-hover:scale-105 transition-transform duration-500"
+            />
+            <span className="absolute top-2 left-2 text-[9px] font-mono-display text-white bg-[#4F8A4D] px-2 py-0.5 rounded-md uppercase font-bold">
+              STAFF APPAREL
+            </span>
+          </div>
+
+          {/* Tile 11: Paper Bag (Cols 8-9) */}
+          <div
+            onClick={() => onSelectProject(brand.id)}
+            className="md:col-span-2 bg-white rounded-2xl p-3 cursor-pointer border border-[#1A1A1A]/15 shadow-xs flex items-center justify-center min-h-[170px] relative overflow-hidden group"
+          >
+            <img
+              src={brand.bagImg}
+              alt="Weld Shopping Bag"
+              referrerPolicy="no-referrer"
+              className="w-full h-full object-contain max-h-[155px] rounded-xl group-hover:scale-105 transition-transform duration-500"
+            />
+            <span className="absolute top-2 left-2 text-[9px] font-mono-display text-[#1A1A1A] bg-[#F7F4EE] border border-[#1A1A1A]/15 px-2 py-0.5 rounded-md uppercase font-bold">
+              KRAFT SHOPPING BAG
+            </span>
+          </div>
+
+          {/* Tile 12: Color Swatches & Feature Badges (Cols 10-12) */}
+          <div className="md:col-span-3 bg-white rounded-2xl p-4 border border-[#1A1A1A]/15 shadow-xs flex flex-col justify-between min-h-[170px]">
+            <div>
+              <span className="text-[10px] font-mono-display text-[#F68B2E] font-bold uppercase tracking-widest block mb-2">
+                COLOR PALETTE &amp; BADGES
+              </span>
+              <div className="flex items-center gap-2 mb-3">
                 {brand.colors.map((c) => (
-                  <div key={c.hex} className="flex items-center gap-1.5">
-                    <span className="w-4 h-4 rounded-full border border-[#1A1A1A]/20" style={{ backgroundColor: c.hex }}></span>
-                    <span className="text-[11px] font-mono-display text-[#1A1A1A] font-semibold">{c.hex}</span>
+                  <div key={c.hex} className="flex flex-col items-center">
+                    <span className="w-5 h-5 rounded-full border border-[#1A1A1A]/20" style={{ backgroundColor: c.hex }}></span>
+                    <span className="text-[9px] font-mono-display text-[#1A1A1A]/70 font-semibold mt-0.5">{c.hex}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="flex items-center gap-4 text-xs font-mono-display text-[#1A1A1A]/80">
-              <span className="inline-flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-[#F68B2E]" /> 100% Vegetarian</span>
-              <span className="inline-flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-[#F68B2E]" /> Premium Ingredients</span>
-              <span className="inline-flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-[#F68B2E]" /> Made With Love</span>
+            <div className="pt-2 border-t border-[#1A1A1A]/10 flex flex-wrap items-center gap-2 text-[10px] font-mono-display text-[#1A1A1A]/80">
+              <span className="inline-flex items-center gap-1"><CheckCircle2 className="w-3 h-3 text-[#F68B2E]" /> 100% VEGETARIAN</span>
+              <span className="inline-flex items-center gap-1"><CheckCircle2 className="w-3 h-3 text-[#4F8A4D]" /> HANDCRAFTED</span>
             </div>
           </div>
+
         </div>
       ) : (
-        /* SYMMETRIC BENTO GRID: CENTERED MAIN LOGO & UNCROPPED MOCKUPS */
+        /* SYMMETRIC BENTO GRID FOR INNOFUSION & PHOENIX */
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* ROW 1, COL 1: Barcode Ticket */}
           <div className="bg-white rounded-2xl p-5 flex flex-col justify-between border border-[#1A1A1A]/15 shadow-xs min-h-[190px]">
