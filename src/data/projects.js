@@ -87,13 +87,13 @@ export const PROCESS_STEPS = [
 
 export const TESTIMONIALS = [
   {
-    author: 'Sunil Sharma',
-    role: 'VP Brand Marketing',
-    company: 'Air India',
+    author: 'Sourodeep Ghosh',
+    role: 'Founder',
+    company: 'Agenc-E' 'Frikey',
     projectRelation: 'Family Travel & Destination Campaigns',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
     quote:
-      'Bireswaar transformed our brand vision into stunning visual campaigns. The Family Travel key visual resonated immensely across terminals and print media.',
+      'Working with Bireswaar Kundu was a very good and seamless experience. He is one of the most versatile people and a brilliant creative mind. I am very impressed by his work ethics and ability to deliver projects on a consistent level with most dedication. Highly recommend him for your design and marketing work. You will not just get an designer, you will get a reliable partner for your creative creations.',
   },
   {
     author: 'Ananya Roy',
