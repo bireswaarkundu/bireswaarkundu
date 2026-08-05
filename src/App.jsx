@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { ProjectGrid } from './components/ProjectGrid';
 import { ProjectModal } from './components/ProjectModal';
 import { Process } from './components/Process';
+import { PricingStrategy } from './components/PricingStrategy';
 import { Testimonials } from './components/Testimonials';
 import { InquiryForm } from './components/InquiryForm';
 import { ShortlistDrawer } from './components/ShortlistDrawer';
@@ -71,6 +72,13 @@ export default function App() {
         />
 
         <Process />
+
+        <PricingStrategy
+          onOpenInquiry={() => {
+            setInquiryPreselectedProject(null);
+            setInquiryModalOpen(true);
+          }}
+        />
 
         <Testimonials />
       </main>
