@@ -44,6 +44,7 @@ export const ASSET_PATHS = {
   WELD_ASSET_12: safePath('/assets/Branding/Weld/Asset 12.webp'),
   WELD_ASSET_13: safePath('/assets/Branding/Weld/Asset 13.webp'),
   WELD_ASSET_14: safePath('/assets/Branding/Weld/Asset 14.webp'),
+  WELD_MASTER_BENTO: safePath('/assets/Branding/Weld/weld_master_bento.jpg'),
 
   // CONCEPT DRIVEN DESIGN
   CONCEPT_WORDSWORTH: safePath('/assets/Concept-driven design/A slumber did my spirit seal_I had no human fears...— William Wordsworth— Not all rest, thoug.webp'),
