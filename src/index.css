@@ -33,15 +33,15 @@
 }
 
 .font-syne {
-  font-family: 'TT Artnik', 'TT Artnik Demo Regular', 'TT Artnik Demo Light', 'TT Artnik Demo', 'Syne Mono', monospace;
+  font-family: 'TT Artnik', 'TT Artnik Demo Regular', 'TT Artnik Demo Light', 'TT Artnik Demo', 'Syne', sans-serif;
 }
 
 .font-syne-mono {
-  font-family: 'TT Artnik', 'TT Artnik Demo Regular', 'TT Artnik Demo Light', 'TT Artnik Demo', 'Syne Mono', monospace;
+  font-family: 'Syne Mono', monospace;
 }
 
 .font-syne-mono-italic {
-  font-family: 'TT Artnik', 'TT Artnik Demo Regular', 'TT Artnik Demo Light', 'TT Artnik Demo', 'Syne Mono', monospace;
+  font-family: 'Syne Mono', monospace;
   font-style: normal;
 }
 
