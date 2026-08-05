@@ -164,22 +164,25 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
 
               {/* Sub-Column 2: Experience Timeline, Values, Fields, Skills */}
               <div className="md:col-span-5 space-y-5 md:border-l md:border-[#1A1A1A]/10 md:pl-6">
-                {/* Experience Section with Motion Effects */}
+                {/* Experience Section with Mathematically Centered Timeline & Liquid Wave Motion */}
                 <div className="space-y-3">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#5D5CDE] animate-pulse"></span>
                     <span className="text-[#1A1A1A]/50 font-bold uppercase tracking-wider block">EXPERIENCE</span>
                   </div>
 
-                  <div className="relative border-l-2 border-[#1A1A1A]/15 pl-5 space-y-4">
-                    {/* Animated Light Beam Traveling Down the Timeline */}
-                    <span className="absolute left-[-2px] w-[2px] bg-gradient-to-b from-[#5D5CDE] via-[#5D5CDE]/90 to-transparent rounded-full animate-timeline-beam shadow-[0_0_10px_#5D5CDE] pointer-events-none"></span>
+                  <div className="relative pl-6 space-y-4">
+                    {/* 1. Perfect Central Vertical Track Line */}
+                    <div className="absolute left-[8px] top-1.5 bottom-1.5 w-[2px] bg-[#1A1A1A]/15 rounded-full overflow-hidden">
+                      {/* Animated Liquid Wave Light Beam traveling up and down */}
+                      <span className="absolute left-0 w-full bg-gradient-to-b from-transparent via-[#5D5CDE] to-transparent rounded-full animate-timeline-wave shadow-[0_0_12px_#5D5CDE] pointer-events-none"></span>
+                    </div>
 
                     {/* Timeline Item 1: Techscholars */}
                     <div className="group cursor-pointer transition-all duration-300 hover:translate-x-1.5 relative">
-                      <span className="absolute -left-[25px] top-1 flex h-3 w-3 items-center justify-center">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5D5CDE] opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#5D5CDE] shadow-[0_0_8px_rgba(93,92,222,0.9)]"></span>
+                      <span className="absolute left-[-15px] top-1 flex h-3 w-3 items-center justify-center -translate-x-1/2">
+                        <span className="animate-smooth-glow absolute inline-flex h-full w-full rounded-full bg-[#5D5CDE]"></span>
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#5D5CDE] shadow-[0_0_8px_#5D5CDE] group-hover:scale-125 transition-transform duration-300"></span>
                       </span>
                       <div className="flex items-center justify-between">
                         <span className="font-bold text-[#1A1A1A] group-hover:text-[#5D5CDE] transition-colors">Techscholars™</span>
@@ -190,8 +193,8 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
 
                     {/* Timeline Item 2: School Root Education */}
                     <div className="group cursor-pointer transition-all duration-300 hover:translate-x-1.5 relative">
-                      <span className="absolute -left-[25px] top-1 flex h-3 w-3 items-center justify-center">
-                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#1A1A1A]/50 group-hover:bg-[#5D5CDE] group-hover:scale-125 transition-all shadow-xs"></span>
+                      <span className="absolute left-[-15px] top-1 flex h-3 w-3 items-center justify-center -translate-x-1/2">
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#1A1A1A]/40 border border-white group-hover:bg-[#5D5CDE] group-hover:scale-125 transition-all duration-300 shadow-xs"></span>
                       </span>
                       <div className="flex items-center justify-between">
                         <span className="font-bold text-[#1A1A1A] group-hover:text-[#5D5CDE] transition-colors">School Root Education</span>
@@ -202,8 +205,8 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
 
                     {/* Timeline Item 3: The Agenc-E */}
                     <div className="group cursor-pointer transition-all duration-300 hover:translate-x-1.5 relative">
-                      <span className="absolute -left-[25px] top-1 flex h-3 w-3 items-center justify-center">
-                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#1A1A1A]/50 group-hover:bg-[#5D5CDE] group-hover:scale-125 transition-all shadow-xs"></span>
+                      <span className="absolute left-[-15px] top-1 flex h-3 w-3 items-center justify-center -translate-x-1/2">
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#1A1A1A]/40 border border-white group-hover:bg-[#5D5CDE] group-hover:scale-125 transition-all duration-300 shadow-xs"></span>
                       </span>
                       <div className="flex items-center justify-between">
                         <span className="font-bold text-[#1A1A1A] group-hover:text-[#5D5CDE] transition-colors">The Agenc-E</span>
@@ -214,9 +217,9 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
 
                     {/* Timeline Item 4: GrnLYFT */}
                     <div className="group cursor-pointer transition-all duration-300 hover:translate-x-1.5 relative">
-                      <span className="absolute -left-[25px] top-1 flex h-3 w-3 items-center justify-center">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5D5CDE] opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#5D5CDE] shadow-[0_0_8px_rgba(93,92,222,0.9)]"></span>
+                      <span className="absolute left-[-15px] top-1 flex h-3 w-3 items-center justify-center -translate-x-1/2">
+                        <span className="animate-smooth-glow absolute inline-flex h-full w-full rounded-full bg-[#5D5CDE]"></span>
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#5D5CDE] shadow-[0_0_8px_#5D5CDE] group-hover:scale-125 transition-transform duration-300"></span>
                       </span>
                       <div className="flex items-center justify-between">
                         <span className="font-bold text-[#1A1A1A] group-hover:text-[#5D5CDE] transition-colors">GrnLYFT</span>

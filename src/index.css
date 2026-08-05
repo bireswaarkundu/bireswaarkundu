@@ -61,25 +61,43 @@
 }
 
 /* Timeline Motion Effects */
-@keyframes beamTravel {
+/* Ultra-Smooth Timeline Motion Effects */
+@keyframes timelineWave {
   0% {
-    top: 0%;
-    opacity: 0.2;
-    height: 20px;
+    top: -10%;
+    opacity: 0.15;
+    height: 30px;
   }
   50% {
-    opacity: 1;
-    height: 40px;
+    opacity: 0.9;
+    height: 55px;
   }
   100% {
-    top: 85%;
-    opacity: 0.2;
-    height: 20px;
+    top: 90%;
+    opacity: 0.15;
+    height: 30px;
   }
 }
 
-.animate-timeline-beam {
-  animation: beamTravel 2.5s ease-in-out infinite;
+@keyframes smoothGlowPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.35;
+    box-shadow: 0 0 4px rgba(93, 92, 222, 0.4);
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 0.85;
+    box-shadow: 0 0 16px rgba(93, 92, 222, 0.9);
+  }
+}
+
+.animate-timeline-wave {
+  animation: timelineWave 3.5s ease-in-out infinite alternate;
+}
+
+.animate-smooth-glow {
+  animation: smoothGlowPulse 2.8s ease-in-out infinite;
 }
 
 .bento-card-neutral {
