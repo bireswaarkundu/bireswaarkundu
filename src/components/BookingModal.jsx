@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { X, Calendar, CheckCircle2 } from 'lucide-react';
 
 /* Generate the next 14 available weekdays (Mon–Sat) */
@@ -37,7 +38,17 @@ export const BookingModal = ({ onClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!selectedDate || !selectedTime || !clientName || !clientEmail) return;
-    setSubmitted(true);
+    emailjs.send(
+      'service_bireswaarkundu15',
+      'template_e9ekdah',
+      {
+        name: clientName,
+        email: clientEmail,
+        title: 'Discovery Meeting Booking',
+        message: `Date: ${selectedDate}\nTime: ${selectedTime} IST`,
+        date: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+      }
+    ).finally(() => setSubmitted(true));
   };
 
   return (

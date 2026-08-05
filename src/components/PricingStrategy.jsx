@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Check, Clock, RefreshCw, Zap, Sparkles, ArrowRight, ShieldCheck, Mail, Phone, MessageSquare, X, Send, CheckCircle2, Calendar } from 'lucide-react';
 
 export const PRICING_SERVICES = [
@@ -434,6 +435,11 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
   const [clientEmail, setClientEmail] = useState('');
   const [bookingSubmitted, setBookingSubmitted] = useState(false);
 
+  // Custom quote form state
+  const [cqName, setCqName] = useState('');
+  const [cqEmail, setCqEmail] = useState('');
+  const [cqMessage, setCqMessage] = useState('');
+
   const activeService = PRICING_SERVICES.find((s) => s.id === selectedServiceId) || PRICING_SERVICES[0];
 
   const availableDates = [
@@ -652,7 +658,17 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
-                  setCustomSubmitted(true);
+                  emailjs.send(
+                    'service_bireswaarkundu15',
+                    'template_e9ekdah',
+                    {
+                      name: cqName,
+                      email: cqEmail,
+                      title: 'Custom Quote Request',
+                      message: cqMessage,
+                      date: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+                    }
+                  ).finally(() => setCustomSubmitted(true));
                 }}
                 className="space-y-4 bg-white p-5 rounded-xs border border-[#1A1A1A]/15 shadow-xs"
               >
@@ -668,6 +684,8 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
                     <input
                       type="text"
                       required
+                      value={cqName}
+                      onChange={(e) => setCqName(e.target.value)}
                       placeholder="e.g. Rahul Sharma"
                       className="w-full p-2.5 bg-[#F5F5F0] border border-[#1A1A1A]/20 rounded-xs text-xs font-mono-display text-[#1A1A1A] focus:outline-none focus:border-[#5D5CDE]"
                     />
@@ -680,6 +698,8 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
                     <input
                       type="email"
                       required
+                      value={cqEmail}
+                      onChange={(e) => setCqEmail(e.target.value)}
                       placeholder="rahul@brand.com"
                       className="w-full p-2.5 bg-[#F5F5F0] border border-[#1A1A1A]/20 rounded-xs text-xs font-mono-display text-[#1A1A1A] focus:outline-none focus:border-[#5D5CDE]"
                     />
@@ -693,6 +713,8 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
                   <textarea
                     required
                     rows={4}
+                    value={cqMessage}
+                    onChange={(e) => setCqMessage(e.target.value)}
                     placeholder="Describe your custom design requirements, timeline, budget expectations, or retainer details..."
                     className="w-full p-2.5 bg-[#F5F5F0] border border-[#1A1A1A]/20 rounded-xs text-xs font-mono-display text-[#1A1A1A] focus:outline-none focus:border-[#5D5CDE]"
                   ></textarea>

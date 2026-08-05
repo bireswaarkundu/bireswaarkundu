@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Send, CheckCircle2, Bookmark, ArrowRight, Sparkles, X, Download, FileText, Check } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import { PROJECTS } from '../data/projects.js';
 
 export const InquiryForm = ({
@@ -72,11 +73,21 @@ export const InquiryForm = ({
       shortlistedProjects: shortlist
     };
 
-    setTimeout(() => {
+    emailjs.send(
+      'service_bireswaarkundu15',
+      'template_e9ekdah',
+      {
+        name,
+        email,
+        title: selectedServices.join(', '),
+        message: `Company: ${data.company}\nBudget: ${budgetTier}\nTimeline: ${timeline}\nOverview: ${data.projectOverview}`,
+        date: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+      }
+    ).finally(() => {
       setIsSubmitting(false);
       setSubmitted(true);
       setReceiptData(data);
-    }, 1000);
+    });
   };
 
   const shortlistedObjs = PROJECTS.filter((p) => shortlist.includes(p.id));
