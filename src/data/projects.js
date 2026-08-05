@@ -4,7 +4,7 @@ export const DOMAIN_CATEGORIES = [
   { id: 'Ad Campaign', label: 'AD CAMPAIGN', count: 3 },
   { id: 'Branding', label: 'BRANDING IDENTITY', count: 3, subCategories: ['Innofusion', 'Phoenix', 'Weld'] },
   { id: 'Concept-driven design', label: 'CONCEPT-DRIVEN DESIGN', count: 5 },
-  { id: 'Social Media Poster', label: 'SOCIAL MEDIA POSTERS', count: 11 },
+  { id: 'Social Media Poster', label: 'SOCIAL MEDIA POSTERS', count: 16 },
 ];
 
 export const TYPE_SPECIMENS = [
@@ -613,6 +613,191 @@ export const PROJECTS = [
   // =========================================================================
   // DOMAIN 4: SOCIAL MEDIA POSTER
   // =========================================================================
+  {
+    id: 'social-coming-soon',
+    title: 'Coming Soon — Teaser Poster',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Bireswaar Kundu Studio',
+    year: '2026',
+    medium: 'Teaser Poster Design',
+    thumbnail: ASSET_PATHS.COMING_SOON,
+    bentoSize: 'normal',
+    bentoTag: '01 // SOCIAL POSTER • LAUNCH',
+    shortDescription:
+      'High-impact "Coming Soon" teaser poster designed for social media release and brand reveal.',
+    deliverables: [
+      'Social Media Teaser Poster',
+      'High-Resolution Digital Asset',
+      'Instagram Story & Feed Layouts',
+    ],
+    caseStudy: {
+      brief: 'Create an engaging teaser poster to build anticipation for an upcoming project release.',
+      constraint: 'Maintain high visual interest while withholding full details to pique curiosity.',
+      processSteps: [
+        {
+          title: '01. Visual Lockup',
+          description: 'Crafting bold typographic composition and dynamic lighting contrast.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Studio Dark', hex: '#1A1A1A' },
+        { name: 'Accent Blue', hex: '#5D5CDE' },
+      ],
+      typographyUsed: ['Syne ExtraBold', 'Plus Jakarta Sans'],
+      keyMetric: 'Teaser Launch Campaign',
+      outcome: 'Generated strong early engagement and audience anticipation.',
+      gallery: [{ url: ASSET_PATHS.COMING_SOON, caption: 'Coming Soon Teaser Poster' }],
+    },
+  },
+  {
+    id: 'social-intro-post',
+    title: 'Intro Post — Studio Launch Poster',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Bireswaar Kundu Studio',
+    year: '2026',
+    medium: 'Announcement Poster',
+    thumbnail: ASSET_PATHS.INTRO_POST,
+    bentoSize: 'normal',
+    bentoTag: '02 // SOCIAL POSTER • LAUNCH',
+    shortDescription:
+      'Bold introduction poster introducing the creative studio’s vision, services, and visual style.',
+    deliverables: [
+      'Introduction Social Poster',
+      'Typography Hierarchy Layout',
+      'Multi-Platform Ad Ratios',
+    ],
+    caseStudy: {
+      brief: 'Establish brand identity and design philosophy through a introductory social post.',
+      constraint: 'Balance clear messaging with expressive art direction.',
+      processSteps: [
+        {
+          title: '01. Editorial Layout',
+          description: 'Aligning high-contrast typography with modern layout grids.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Obsidian Black', hex: '#0A0A0A' },
+        { name: 'Vibrant Accent', hex: '#5D5CDE' },
+      ],
+      typographyUsed: ['Syne Mono', 'Plus Jakarta Sans'],
+      keyMetric: 'Brand Announcement',
+      outcome: 'Established brand positioning across digital channels.',
+      gallery: [{ url: ASSET_PATHS.INTRO_POST, caption: 'Intro Post Graphic' }],
+    },
+  },
+  {
+    id: 'social-website-live',
+    title: 'Website Is Live — Launch Poster',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Bireswaar Kundu Studio',
+    year: '2026',
+    medium: 'Digital Launch Campaign',
+    thumbnail: ASSET_PATHS.WEBSITE_IS_LIVE,
+    bentoSize: 'normal',
+    bentoTag: '03 // SOCIAL POSTER • LAUNCH',
+    shortDescription:
+      'Promotional launch poster announcing the official rollout of the new portfolio website.',
+    deliverables: [
+      'Website Launch Announcement Poster',
+      'Digital Banner Asset',
+      'Social Campaign Graphics',
+    ],
+    caseStudy: {
+      brief: 'Drive social traffic to the newly launched interactive digital portfolio.',
+      constraint: 'Highlight core digital features in a single striking poster format.',
+      processSteps: [
+        {
+          title: '01. Launch Graphic System',
+          description: 'Combining UI preview elements with bold announcement typography.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Launch Blue', hex: '#5D5CDE' },
+        { name: 'Cream Background', hex: '#F5F5F0' },
+      ],
+      typographyUsed: ['Playfair Display', 'Plus Jakarta Sans'],
+      keyMetric: 'Direct Site Visitors',
+      outcome: 'Drove massive opening day traffic to the live portfolio.',
+      gallery: [{ url: ASSET_PATHS.WEBSITE_IS_LIVE, caption: 'Website is Live Poster' }],
+    },
+  },
+  {
+    id: 'social-my-app',
+    title: 'My App — Product Feature Showcase',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Product Showcase',
+    year: '2026',
+    medium: 'App Feature Social Poster',
+    thumbnail: ASSET_PATHS.MY_APP,
+    bentoSize: 'normal',
+    bentoTag: '04 // SOCIAL POSTER • APP',
+    shortDescription:
+      'Sleek application promotional poster showcasing mobile UI features and user experience.',
+    deliverables: [
+      'Mobile App Promo Poster',
+      'UI Screen Mockup Compositing',
+      'Social Ad Assets',
+    ],
+    caseStudy: {
+      brief: 'Highlight application features in an appealing social media promotional poster.',
+      constraint: 'Render complex mobile screens clearly for social media mobile feeds.',
+      processSteps: [
+        {
+          title: '01. Screen Compositing',
+          description: 'Styling isometric and flat device frames with clean accent highlights.',
+        },
+      ],
+      colorPalette: [
+        { name: 'App Indigo', hex: '#5D5CDE' },
+        { name: 'Pure White', hex: '#FFFFFF' },
+      ],
+      typographyUsed: ['Inter', 'Plus Jakarta Sans'],
+      keyMetric: 'Mobile Engagement',
+      outcome: 'Increased app showcase views and user signups.',
+      gallery: [{ url: ASSET_PATHS.MY_APP, caption: 'My App Promotional Poster' }],
+    },
+  },
+  {
+    id: 'social-my-website',
+    title: 'My Website — Digital Portfolio Showcase',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Digital Portfolio',
+    year: '2026',
+    medium: 'Website Feature Poster',
+    thumbnail: ASSET_PATHS.MY_WEBSITE,
+    bentoSize: 'normal',
+    bentoTag: '05 // SOCIAL POSTER • WEB',
+    shortDescription:
+      'Elegant showcase poster highlighting web design craft, layout structure, and aesthetic precision.',
+    deliverables: [
+      'Web Design Feature Poster',
+      'Layout Breakdown Visuals',
+      'Social Media Display Kit',
+    ],
+    caseStudy: {
+      brief: 'Feature web design craftsmanship and responsive layout structure in a social graphic format.',
+      constraint: 'Present web desktop layouts legized for portrait social screens.',
+      processSteps: [
+        {
+          title: '01. Responsive Framing',
+          description: 'Structuring browser UI mockups with high contrast background cards.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Charcoal Noir', hex: '#1A1A1A' },
+        { name: 'Vibrant Violet', hex: '#5D5CDE' },
+      ],
+      typographyUsed: ['Syne ExtraBold', 'JetBrains Mono'],
+      keyMetric: 'Portfolio Feature Engagement',
+      outcome: 'Widely praised for clean digital presentation.',
+      gallery: [{ url: ASSET_PATHS.MY_WEBSITE, caption: 'My Website Showcase Poster' }],
+    },
+  },
   {
     id: 'social-nahoums-bakery',
     title: 'Nahoum & Sons — Heritage Confectionery Social Series',

@@ -42,6 +42,13 @@ export const ASSET_PATHS = {
   CONCEPT_BHASHA_DIVAS: safePath('/assets/Concept-driven design/bhasha_divas.webp'),
   CONCEPT_WOMEN_RESPECT: safePath('/assets/Concept-driven design/women_respect.webp'),
 
+  // SOCIAL MEDIA POSTERS - FEATURED LAUNCH SERIES
+  COMING_SOON: safePath('/assets/Social Media Poster/coming soon.png'),
+  INTRO_POST: safePath('/assets/Social Media Poster/intro post.png'),
+  WEBSITE_IS_LIVE: safePath('/assets/Social Media Poster/website is live.png'),
+  MY_APP: safePath('/assets/Social Media Poster/my app.png'),
+  MY_WEBSITE: safePath('/assets/Social Media Poster/my website.png'),
+
   // SOCIAL MEDIA POSTERS - NAHOUM'S SERIES
   NAHOUM_1: safePath('/assets/Social Media Poster/nahoum1.webp'),
   NAHOUM_2: safePath('/assets/Social Media Poster/nahoum2.webp'),
