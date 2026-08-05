@@ -4,7 +4,7 @@ export const DOMAIN_CATEGORIES = [
   { id: 'Ad Campaign', label: 'AD CAMPAIGN', count: 3 },
   { id: 'Branding', label: 'BRANDING IDENTITY', count: 3, subCategories: ['Innofusion', 'Phoenix', 'Weld'] },
   { id: 'Concept-driven design', label: 'CONCEPT-DRIVEN DESIGN', count: 5 },
-  { id: 'Social Media Poster', label: 'SOCIAL MEDIA POSTERS', count: 13 },
+  { id: 'Social Media Poster', label: 'SOCIAL MEDIA POSTERS', count: 16 },
 ];
 
 export const TYPE_SPECIMENS = [
@@ -796,6 +796,117 @@ export const PROJECTS = [
       keyMetric: 'Portfolio Feature Engagement',
       outcome: 'Widely praised for clean digital presentation.',
       gallery: [{ url: ASSET_PATHS.MY_WEBSITE, caption: 'My Website Showcase Poster' }],
+    },
+  },
+  {
+    id: 'social-weld-1',
+    title: 'Weld Bakery — Layers of Happiness Poster',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Weld Artisanal Bakery',
+    year: '2025',
+    medium: 'Bakery Social Campaign Poster',
+    thumbnail: ASSET_PATHS.WELD_POSTER_1,
+    bentoSize: 'normal',
+    bentoTag: '06 // SOCIAL POSTER • BAKERY',
+    shortDescription:
+      'Appetizing social media poster for Weld Bakery featuring warm orange accents and "Layers of Happiness" headline typography.',
+    deliverables: [
+      'Social Media Bakery Graphic',
+      'Food Art Direction',
+      'Warm Pastel Background Compositing',
+    ],
+    caseStudy: {
+      brief: 'Highlight fresh flaky pastry layers and pure ingredients for Weld Bakery.',
+      constraint: 'Evoke warmth, quality, and mouth-watering freshness.',
+      processSteps: [
+        {
+          title: '01. Food Art Direction',
+          description: 'Focusing on golden flaky pastry textures and warm orange brand accents.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Warm Bakery Orange', hex: '#E87A24' },
+        { name: 'Cream Background', hex: '#FDFBF7' },
+      ],
+      typographyUsed: ['Syne ExtraBold', 'Playfair Display Italic'],
+      keyMetric: 'High Social Engagement',
+      outcome: 'Extensively appreciated across food enthusiast handles.',
+      gallery: [{ url: ASSET_PATHS.WELD_POSTER_1, caption: 'Weld Bakery — Layers of Happiness Poster' }],
+    },
+  },
+  {
+    id: 'social-weld-2',
+    title: 'Weld Bakery — Freshly Baked Option Poster',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Weld Artisanal Bakery',
+    year: '2025',
+    medium: 'Interactive UI Social Poster',
+    thumbnail: ASSET_PATHS.WELD_POSTER_2,
+    bentoSize: 'normal',
+    bentoTag: '07 // SOCIAL POSTER • BAKERY',
+    shortDescription:
+      'Creative social media poster blending steaming hot pastry photography with interactive order menu UI elements.',
+    deliverables: [
+      'Interactive Concept Graphic',
+      'Steam Optics & Depth Effect',
+      'Bakery UI Menu Overlay',
+    ],
+    caseStudy: {
+      brief: 'Combine digital ordering menu UI with mouth-watering freshly baked savory roll photography.',
+      constraint: 'Keep the UI dropdown overlay clean while accentuating the hot steam effect.',
+      processSteps: [
+        {
+          title: '01. UI Menu Compositing',
+          description: 'Overlaying pill selector UI directly onto depth-of-field food photography.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Baking Sage Green', hex: '#6B8E78' },
+        { name: 'Hot Orange Accent', hex: '#F27420' },
+      ],
+      typographyUsed: ['Plus Jakarta Sans', 'Inter'],
+      keyMetric: 'Interactive Campaign Concept',
+      outcome: 'Standout creative post praised for UI/food fusion.',
+      gallery: [{ url: ASSET_PATHS.WELD_POSTER_2, caption: 'Weld Bakery — Freshly Baked Option Poster' }],
+    },
+  },
+  {
+    id: 'social-weld-3',
+    title: 'Weld Bakery — Made With Love Poster',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Weld Artisanal Bakery',
+    year: '2025',
+    medium: 'Brand Philosophy Poster',
+    thumbnail: ASSET_PATHS.WELD_POSTER_3,
+    bentoSize: 'normal',
+    bentoTag: '08 // SOCIAL POSTER • BAKERY',
+    shortDescription:
+      'Warm brand philosophy poster showcasing 100% vegetarian savory puff pastry crafted fresh every day.',
+    deliverables: [
+      'Brand Quality Guarantee Poster',
+      'Artisanal Flour & Herb Styling',
+      'Vegetarian Badge Integration',
+    ],
+    caseStudy: {
+      brief: 'Emphasize Weld Bakery’s commitment to pure ingredients and daily artisanal baking.',
+      constraint: 'Balance bold typography lockup with organic ingredient styling.',
+      processSteps: [
+        {
+          title: '01. Ingredient Framing',
+          description: 'Arranging fresh spinach, mushrooms, and wheat stalks around golden puff pastry.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Olive Green', hex: '#5A6B48' },
+        { name: 'Terracotta Orange', hex: '#D95828' },
+      ],
+      typographyUsed: ['Syne ExtraBold', 'Plus Jakarta Sans'],
+      keyMetric: 'Pure Ingredient Campaign',
+      outcome: 'Strengthened brand trust and customer loyalty.',
+      gallery: [{ url: ASSET_PATHS.WELD_POSTER_3, caption: 'Weld Bakery — Made With Love Poster' }],
     },
   },
   {

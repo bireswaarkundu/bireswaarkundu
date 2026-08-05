@@ -48,6 +48,9 @@ export const ASSET_PATHS = {
   WEBSITE_IS_LIVE: safePath('/assets/Social Media Poster/website is live.png'),
   MY_APP: safePath('/assets/Social Media Poster/my app.png'),
   MY_WEBSITE: safePath('/assets/Social Media Poster/my website.png'),
+  WELD_POSTER_1: safePath('/assets/Social Media Poster/weld 1.png'),
+  WELD_POSTER_2: safePath('/assets/Social Media Poster/weld 2.png'),
+  WELD_POSTER_3: safePath('/assets/Social Media Poster/weld 3.png'),
 
   // SOCIAL MEDIA POSTERS - NAHOUM'S SERIES
   NAHOUM_1: safePath('/assets/Social Media Poster/nahoum1.webp'),
