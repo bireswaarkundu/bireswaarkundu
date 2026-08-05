@@ -128,17 +128,16 @@ export const Header = ({
               </a>
             ))}
 
-              <button
-                onClick={() => {
-                  onOpenInquiry();
-                  setMobileMenuOpen(false);
-                }}
-                className="w-full py-3 bg-[#5D5CDE] text-white text-xs font-mono-display font-bold uppercase tracking-wider rounded-xs flex items-center justify-center gap-2"
-              >
-                <span>Start Freelance Inquiry</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </button>
-            </div>
+            <button
+              onClick={() => {
+                onOpenInquiry();
+                setMobileMenuOpen(false);
+              }}
+              className="w-full py-3 bg-[#5D5CDE] text-white text-xs font-mono-display font-bold uppercase tracking-wider rounded-xs flex items-center justify-center gap-2"
+            >
+              <span>Start Freelance Inquiry</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </button>
           </div>
         </div>
       )}
