@@ -66,12 +66,12 @@ export default function App() {
 
         <Process />
 
-        <PricingStrategy
+        {/* <PricingStrategy
           onOpenInquiry={() => {
             setInquiryPreselectedProject(null);
             setInquiryModalOpen(true);
           }}
-        />
+        /> */}
 
         <Testimonials />
       </main>

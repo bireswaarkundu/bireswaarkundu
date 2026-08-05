@@ -22,7 +22,7 @@ export const Header = ({
   const navLinks = [
     { name: 'Selected Work', href: '#work' },
     { name: 'Process', href: '#process' },
-    { name: 'Pricing', href: '#pricing' },
+    // { name: 'Pricing', href: '#pricing' },
     { name: 'Testimonials', href: '#testimonials' },
   ];
 
