@@ -1184,17 +1184,17 @@ export const PROJECTS = [
   },
   {
     id: 'social-ureckon-5',
-    title: 'Ureckon Annual Tech Fest — Event Poster 05',
+    title: 'Independence Day Poster',
     category: 'Social Media Design',
     domain: 'Social Media Poster',
     client: 'Ureckon Tech Fest',
-    year: '2025',
+    year: '2024',
     medium: 'Event Poster Design 05',
     thumbnail: ASSET_PATHS.URECKON_5,
     bentoSize: 'normal',
     bentoTag: '13 // SOCIAL POSTER • EVENT',
     shortDescription:
-      'Grand finale promotional poster for Ureckon tech fest closing ceremony and prize announcement.',
+      "A modern patriotic poster celebrating India's Independence Day through bold visuals, vibrant colors, and a clean contemporary design.",
     deliverables: [
       'Tech Fest Event Poster 05',
       'Finale Ceremony Visuals',
