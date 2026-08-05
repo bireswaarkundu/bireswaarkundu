@@ -7,11 +7,9 @@ export const Footer = () => {
   };
 
   const socialLinks = [
-    { name: 'Instagram', url: 'https://instagram.com', icon: Instagram },
-    { name: 'Behance', url: 'https://behance.net', icon: Globe },
-    { name: 'Dribbble', url: 'https://dribbble.com', icon: Dribbble },
-    { name: 'LinkedIn', url: 'https://linkedin.com', icon: Linkedin },
-    { name: 'Read.cv', url: 'https://read.cv', icon: Globe }
+    { name: 'Instagram', url: 'https://instagram.com/bireshwarkundu', icon: Instagram },
+    { name: 'Behance', url: 'https://behance.net/bireshwarkundu', icon: Globe },
+    { name: 'LinkedIn', url: 'https://linkedin.com/in/bireswaarkundu', icon: Linkedin }
   ];
 
   return (

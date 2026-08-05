@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, Clock, RefreshCw, Zap, Sparkles, ArrowRight, ShieldCheck, Mail, Phone, MessageSquare, X, Send, CheckCircle2 } from 'lucide-react';
+import { Check, Clock, RefreshCw, Zap, Sparkles, ArrowRight, ShieldCheck, Mail, Phone, MessageSquare, X, Send, CheckCircle2, Calendar } from 'lucide-react';
 
 export const PRICING_SERVICES = [
   {
@@ -425,7 +425,34 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
   const [customQuoteModalOpen, setCustomQuoteModalOpen] = useState(false);
   const [customSubmitted, setCustomSubmitted] = useState(false);
 
+  // Meeting Booking Calendar State
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
+  const [selectedPkgInfo, setSelectedPkgInfo] = useState(null);
+  const [selectedDate, setSelectedDate] = useState('Thu, Aug 6');
+  const [selectedTime, setSelectedTime] = useState('02:00 PM IST');
+  const [clientName, setClientName] = useState('');
+  const [clientEmail, setClientEmail] = useState('');
+  const [bookingSubmitted, setBookingSubmitted] = useState(false);
+
   const activeService = PRICING_SERVICES.find((s) => s.id === selectedServiceId) || PRICING_SERVICES[0];
+
+  const availableDates = [
+    { day: 'Thu', date: 'Aug 6' },
+    { day: 'Fri', date: 'Aug 7' },
+    { day: 'Mon', date: 'Aug 10' },
+    { day: 'Tue', date: 'Aug 11' },
+    { day: 'Wed', date: 'Aug 12' },
+    { day: 'Thu', date: 'Aug 13' },
+    { day: 'Fri', date: 'Aug 14' },
+  ];
+
+  const availableTimes = ['10:00 AM IST', '11:30 AM IST', '02:00 PM IST', '04:30 PM IST', '06:00 PM IST', '08:00 PM IST'];
+
+  const handleSelectPackage = (pkgDetails) => {
+    setSelectedPkgInfo(pkgDetails);
+    setBookingModalOpen(true);
+    setBookingSubmitted(false);
+  };
 
   return (
     <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-20">
@@ -510,7 +537,7 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
 
       {/* Render Packages */}
       {viewMode === 'tabs' ? (
-        <ServicePricingCard service={activeService} onOpenInquiry={onOpenInquiry} />
+        <ServicePricingCard service={activeService} onSelectPackage={handleSelectPackage} />
       ) : (
         <div className="space-y-16">
           {PRICING_SERVICES.map((srv) => (
@@ -528,7 +555,7 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
                   {srv.description}
                 </p>
               </div>
-              <ServicePricingCard service={srv} onOpenInquiry={onOpenInquiry} />
+              <ServicePricingCard service={srv} onSelectPackage={handleSelectPackage} />
             </div>
           ))}
         </div>
@@ -702,12 +729,211 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
           </div>
         </div>
       )}
+
+      {/* Meeting Booking Calendar Modal */}
+      {bookingModalOpen && selectedPkgInfo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
+          <div className="bg-[#F5F5F0] rounded-xs border border-[#1A1A1A] shadow-2xl max-w-xl w-full p-6 sm:p-8 relative overflow-y-auto max-h-[90vh]">
+            {/* Close Button */}
+            <button
+              onClick={() => {
+                setBookingModalOpen(false);
+                setBookingSubmitted(false);
+              }}
+              className="absolute top-4 right-4 p-2 text-[#1A1A1A]/60 hover:text-[#1A1A1A] hover:bg-[#1A1A1A]/5 rounded-full transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {/* Header */}
+            <div className="mb-6 border-b border-[#1A1A1A]/15 pb-4">
+              <div className="flex items-center gap-2 mb-1">
+                <Calendar className="w-4 h-4 text-[#5D5CDE]" />
+                <span className="font-mono-display text-xs font-bold text-[#5D5CDE] uppercase tracking-wider block">
+                  SCHEDULE PACKAGE DISCOVERY MEETING
+                </span>
+              </div>
+              <h3 className="font-syne-mono text-2xl sm:text-3xl font-normal text-[#1A1A1A]">
+                Book Meeting with Bireswaar Kundu
+              </h3>
+              <div className="mt-3 p-3 bg-white rounded-xs border border-[#1A1A1A]/15 flex items-center justify-between font-mono-display text-xs">
+                <div>
+                  <span className="text-[#1A1A1A]/60 block text-[10px]">SELECTED PACKAGE:</span>
+                  <span className="font-bold text-[#1A1A1A]">{selectedPkgInfo.serviceName} — {selectedPkgInfo.tierName}</span>
+                </div>
+                <span className="font-syne-mono font-bold text-sm text-[#5D5CDE]">{selectedPkgInfo.price}</span>
+              </div>
+            </div>
+
+            {!bookingSubmitted ? (
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  if (!clientName || !clientEmail) return;
+                  setBookingSubmitted(true);
+                }}
+                className="space-y-6"
+              >
+                {/* 1. Date Selector */}
+                <div className="space-y-2">
+                  <label className="block text-xs font-mono-display font-bold text-[#1A1A1A] uppercase tracking-wider">
+                    01 // SELECT MEETING DATE
+                  </label>
+                  <div className="grid grid-cols-4 sm:grid-cols-7 gap-2">
+                    {availableDates.map((d) => {
+                      const fullDateStr = `${d.day}, ${d.date}`;
+                      const isSel = selectedDate === fullDateStr;
+
+                      return (
+                        <button
+                          type="button"
+                          key={fullDateStr}
+                          onClick={() => setSelectedDate(fullDateStr)}
+                          className={`p-2.5 rounded-xs border text-center font-mono-display transition-all ${
+                            isSel
+                              ? 'bg-[#1A1A1A] text-white border-[#1A1A1A] shadow-sm font-bold scale-105'
+                              : 'bg-white text-[#1A1A1A] border-[#1A1A1A]/15 hover:border-[#1A1A1A]/40'
+                          }`}
+                        >
+                          <span className="block text-[9px] uppercase opacity-60">{d.day}</span>
+                          <span className="block text-xs font-bold">{d.date}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* 2. Time Slot Selector */}
+                <div className="space-y-2">
+                  <label className="block text-xs font-mono-display font-bold text-[#1A1A1A] uppercase tracking-wider">
+                    02 // SELECT TIME SLOT (IST)
+                  </label>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                    {availableTimes.map((t) => {
+                      const isSel = selectedTime === t;
+
+                      return (
+                        <button
+                          type="button"
+                          key={t}
+                          onClick={() => setSelectedTime(t)}
+                          className={`p-2.5 rounded-xs border text-center text-xs font-mono-display transition-all ${
+                            isSel
+                              ? 'bg-[#5D5CDE] text-white border-[#5D5CDE] font-bold shadow-xs'
+                              : 'bg-white text-[#1A1A1A] border-[#1A1A1A]/15 hover:border-[#1A1A1A]/40'
+                          }`}
+                        >
+                          {t}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* 3. Client Details */}
+                <div className="space-y-3 pt-3 border-t border-[#1A1A1A]/10">
+                  <label className="block text-xs font-mono-display font-bold text-[#1A1A1A] uppercase tracking-wider">
+                    03 // YOUR DETAILS
+                  </label>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-[10px] font-mono-display uppercase tracking-wider font-bold text-[#1A1A1A]/70 mb-1">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={clientName}
+                        onChange={(e) => setClientName(e.target.value)}
+                        placeholder="e.g. Priyanshu Das"
+                        className="w-full p-2.5 bg-white border border-[#1A1A1A]/20 rounded-xs text-xs font-mono-display text-[#1A1A1A] focus:outline-none focus:border-[#5D5CDE]"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-[10px] font-mono-display uppercase tracking-wider font-bold text-[#1A1A1A]/70 mb-1">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        required
+                        value={clientEmail}
+                        onChange={(e) => setClientEmail(e.target.value)}
+                        placeholder="priyanshu@brand.com"
+                        className="w-full p-2.5 bg-white border border-[#1A1A1A]/20 rounded-xs text-xs font-mono-display text-[#1A1A1A] focus:outline-none focus:border-[#5D5CDE]"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Submit CTA */}
+                <button
+                  type="submit"
+                  className="w-full py-3.5 bg-[#1A1A1A] hover:bg-[#5D5CDE] text-white text-xs font-mono-display uppercase tracking-wider font-bold rounded-xs transition-all shadow-md flex items-center justify-center gap-2"
+                >
+                  <Calendar className="w-4 h-4" />
+                  <span>Confirm &amp; Book Discovery Meeting</span>
+                </button>
+              </form>
+            ) : (
+              /* Booking Confirmation Receipt */
+              <div className="bg-white p-6 sm:p-8 rounded-xs border border-emerald-500/30 space-y-5 text-center">
+                <div className="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                  <CheckCircle2 className="w-8 h-8" />
+                </div>
+
+                <div className="space-y-1">
+                  <span className="font-mono-display text-xs text-emerald-600 font-bold uppercase tracking-wider">
+                    ● MEETING CONFIRMED &amp; BOOKED
+                  </span>
+                  <h4 className="font-syne-mono text-2xl font-normal text-[#1A1A1A]">
+                    Discovery Call Scheduled!
+                  </h4>
+                </div>
+
+                <div className="p-4 bg-[#F5F5F0] rounded-xs border border-[#1A1A1A]/10 text-left font-mono-display text-xs space-y-2">
+                  <div className="flex justify-between border-b border-[#1A1A1A]/10 pb-1.5">
+                    <span className="text-[#1A1A1A]/60">Client Name:</span>
+                    <span className="font-bold text-[#1A1A1A]">{clientName}</span>
+                  </div>
+                  <div className="flex justify-between border-b border-[#1A1A1A]/10 pb-1.5">
+                    <span className="text-[#1A1A1A]/60">Client Email:</span>
+                    <span className="font-bold text-[#1A1A1A]">{clientEmail}</span>
+                  </div>
+                  <div className="flex justify-between border-b border-[#1A1A1A]/10 pb-1.5">
+                    <span className="text-[#1A1A1A]/60">Date &amp; Time:</span>
+                    <span className="font-bold text-[#5D5CDE]">{selectedDate} @ {selectedTime}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-[#1A1A1A]/60">Package:</span>
+                    <span className="font-bold text-[#1A1A1A]">{selectedPkgInfo.serviceName} ({selectedPkgInfo.tierName})</span>
+                  </div>
+                </div>
+
+                <p className="font-editorial text-xs text-[#1A1A1A]/80 italic">
+                  A Google Calendar invite &amp; meeting link have been dispatched to <strong className="not-italic text-[#1A1A1A]">{clientEmail}</strong>. Bireswaar Kundu looks forward to consulting with you!
+                </p>
+
+                <button
+                  onClick={() => {
+                    setBookingModalOpen(false);
+                    setBookingSubmitted(false);
+                  }}
+                  className="px-6 py-2.5 bg-[#1A1A1A] text-white text-xs font-mono-display uppercase tracking-wider rounded-xs font-bold hover:bg-[#5D5CDE] transition-colors"
+                >
+                  Done
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 };
 
 /* Individual Service 3-Column Comparison Table Component */
-const ServicePricingCard = ({ service, onOpenInquiry }) => {
+const ServicePricingCard = ({ service, onSelectPackage }) => {
   // Explicit Tier Column Ordering: Basic -> Standard -> Premium
   const tiers = ['basic', 'standard', 'premium'];
 
@@ -811,7 +1037,15 @@ const ServicePricingCard = ({ service, onOpenInquiry }) => {
 
             {/* Action CTA Button */}
             <button
-              onClick={() => onOpenInquiry && onOpenInquiry()}
+              onClick={() =>
+                onSelectPackage &&
+                onSelectPackage({
+                  serviceName: service.name,
+                  tierName: pkg.name,
+                  price: pkg.price,
+                  unit: pkg.unit
+                })
+              }
               className={`w-full py-3.5 px-4 rounded-xs text-xs font-mono-display uppercase tracking-wider font-bold transition-all flex items-center justify-center gap-2 ${
                 isStandard
                   ? 'bg-[#5D5CDE] hover:bg-[#4b4ab0] text-white shadow-lg'

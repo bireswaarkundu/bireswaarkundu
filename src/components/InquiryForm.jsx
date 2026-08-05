@@ -88,13 +88,13 @@ export const InquiryForm = ({
         <div className="flex items-center gap-2 mb-2">
           <span className="w-2.5 h-2.5 rounded-full bg-[#5D5CDE]"></span>
           <span className="font-mono-display text-xs text-[#1A1A1A]/70 uppercase tracking-widest font-semibold">
-            FREELANCE SERVICE INQUIRY STUDIO
+            PROJECT ESTIMATION
           </span>
         </div>
-        <h2 className="font-syne text-3xl sm:text-5xl font-extrabold tracking-tight text-[#1A1A1A]">
-          Let&apos;s Build Something Enduring
+        <h2 className="font-syne-mono text-3xl sm:text-4xl text-[#1A1A1A] font-normal tracking-wide">
+          Project Brief &amp; Scope
         </h2>
-        <p className="font-editorial text-lg sm:text-xl text-[#1A1A1A]/80 italic mt-2">
+        <p className="font-editorial text-base sm:text-lg text-[#1A1A1A]/80 italic mt-1">
           Select your scope, target budget, and timeline below. Responses are sent directly to Bireswaar Kundu with guaranteed feedback within 24 hours.
         </p>
       </div>
