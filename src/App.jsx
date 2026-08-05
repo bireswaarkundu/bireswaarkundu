@@ -3,7 +3,6 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { ProjectGrid } from './components/ProjectGrid';
 import { ProjectModal } from './components/ProjectModal';
-import { About } from './components/About';
 import { Process } from './components/Process';
 import { Testimonials } from './components/Testimonials';
 import { StartProjectSection } from './components/StartProjectSection';
@@ -71,8 +70,6 @@ export default function App() {
           shortlist={shortlist}
           onToggleShortlist={handleToggleShortlist}
         />
-
-        <About />
 
         <Process />
 

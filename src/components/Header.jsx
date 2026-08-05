@@ -23,7 +23,6 @@ export const Header = ({
     { name: 'Selected Work', href: '#work' },
     { name: 'Case Studies', href: '#case-studies' },
     { name: 'Start a Project', href: '#start-project' },
-    { name: 'About', href: '#about' },
     { name: 'Process', href: '#process' },
     { name: 'Testimonials', href: '#testimonials' },
   ];
