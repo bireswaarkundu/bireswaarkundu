@@ -5,7 +5,6 @@ export const DOMAIN_CATEGORIES = [
   { id: 'Branding', label: 'BRANDING IDENTITY', count: 3, subCategories: ['Innofusion', 'Phoenix', 'Weld'] },
   { id: 'Concept-driven design', label: 'CONCEPT-DRIVEN DESIGN', count: 5 },
   { id: 'Social Media Poster', label: 'SOCIAL MEDIA POSTERS', count: 11 },
-  { id: 'Digital Drawing', label: 'DIGITAL DRAWING', count: 0 },
 ];
 
 export const TYPE_SPECIMENS = [

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Bookmark, BookmarkCheck, ArrowUpRight, Sparkles, Filter } from 'lucide-react';
+import { Bookmark, BookmarkCheck, ArrowUpRight, Filter } from 'lucide-react';
 import { PROJECTS, DOMAIN_CATEGORIES } from '../data/projects.js';
 import { BrandingBentoCanvas } from './BrandingBentoCanvas.jsx';
 
@@ -78,28 +78,6 @@ export const ProjectGrid = ({
           shortlist={shortlist}
           onToggleShortlist={onToggleShortlist}
         />
-      ) : filteredProjects.length === 0 ? (
-        /* Digital Drawing / Empty State Card */
-        <div className="py-20 px-8 text-center bg-white rounded-xs border border-dashed border-[#1A1A1A]/30 shadow-[4px_4px_0px_#1A1A1A]">
-          <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#5D5CDE]/10 text-[#5D5CDE] flex items-center justify-center font-bold text-xl font-mono-display">
-            <Sparkles className="w-7 h-7 text-[#5D5CDE]" />
-          </div>
-          <div className="font-mono-display text-xs text-[#5D5CDE] font-bold uppercase tracking-widest mb-1">
-            00 // DIGITAL DRAWING STUDIO
-          </div>
-          <h3 className="font-syne-mono-italic text-2xl sm:text-3xl text-[#1A1A1A] font-normal mb-3">
-            Digital Artwork &amp; Vector Character Suite
-          </h3>
-          <p className="font-editorial text-base text-[#1A1A1A]/70 italic max-w-xl mx-auto leading-relaxed mb-6">
-            Digital illustrations, speed paints, and character line-art drawings are currently in studio production and pre-press color calibration. New vector art pieces will drop soon!
-          </p>
-          <button
-            onClick={() => setActiveCategory('Ad Campaign')}
-            className="px-5 py-2.5 bg-[#1A1A1A] hover:bg-[#5D5CDE] text-white text-xs font-mono-display uppercase tracking-wider font-bold rounded-xs transition-colors shadow-xs"
-          >
-            Explore Ad Campaign Works
-          </button>
-        </div>
       ) : (
         /* Uniform Grid with 4:5 Aspect Ratio Cards for Other Domains */
         <div className={`grid gap-6 ${
