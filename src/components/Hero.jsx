@@ -248,11 +248,11 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
                 {/* Software Skills SVG Icons */}
                 <div className="pt-3 border-t border-[#1A1A1A]/10 space-y-1.5">
                   <span className="text-[#1A1A1A]/50 font-bold uppercase tracking-wider block">SOFTWARE SKILLS</span>
-                  <div className="flex items-center gap-3">
-                    <img src="/assets/software skills/2069a460dcf28295e231f3111e037552.svg" alt="Photoshop" className="w-8 h-8 rounded-xs hover:scale-110 transition-transform shadow-xs border border-black/20" title="Adobe Photoshop" />
-                    <img src="/assets/software skills/Group 13.svg" alt="Illustrator" className="w-8 h-8 rounded-xs hover:scale-110 transition-transform shadow-xs border border-black/20" title="Adobe Illustrator" />
-                    <img src="/assets/software skills/Group 14.svg" alt="Figma" className="w-8 h-8 rounded-xs hover:scale-110 transition-transform shadow-xs border border-black/20" title="Figma" />
-                    <img src="/assets/software skills/Group 15.svg" alt="Canva" className="w-8 h-8 rounded-xs hover:scale-110 transition-transform shadow-xs border border-black/20" title="Canva" />
+                  <div className="flex items-center gap-3 pt-1">
+                    <img src="/assets/software skills/2069a460dcf28295e231f3111e037552.svg" alt="Photoshop" className="w-8 h-8 hover:scale-110 transition-transform object-contain" title="Adobe Photoshop" />
+                    <img src="/assets/software skills/Group 13.svg" alt="Illustrator" className="w-8 h-8 hover:scale-110 transition-transform object-contain" title="Adobe Illustrator" />
+                    <img src="/assets/software skills/Group 14.svg" alt="Figma" className="w-8 h-8 hover:scale-110 transition-transform object-contain" title="Figma" />
+                    <img src="/assets/software skills/Group 15.svg" alt="Canva" className="w-8 h-8 hover:scale-110 transition-transform object-contain" title="Canva" />
                   </div>
                 </div>
               </div>

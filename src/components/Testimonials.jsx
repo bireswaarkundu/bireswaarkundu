@@ -21,7 +21,7 @@ export const Testimonials = () => {
               CLIENT TESTIMONIALS & REPUTATION
             </span>
           </div>
-          <h2 className="font-syne text-4xl sm:text-5xl font-extrabold tracking-tight text-[#1A1A1A]">
+          <h2 className="font-syne-mono text-4xl sm:text-5xl lg:text-6xl text-[#1A1A1A] font-normal leading-tight tracking-wide">
             Client Endorsements
           </h2>
         </div>
