@@ -520,7 +520,7 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
                   <span className="font-mono-display text-xs text-[#5D5CDE] font-bold uppercase tracking-wider">
                     {srv.badge}
                   </span>
-                  <h3 className="font-syne text-2xl sm:text-3xl font-bold text-[#1A1A1A] mt-0.5">
+                  <h3 className="font-syne-mono text-2xl sm:text-3xl font-normal text-[#1A1A1A] mt-0.5">
                     {srv.name}
                   </h3>
                 </div>
@@ -541,7 +541,7 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
             <ShieldCheck className="w-6 h-6 text-[#5D5CDE]" />
           </div>
           <div>
-            <h4 className="font-syne font-bold text-base text-[#1A1A1A]">Need a Custom Scope or Retainer?</h4>
+            <h4 className="font-syne-mono font-normal text-base text-[#1A1A1A]">Need a Custom Scope or Retainer?</h4>
             <p className="font-editorial text-sm text-[#1A1A1A]/70 italic">
               Skip pre-configured segments — contact Bireswaar Kundu directly for custom specifications, bulk packages, or retainers.
             </p>
@@ -577,7 +577,7 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
               <span className="font-mono-display text-xs font-bold text-[#5D5CDE] uppercase tracking-wider block">
                 DIRECT CUSTOM QUOTE INQUIRY
               </span>
-              <h3 className="font-syne text-2xl sm:text-3xl font-bold text-[#1A1A1A] mt-1">
+              <h3 className="font-syne-mono text-2xl sm:text-3xl font-normal text-[#1A1A1A] mt-1">
                 Contact Bireswaar Kundu
               </h3>
               <p className="font-editorial text-sm text-[#1A1A1A]/80 italic mt-1">
@@ -744,7 +744,7 @@ const ServicePricingCard = ({ service, onOpenInquiry }) => {
                     {pkg.name} TIER
                   </span>
                   <div className="flex items-baseline gap-1 mt-1">
-                    <span className="font-syne text-3xl sm:text-4xl font-extrabold tracking-tight">
+                    <span className="font-syne-mono text-3xl sm:text-4xl font-normal tracking-wide">
                       {pkg.price}
                     </span>
                     {pkg.unit && (
