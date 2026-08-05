@@ -1,7 +1,7 @@
-# DESIGN_SYSTEM.md — Bireshwar Kundu Portfolio
+# DESIGN_SYSTEM.md — Bireswaar Kundu Portfolio
 
 ## 1. Executive Summary & Brand Identity
-* **Designer Name:** Bireshwar Kundu
+* **Designer Name:** Bireswaar Kundu
 * **Title:** Indian Graphic & Brand Designer
 * **Specialization:** Brand Identity Systems, Editorial & Publication Design, Custom Typography, Physical Packaging Architecture, and Digital Interfaces.
 * **Core Philosophy:** *Tactile Precision meets Contemporary Heritage.* Fusing the structural rigor of Swiss International Grid Systems with rich Indian design sensibilities and modern digital typography.

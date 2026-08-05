@@ -45,14 +45,14 @@ export const Header = ({
             <a
               href="#"
               className="group flex items-center gap-2 text-left"
-              aria-label="Bireshwar Kundu Homepage"
+              aria-label="Bireswaar Kundu Homepage"
             >
               <div className="w-8 h-8 bg-[#1A1A1A] text-[#F5F5F0] font-syne font-bold flex items-center justify-center text-sm rounded-xs group-hover:bg-[#5D5CDE] transition-colors">
                 BK
               </div>
               <div className="flex flex-col">
                 <span className="font-syne font-bold tracking-tight text-sm text-[#1A1A1A] uppercase">
-                  Bireshwar Kundu
+                  Bireswaar Kundu
                 </span>
                 <span className="font-mono-display text-[10px] text-[#1A1A1A]/60 tracking-wider">
                   STUDIO KUNDU ©2026

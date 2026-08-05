@@ -77,7 +77,7 @@ export const Footer = () => {
 
         {/* Bottom Minimal Copyright Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono-display text-white/50">
-          <span>© {new Date().getFullYear()} BIRESHWAR KUNDU. ALL RIGHTS RESERVED.</span>
+          <span>© {new Date().getFullYear()} BIRESWAAR KUNDU. ALL RIGHTS RESERVED.</span>
           <span>DESIGNED WITH TACTILE PRECISION &amp; TYPESET IN SYNE &amp; PLAYFAIR DISPLAY.</span>
         </div>
       </div>

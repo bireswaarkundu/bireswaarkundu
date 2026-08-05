@@ -30,7 +30,7 @@ export const About = () => {
             </span>
           </div>
           <h2 className="font-syne text-4xl sm:text-5xl font-extrabold tracking-tight text-[#1A1A1A]">
-            About Bireshwar Kundu
+            About Bireswaar Kundu
           </h2>
         </div>
         <span className="font-mono-display text-xs text-[#1A1A1A]/60">
@@ -45,12 +45,12 @@ export const About = () => {
           <div className="relative rounded-xs overflow-hidden border border-[#1A1A1A]/20 shadow-md bg-neutral-200 aspect-[3/4]">
             <img
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=85"
-              alt="Bireshwar Kundu Portrait"
+              alt="Bireswaar Kundu Portrait"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
             />
             <div className="absolute bottom-4 left-4 right-4 p-4 bg-[#1A1A1A]/90 backdrop-blur-md text-white rounded-xs border border-white/10">
-              <span className="block font-syne font-bold text-sm">Bireshwar Kundu</span>
+              <span className="block font-syne font-bold text-sm">Bireswaar Kundu</span>
               <span className="block font-mono-display text-[11px] text-white/70">
                 Principal Designer • Studio Kundu
               </span>

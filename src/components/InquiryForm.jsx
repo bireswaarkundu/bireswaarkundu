@@ -95,7 +95,7 @@ export const InquiryForm = ({
           Let&apos;s Build Something Enduring
         </h2>
         <p className="font-editorial text-lg sm:text-xl text-[#1A1A1A]/80 italic mt-2">
-          Select your scope, target budget, and timeline below. Responses are sent directly to Bireshwar Kundu with guaranteed feedback within 24 hours.
+          Select your scope, target budget, and timeline below. Responses are sent directly to Bireswaar Kundu with guaranteed feedback within 24 hours.
         </p>
       </div>
 
