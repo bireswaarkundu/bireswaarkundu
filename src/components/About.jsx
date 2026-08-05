@@ -85,7 +85,7 @@ export const About = () => {
               FIRST-PERSON PERSPECTIVE
             </span>
             <p className="font-editorial text-2xl sm:text-3xl text-[#1A1A1A] leading-relaxed font-normal">
-              &ldquo;I am Bireshwar Kundu, an Indian graphic and brand designer with a passion for crafting enduring visual identities, editorial print systems, custom typography, and physical packaging architecture. I believe design is a bridge between rich heritage and contemporary visual language—stripping away ornament to let bold typography, structured grid hierarchy, and purposeful material texture communicate. Whether partnering with ambitious startups, luxury heritage brands, or cultural institutions, I engineer visual systems built to command attention and scale.&rdquo;
+              &ldquo;I am Bireswaar Kundu, an Indian graphic and brand designer with a passion for crafting enduring visual identities, editorial print systems, custom typography, and physical packaging architecture. I believe design is a bridge between rich heritage and contemporary visual language—stripping away ornament to let bold typography, structured grid hierarchy, and purposeful material texture communicate. Whether partnering with ambitious startups, luxury heritage brands, or cultural institutions, I engineer visual systems built to command attention and scale.&rdquo;
             </p>
           </div>
 

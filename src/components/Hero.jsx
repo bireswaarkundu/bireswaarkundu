@@ -59,113 +59,185 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
         </div>
       </div>
 
-      {/* Main Hero Interactive Work Showcase Previewer - Bento Layout */}
+      {/* Designer Profile Showcase - Replaced Featured Carousel */}
       <div className="my-10 relative z-10">
-        {featuredProjects.length > 0 ? (
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Featured Showcase Large Image Preview */}
-            <div className="lg:col-span-8 group relative rounded-xs overflow-hidden bg-[#1A1A1A] aspect-[4/5] sm:aspect-[16/10] min-h-[480px] flex items-center justify-center shadow-lg border border-[#1A1A1A]">
-              <img
-                src={featuredProjects[activeThumbnailIndex]?.thumbnail}
-                alt={featuredProjects[activeThumbnailIndex]?.title || 'Featured Work'}
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 opacity-95"
-              />
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start bg-white p-6 sm:p-8 rounded-xs border border-[#1A1A1A]/20 shadow-md">
+          {/* Left Column: Portrait Photo Frame */}
+          <div className="lg:col-span-4 relative rounded-xs overflow-hidden bg-neutral-100 border border-[#1A1A1A]/15 aspect-[4/5] sm:aspect-[3/4] lg:aspect-auto lg:h-full flex flex-col justify-end group min-h-[420px]">
+            <img
+              src="/assets/profile.jpg"
+              alt="Bireswaar Kundu — Designer Portrait"
+              referrerPolicy="no-referrer"
+              className="w-full h-full object-cover transition-all duration-700 absolute inset-0"
+            />
 
-              {/* Overlaid Case Study Overlay Card */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 sm:p-8 flex flex-col justify-end text-white">
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="px-2.5 py-1 bg-[#5D5CDE] text-white text-[10px] font-mono-display font-bold uppercase tracking-wider rounded-xs">
-                    FEATURED PROJECT 0{activeThumbnailIndex + 1}
-                  </span>
-                  <span className="text-xs font-mono-display text-white/70">
-                    {featuredProjects[activeThumbnailIndex]?.category} • {featuredProjects[activeThumbnailIndex]?.year}
-                  </span>
+            {/* Overlaid Badge */}
+            <div className="relative z-10 p-4 bg-[#1A1A1A]/90 backdrop-blur-md border-t border-white/10 text-white flex items-center justify-between">
+              <div>
+                <span className="block font-syne font-bold text-sm text-white">BIRESWAAR KUNDU</span>
+                <span className="block font-mono-display text-[11px] text-white/70">GRAPHIC &amp; BRAND DESIGNER</span>
+              </div>
+              <span className="px-2 py-0.5 bg-[#5D5CDE] text-white text-[10px] font-mono-display font-bold uppercase rounded-xs">
+                INDIA
+              </span>
+            </div>
+          </div>
+
+          {/* Right Column: Complete Resume Profile Grid */}
+          <div className="lg:col-span-8 space-y-6">
+            {/* Top Row: Greeting Speech Bubble & Bio Description */}
+            <div className="space-y-3 pb-5 border-b border-[#1A1A1A]/10">
+              <div className="inline-block px-4 py-1.5 rounded-full bg-[#1A1A1A] text-white font-syne font-bold text-xs shadow-xs">
+                Hi, I&apos;m Bireswaar
+              </div>
+              <p className="font-editorial text-base sm:text-lg text-[#1A1A1A]/90 leading-relaxed">
+                Forward-thinking Visual Communication Design student dedicated to exploring cutting-edge ideas across the creative industry. Experienced in directing visual strategy and crafting compelling graphic assets for diverse student exhibitions.
+              </p>
+            </div>
+
+            {/* Main Information Grid: 2 Sub-Columns */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 text-xs font-mono-display">
+              {/* Sub-Column 1: Contact, Education, Achievements */}
+              <div className="md:col-span-7 space-y-5">
+                {/* Contact Section */}
+                <div className="space-y-1.5">
+                  <span className="text-[#1A1A1A]/50 font-bold uppercase tracking-wider block">CONTACT</span>
+                  <div className="text-[#1A1A1A] font-medium space-y-0.5">
+                    <p>(+91) 74395 75294</p>
+                    <a href="mailto:bireswaarkundu@gmail.com" className="hover:text-[#5D5CDE] transition-colors block">
+                      bireswaarkundu@gmail.com
+                    </a>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 pt-1 text-[11px]">
+                    <div>
+                      <span className="text-[#1A1A1A]/50 block">Instagram</span>
+                      <a href="https://instagram.com/bireshwarkundu" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#1A1A1A] hover:text-[#5D5CDE]">
+                        @bireswaarkundu
+                      </a>
+                    </div>
+                    <div>
+                      <span className="text-[#1A1A1A]/50 block">Behance</span>
+                      <a href="https://behance.net/bireshwarkundu" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#1A1A1A] hover:text-[#5D5CDE] truncate block">
+                        behance.net/bireshwarkundu
+                      </a>
+                    </div>
+                    <div className="col-span-2">
+                      <span className="text-[#1A1A1A]/50 block">LinkedIn</span>
+                      <a href="https://linkedin.com/in/bireswaarkundu" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#1A1A1A] hover:text-[#5D5CDE]">
+                        linkedin.com/in/bireswaarkundu
+                      </a>
+                    </div>
+                  </div>
                 </div>
 
-                <h3 className="font-syne text-2xl sm:text-3xl font-bold tracking-tight mb-2">
-                  {featuredProjects[activeThumbnailIndex]?.title}
-                </h3>
+                {/* Education Section */}
+                <div className="pt-3 border-t border-[#1A1A1A]/10 space-y-1">
+                  <span className="text-[#1A1A1A]/50 font-bold uppercase tracking-wider block">EDUCATION</span>
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#5D5CDE] font-bold shrink-0">2023–now</span>
+                    <div>
+                      <span className="font-bold text-[#1A1A1A] block">B.Tech, CSE</span>
+                      <span className="text-[#1A1A1A]/70 text-[11px] block">Institute of Engineering and Management, Kolkata</span>
+                    </div>
+                  </div>
+                </div>
 
-                <p className="text-sm font-editorial text-white/80 italic max-w-xl line-clamp-2 mb-4">
-                  {featuredProjects[activeThumbnailIndex]?.shortDescription}
-                </p>
+                {/* Achievements Section */}
+                <div className="pt-3 border-t border-[#1A1A1A]/10 space-y-1">
+                  <span className="text-[#1A1A1A]/50 font-bold uppercase tracking-wider block">ACHIEVEMENTS</span>
+                  <ul className="space-y-1 text-[#1A1A1A] font-medium text-[11px]">
+                    <li className="flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#5D5CDE]"></span>
+                      <span>Best Student Contribution, IEM Kolkata</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#5D5CDE]"></span>
+                      <span>Best Graphics Lead, Innofusion 2.0 Hackathon</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#5D5CDE]"></span>
+                      <span>Web3 Track Winner, Technologia 1.0 Hackathon</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-                <div className="flex items-center gap-4">
-                  <button
-                    onClick={() => onSelectProject(featuredProjects[activeThumbnailIndex]?.id)}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-white text-[#1A1A1A] hover:bg-[#5D5CDE] hover:text-white text-xs font-mono-display font-bold uppercase tracking-wider rounded-xs transition-colors"
-                  >
-                    <Eye className="w-3.5 h-3.5" />
-                    <span>View Case Study</span>
-                  </button>
+              {/* Sub-Column 2: Experience Timeline, Values, Fields, Skills */}
+              <div className="md:col-span-5 space-y-5 md:border-l md:border-[#1A1A1A]/10 md:pl-6">
+                {/* Experience Section */}
+                <div className="space-y-3">
+                  <span className="text-[#1A1A1A]/50 font-bold uppercase tracking-wider block">EXPERIENCE</span>
+                  <div className="relative border-l border-[#1A1A1A]/20 pl-4 space-y-3">
+                    <div>
+                      <span className="w-2 h-2 rounded-full bg-[#5D5CDE] absolute -left-[4.5px] top-1"></span>
+                      <div className="flex items-center justify-between">
+                        <span className="font-bold text-[#1A1A1A]">Techscholars™</span>
+                        <span className="text-[10px] text-[#1A1A1A]/60 font-semibold">May–May 2024</span>
+                      </div>
+                      <span className="text-[11px] text-[#1A1A1A]/70 block">Graphic Designer Intern</span>
+                    </div>
 
-                  <span className="text-xs font-mono-display text-white/60 hidden sm:inline">
-                    Client: {featuredProjects[activeThumbnailIndex]?.client}
-                  </span>
+                    <div>
+                      <span className="w-2 h-2 rounded-full bg-[#1A1A1A]/40 absolute -left-[4.5px] top-11"></span>
+                      <div className="flex items-center justify-between">
+                        <span className="font-bold text-[#1A1A1A]">School Root Education</span>
+                        <span className="text-[10px] text-[#1A1A1A]/60 font-semibold">June–Aug 2024</span>
+                      </div>
+                      <span className="text-[11px] text-[#1A1A1A]/70 block">Graphic Designer Intern</span>
+                    </div>
+
+                    <div>
+                      <span className="w-2 h-2 rounded-full bg-[#1A1A1A]/40 absolute -left-[4.5px] top-20"></span>
+                      <div className="flex items-center justify-between">
+                        <span className="font-bold text-[#1A1A1A]">The Agenc-E</span>
+                        <span className="text-[10px] text-[#1A1A1A]/60 font-semibold">Dec &apos;24–Mar &apos;25</span>
+                      </div>
+                      <span className="text-[11px] text-[#1A1A1A]/70 block">Graphic Designer</span>
+                    </div>
+
+                    <div>
+                      <span className="w-2 h-2 rounded-full bg-[#5D5CDE] absolute -left-[4.5px] top-31"></span>
+                      <div className="flex items-center justify-between">
+                        <span className="font-bold text-[#1A1A1A]">GrnLYFT</span>
+                        <span className="text-[10px] text-[#5D5CDE] font-bold">Sep &apos;25–Mar &apos;26</span>
+                      </div>
+                      <span className="text-[11px] text-[#1A1A1A]/80 font-medium block">Brand Designer &amp; Graphic Designer</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Personal Values & Creative Fields */}
+                <div className="pt-3 border-t border-[#1A1A1A]/10 grid grid-cols-2 gap-3 text-[11px]">
+                  <div>
+                    <span className="text-[#1A1A1A]/50 font-bold uppercase block mb-0.5">PERSONAL VALUES</span>
+                    <p className="text-[#1A1A1A]/80 font-medium leading-tight">
+                      Innovation, creative dedication, teamwork, good taste
+                    </p>
+                  </div>
+                  <div>
+                    <span className="text-[#1A1A1A]/50 font-bold uppercase block mb-0.5">CREATIVE FIELDS</span>
+                    <p className="text-[#1A1A1A]/80 font-medium leading-tight">
+                      Branding, poster design, UI/UX, Packaging
+                    </p>
+                  </div>
+                </div>
+
+                {/* Software Skills Badges */}
+                <div className="pt-3 border-t border-[#1A1A1A]/10 space-y-1.5">
+                  <span className="text-[#1A1A1A]/50 font-bold uppercase tracking-wider block">SOFTWARE SKILLS</span>
+                  <div className="flex items-center gap-2">
+                    <span className="px-2.5 py-1 bg-[#1A1A1A] text-white text-[11px] font-syne font-bold rounded-xs">Ps</span>
+                    <span className="px-2.5 py-1 bg-[#1A1A1A] text-white text-[11px] font-syne font-bold rounded-xs">Ai</span>
+                    <span className="px-2.5 py-1 bg-[#1A1A1A] text-white text-[11px] font-syne font-bold rounded-xs flex items-center gap-1">
+                      <span className="text-[#5D5CDE]">❖</span> Figma
+                    </span>
+                    <span className="px-2 py-1 bg-[#1A1A1A] text-white text-[10px] font-syne font-bold rounded-xs">Canva</span>
+                  </div>
                 </div>
               </div>
             </div>
-
-            {/* Showcase Selector Column - Bento Cards */}
-            <div className="lg:col-span-4 flex flex-col gap-3">
-              <div className="flex items-center justify-between pb-2 border-b border-[#1A1A1A]/10">
-                <span className="font-mono-display text-xs text-[#1A1A1A]/60 uppercase tracking-wider font-semibold">
-                  FEATURED SHOWCASE TICKER
-                </span>
-                <span className="font-mono-display text-xs text-[#5D5CDE] font-bold">
-                  0{activeThumbnailIndex + 1} / 0{featuredProjects.length}
-                </span>
-              </div>
-
-              {featuredProjects.map((proj, idx) => (
-                <button
-                  key={proj.id}
-                  onClick={() => setActiveThumbnailIndex(idx)}
-                  className={`text-left p-3 rounded-xs transition-all flex items-center gap-3 border ${
-                    activeThumbnailIndex === idx
-                      ? 'bg-[#1A1A1A] text-white border-[#1A1A1A] shadow-md translate-x-1'
-                      : 'bg-white/80 hover:bg-white text-[#1A1A1A] border-[#1A1A1A]/15 hover:border-[#1A1A1A]'
-                  }`}
-                >
-                  <div className="w-12 h-12 rounded-xs overflow-hidden shrink-0 bg-neutral-200 border border-black/10">
-                    <img
-                      src={proj.thumbnail}
-                      alt={proj.title}
-                      referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-
-                  <div className="flex flex-col min-w-0">
-                    <span className={`text-xs font-syne font-bold truncate ${
-                      activeThumbnailIndex === idx ? 'text-white' : 'text-[#1A1A1A]'
-                    }`}>
-                      {proj.title}
-                    </span>
-                    <span className={`text-[11px] font-mono-display truncate ${
-                      activeThumbnailIndex === idx ? 'text-white/70' : 'text-[#1A1A1A]/60'
-                    }`}>
-                      {proj.category} — {proj.client}
-                    </span>
-                  </div>
-                </button>
-              ))}
-            </div>
           </div>
-        ) : (
-          <div className="p-8 sm:p-12 bg-white rounded-xs border border-dashed border-[#1A1A1A]/30 text-center space-y-4 shadow-sm">
-            <div className="w-12 h-12 mx-auto rounded-full bg-[#5D5CDE]/10 text-[#5D5CDE] flex items-center justify-center font-bold text-xl">
-              ✦
-            </div>
-            <h2 className="font-syne font-bold text-2xl sm:text-3xl text-[#1A1A1A]">
-              Ready for Your Domain Designs
-            </h2>
-            <p className="font-editorial text-base sm:text-lg text-[#1A1A1A]/70 italic max-w-xl mx-auto">
-              All previous design works have been cleared as requested. Please upload your design images domain by domain, and they will populate here!
-            </p>
-          </div>
-        )}
+        </div>
       </div>
 
       {/* Ticker / Specialty Badges Bar */}
