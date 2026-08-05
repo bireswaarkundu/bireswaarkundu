@@ -608,11 +608,11 @@ const ServicePricingCard = ({ service, onOpenInquiry }) => {
                 </div>
 
                 <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center font-mono-display text-xs font-bold ${
-                    isStandard ? 'bg-[#5D5CDE] text-white' : 'bg-[#1A1A1A]/5 text-[#1A1A1A]'
+                  className={`px-3 py-1 rounded-full flex items-center justify-center font-mono-display text-xs font-bold tracking-wider uppercase ${
+                    isStandard ? 'bg-[#5D5CDE] text-white' : 'bg-[#1A1A1A]/5 text-[#1A1A1A] border border-[#1A1A1A]/10'
                   }`}
                 >
-                  {pkg.name[0]}
+                  {pkg.name}
                 </div>
               </div>
 
