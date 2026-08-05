@@ -37,7 +37,7 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
         {/* Positioning Statement & Short Bio Hook */}
         <div className="max-w-md flex flex-col gap-4">
           <p className="font-editorial text-2xl sm:text-3xl text-[#1A1A1A] leading-snug italic">
-            &ldquo;Crafting high-impact Ad Campaigns, Social Media Systems, Brand Identities, and Concept Driven Designs for forward-thinking brands.&rdquo;
+            &ldquo;Crafting strategic Brand Identities, Ad Campaigns, and Visual Systems that drive business growth.&rdquo;
           </p>
           <div className="flex items-center gap-4 pt-2">
             <a
