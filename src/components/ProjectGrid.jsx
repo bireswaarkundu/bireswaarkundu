@@ -126,8 +126,7 @@ export const ProjectGrid = ({
 
                 {/* UNIFORM 4:5 ASPECT RATIO FRAME FOR OTHER DOMAIN CARDS */}
                 <div
-                  onClick={() => onSelectProject(project.id)}
-                  className="relative cursor-pointer overflow-hidden bg-[#1A1A1A] aspect-[4/5] w-full flex items-center justify-center border-b border-[#1A1A1A]/10"
+                  className="relative overflow-hidden bg-[#1A1A1A] aspect-[4/5] w-full flex items-center justify-center border-b border-[#1A1A1A]/10"
                 >
                   <img
                     src={project.thumbnail}
@@ -165,15 +164,6 @@ export const ProjectGrid = ({
                         </ul>
                       </div>
                     </div>
-
-                    <div className="pt-2 border-t border-white/20 flex items-center justify-between text-[11px] font-mono-display font-bold">
-                      <span className="text-[#5D5CDE] uppercase">
-                        {project.caseStudy?.gallery?.length > 1
-                          ? `★ GALLERY (${project.caseStudy.gallery.length})`
-                          : '★ PREVIEW'}
-                      </span>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-white" />
-                    </div>
                   </div>
                 </div>
 
@@ -186,8 +176,7 @@ export const ProjectGrid = ({
                     </div>
 
                     <h3
-                      onClick={() => onSelectProject(project.id)}
-                      className="font-syne-mono-italic font-normal text-base text-[#1A1A1A] group-hover:text-[#5D5CDE] transition-colors cursor-pointer leading-snug mb-1.5 truncate"
+                      className="font-syne-mono-italic font-normal text-base text-[#1A1A1A] group-hover:text-[#5D5CDE] transition-colors leading-snug mb-1.5 truncate"
                     >
                       {project.title}
                     </h3>
@@ -201,14 +190,6 @@ export const ProjectGrid = ({
                     <span className="text-[10px] font-mono-display text-[#1A1A1A]/60 truncate">
                       {project.medium}
                     </span>
-
-                    <button
-                      onClick={() => onSelectProject(project.id)}
-                      className="inline-flex items-center gap-1 text-[11px] font-mono-display text-[#1A1A1A] hover:text-[#5D5CDE] transition-colors shrink-0"
-                    >
-                      <span>{project.caseStudy?.gallery?.length > 1 ? 'Gallery' : 'Preview'}</span>
-                      <ArrowUpRight className="w-3 h-3 text-[#5D5CDE]" />
-                    </button>
                   </div>
                 </div>
               </article>

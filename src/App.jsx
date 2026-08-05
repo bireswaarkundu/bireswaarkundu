@@ -79,15 +79,15 @@ export default function App() {
       {/* Footer */}
       <Footer />
 
-      {/* Case Study Modal */}
-      <ProjectModal
+      {/* Case Study Modal (Disabled as requested) */}
+      {/* <ProjectModal
         projectId={selectedProjectId}
         onClose={() => setSelectedProjectId(null)}
         onSelectProject={(id) => setSelectedProjectId(id)}
         shortlist={shortlist}
         onToggleShortlist={handleToggleShortlist}
         onOpenInquiryWithProject={handleOpenInquiryWithProject}
-      />
+      /> */}
 
       {/* Freelance Inquiry Studio Modal */}
       {inquiryModalOpen && (
