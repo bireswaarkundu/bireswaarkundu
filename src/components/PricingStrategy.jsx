@@ -560,28 +560,29 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
 
 /* Individual Service 3-Column Comparison Table Component */
 const ServicePricingCard = ({ service, onOpenInquiry }) => {
+  // Explicit Tier Column Ordering: Basic -> Standard -> Premium
   const tiers = ['basic', 'standard', 'premium'];
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
       {tiers.map((tierKey) => {
         const pkg = service.packages[tierKey];
-        const isPopular = pkg.popular;
+        const isStandard = tierKey === 'standard';
 
         return (
           <div
             key={tierKey}
             className={`relative rounded-xs p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 border ${
-              isPopular
-                ? 'bg-[#1A1A1A] text-white border-[#1A1A1A] shadow-xl md:-translate-y-2'
+              isStandard
+                ? 'bg-[#1A1A1A] text-white border-[#1A1A1A] shadow-xl md:-translate-y-2 border-t-4 border-t-[#5D5CDE]'
                 : 'bg-white text-[#1A1A1A] border-[#1A1A1A]/15 hover:border-[#1A1A1A]/40 shadow-xs hover:shadow-md'
             }`}
           >
-            {/* Popular Badge */}
-            {isPopular && (
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-[#5D5CDE] text-white text-[10px] font-mono-display font-bold uppercase tracking-widest rounded-full shadow-md flex items-center gap-1">
-                <Sparkles className="w-3 h-3" />
-                <span>RECOMMENDED / MOST POPULAR</span>
+            {/* Standard Tier Highlighted Badge */}
+            {isStandard && (
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 bg-[#5D5CDE] text-white text-[10px] font-mono-display font-bold uppercase tracking-widest rounded-full shadow-md flex items-center gap-1.5 shrink-0 z-20">
+                <Sparkles className="w-3 h-3 text-amber-300" />
+                <span>★ HIGHLIGHTED / MOST POPULAR</span>
               </div>
             )}
 
@@ -589,7 +590,9 @@ const ServicePricingCard = ({ service, onOpenInquiry }) => {
               {/* Package Tier Header */}
               <div className="flex items-center justify-between border-b pb-4 mb-5 border-current/15">
                 <div>
-                  <span className="font-mono-display text-xs uppercase tracking-widest opacity-60 font-bold block">
+                  <span className={`font-mono-display text-xs uppercase tracking-widest font-bold block ${
+                    isStandard ? 'text-[#5D5CDE]' : 'text-[#1A1A1A]/60'
+                  }`}>
                     {pkg.name} TIER
                   </span>
                   <div className="flex items-baseline gap-1 mt-1">
@@ -606,7 +609,7 @@ const ServicePricingCard = ({ service, onOpenInquiry }) => {
 
                 <div
                   className={`w-10 h-10 rounded-full flex items-center justify-center font-mono-display text-xs font-bold ${
-                    isPopular ? 'bg-white/10 text-white' : 'bg-[#1A1A1A]/5 text-[#1A1A1A]'
+                    isStandard ? 'bg-[#5D5CDE] text-white' : 'bg-[#1A1A1A]/5 text-[#1A1A1A]'
                   }`}
                 >
                   {pkg.name[0]}
@@ -617,8 +620,8 @@ const ServicePricingCard = ({ service, onOpenInquiry }) => {
               <div className="grid grid-cols-2 gap-2 mb-6 font-mono-display text-[11px]">
                 <div
                   className={`p-2.5 rounded-xs flex items-center gap-2 border ${
-                    isPopular
-                      ? 'bg-white/5 border-white/10 text-white/90'
+                    isStandard
+                      ? 'bg-white/10 border-white/15 text-white/90'
                       : 'bg-[#F5F5F0] border-[#1A1A1A]/10 text-[#1A1A1A]/80'
                   }`}
                 >
@@ -628,8 +631,8 @@ const ServicePricingCard = ({ service, onOpenInquiry }) => {
 
                 <div
                   className={`p-2.5 rounded-xs flex items-center gap-2 border ${
-                    isPopular
-                      ? 'bg-white/5 border-white/10 text-white/90'
+                    isStandard
+                      ? 'bg-white/10 border-white/15 text-white/90'
                       : 'bg-[#F5F5F0] border-[#1A1A1A]/10 text-[#1A1A1A]/80'
                   }`}
                 >
@@ -648,10 +651,10 @@ const ServicePricingCard = ({ service, onOpenInquiry }) => {
                     <li key={i} className="flex items-start gap-2.5">
                       <Check
                         className={`w-3.5 h-3.5 mt-0.5 shrink-0 ${
-                          isPopular ? 'text-[#5D5CDE]' : 'text-[#5D5CDE]'
+                          isStandard ? 'text-[#5D5CDE]' : 'text-[#5D5CDE]'
                         }`}
                       />
-                      <span className={isPopular ? 'text-white/90' : 'text-[#1A1A1A]/90'}>{ftr}</span>
+                      <span className={isStandard ? 'text-white/90' : 'text-[#1A1A1A]/90'}>{ftr}</span>
                     </li>
                   ))}
                 </ul>
@@ -662,7 +665,7 @@ const ServicePricingCard = ({ service, onOpenInquiry }) => {
             <button
               onClick={() => onOpenInquiry && onOpenInquiry()}
               className={`w-full py-3.5 px-4 rounded-xs text-xs font-mono-display uppercase tracking-wider font-bold transition-all flex items-center justify-center gap-2 ${
-                isPopular
+                isStandard
                   ? 'bg-[#5D5CDE] hover:bg-[#4b4ab0] text-white shadow-lg'
                   : 'bg-[#1A1A1A] hover:bg-[#5D5CDE] text-white shadow-xs'
               }`}
