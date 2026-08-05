@@ -16,6 +16,14 @@
   }
 }
 
+@font-face {
+  font-family: 'TT Artnik';
+  src: local('TT Artnik Demo Regular'), local('TT Artnik Demo Light'), local('TT Artnik Regular'), local('TT Artnik Light'), local('TT Artnik'), local('TTArtnikDemo-Regular'), local('TTArtnikDemo-Light');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 .font-serif-display {
   font-family: 'Playfair Display', serif;
 }
@@ -25,16 +33,20 @@
 }
 
 .font-syne {
-  font-family: 'Syne', sans-serif;
+  font-family: 'TT Artnik', 'TT Artnik Demo Regular', 'TT Artnik Demo Light', 'TT Artnik Demo', 'Syne Mono', monospace;
 }
 
 .font-syne-mono {
-  font-family: 'Syne Mono', monospace;
+  font-family: 'TT Artnik', 'TT Artnik Demo Regular', 'TT Artnik Demo Light', 'TT Artnik Demo', 'Syne Mono', monospace;
 }
 
 .font-syne-mono-italic {
-  font-family: 'Syne Mono', monospace;
+  font-family: 'TT Artnik', 'TT Artnik Demo Regular', 'TT Artnik Demo Light', 'TT Artnik Demo', 'Syne Mono', monospace;
   font-style: normal;
+}
+
+.font-tt-artnik {
+  font-family: 'TT Artnik', 'TT Artnik Demo Regular', 'TT Artnik Demo Light', 'TT Artnik Demo', 'Syne Mono', monospace;
 }
 
 .font-mono-display {
