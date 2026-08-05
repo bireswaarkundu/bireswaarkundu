@@ -39,9 +39,9 @@ export const Process = () => {
       </div>
 
       {/* Process Interactive Grid with Smooth Motion Effects */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         {/* Step List Column */}
-        <div className="lg:col-span-5 flex flex-col gap-3">
+        <div className="lg:col-span-5 flex flex-col justify-between gap-3 h-full">
           {PROCESS_STEPS.map((step, idx) => {
             const isActive = activeStep === idx;
 
@@ -49,7 +49,7 @@ export const Process = () => {
               <button
                 key={step.number}
                 onClick={() => setActiveStep(idx)}
-                className={`p-5 rounded-xs text-left border transition-all duration-300 flex items-start justify-between gap-4 transform ${
+                className={`p-5 rounded-xs text-left border transition-all duration-300 flex items-center justify-between gap-4 flex-1 transform ${
                   isActive
                     ? 'bg-[#1A1A1A] text-white border-[#1A1A1A] shadow-md translate-x-2'
                     : 'bg-white hover:bg-neutral-50 text-[#1A1A1A] border-[#1A1A1A]/15 hover:translate-x-1 hover:border-[#1A1A1A]/40'
