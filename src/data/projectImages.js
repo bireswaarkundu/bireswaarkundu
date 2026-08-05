@@ -40,20 +40,20 @@ export const ASSET_PATHS = {
   CONCEPT_WOMEN_RESPECT: safePath('/assets/Concept-driven design/women_respect.webp'),
 
   // SOCIAL MEDIA POSTERS - NAHOUM'S SERIES
-  NAHOUM_1: safePath('/assets/Social Media Poster/From rich fruit cakes to almond pastries and fudgy delights, Nahoum’s iconic treats areflying o (1).webp'),
-  NAHOUM_2: safePath('/assets/Social Media Poster/From rich fruit cakes to almond pastries and fudgy delights, Nahoum’s iconic treats areflying o (2).webp'),
-  NAHOUM_3: safePath('/assets/Social Media Poster/From rich fruit cakes to almond pastries and fudgy delights, Nahoum’s iconic treats areflying o (3).webp'),
-  NAHOUM_4: safePath('/assets/Social Media Poster/From rich fruit cakes to almond pastries and fudgy delights, Nahoum’s iconic treats areflying o (4).webp'),
-  NAHOUM_5: safePath('/assets/Social Media Poster/From rich fruit cakes to almond pastries and fudgy delights, Nahoum’s iconic treats areflying o (5).webp'),
+  NAHOUM_1: safePath('/assets/Social Media Poster/nahoum1.webp'),
+  NAHOUM_2: safePath('/assets/Social Media Poster/nahoum2.webp'),
+  NAHOUM_3: safePath('/assets/Social Media Poster/nahoum3.webp'),
+  NAHOUM_4: safePath('/assets/Social Media Poster/nahoum4.webp'),
+  NAHOUM_5: safePath('/assets/Social Media Poster/nahoum5.webp'),
 
   // SOCIAL MEDIA POSTERS - BENGAL SWEETS SERIES
-  SWEETS_MAIN: safePath('/assets/Social Media Poster/From the timeless charm of Hindusthan Sweets to the iconic flavours of Ganguram andBachharam’s,.webp'),
-  SWEETS_1: safePath('/assets/Social Media Poster/From the timeless charm of Hindusthan Sweets to the iconic flavours of Ganguram andBachharam’s, (1).webp'),
-  SWEETS_2: safePath('/assets/Social Media Poster/From the timeless charm of Hindusthan Sweets to the iconic flavours of Ganguram andBachharam’s, (2).webp'),
-  SWEETS_3: safePath('/assets/Social Media Poster/From the timeless charm of Hindusthan Sweets to the iconic flavours of Ganguram andBachharam’s, (3).webp'),
-  SWEETS_4: safePath('/assets/Social Media Poster/From the timeless charm of Hindusthan Sweets to the iconic flavours of Ganguram andBachharam’s, (4).webp'),
-  SWEETS_5: safePath('/assets/Social Media Poster/From the timeless charm of Hindusthan Sweets to the iconic flavours of Ganguram andBachharam’s, (5).webp'),
-  SWEETS_6: safePath('/assets/Social Media Poster/From the timeless charm of Hindusthan Sweets to the iconic flavours of Ganguram andBachharam’s, (6).webp'),
+  SWEETS_MAIN: safePath('/assets/Social Media Poster/sweets_main.webp'),
+  SWEETS_1: safePath('/assets/Social Media Poster/sweets1.webp'),
+  SWEETS_2: safePath('/assets/Social Media Poster/sweets2.webp'),
+  SWEETS_3: safePath('/assets/Social Media Poster/sweets3.webp'),
+  SWEETS_4: safePath('/assets/Social Media Poster/sweets4.webp'),
+  SWEETS_5: safePath('/assets/Social Media Poster/sweets5.webp'),
+  SWEETS_6: safePath('/assets/Social Media Poster/sweets6.webp'),
 
   // SOCIAL MEDIA POSTERS - URECKON TECH FEST SERIES
   URECKON_1: safePath('/assets/Social Media Poster/ureckon 1.jpg'),
@@ -63,15 +63,15 @@ export const ASSET_PATHS = {
   URECKON_5: safePath('/assets/Social Media Poster/ureckon 5.jpg'),
 
   // SOCIAL MEDIA POSTERS - STANDALONE
-  WORLD_CUP_2024: safePath('/assets/Social Media Poster/India Reigns Supreme at T20 World Cup 2024! 🏏✨Victory Celebrated in My Design . 🏆🇮🇳Congratul.jpg'),
-  BANGLA_KONNECTION_HOLI: safePath('/assets/Social Media Poster/Bangla Konnection wishes you Happy Holi! Rong a Rongin Hok tomar holi! 💛#ShubhoDol #HoliHai #R.webp'),
-  HAPPY_HOLI: safePath('/assets/Social Media Poster/Bangla Konnection wishes you Happy Holi! Rong a Rongin Hok tomar holi! 💛#ShubhoDol #HoliHai #R.webp'),
-  EID_MUBARAK: safePath('/assets/Social Media Poster/Eid Mubarak! 🌙✨Shanti, bhalobasha, ar mishtir shubhechha janai sobai ke! Eid-er anondo hok mis.webp'),
-  WORLD_DESIGN_DAY: safePath('/assets/Social Media Poster/Embrace the mesmerizing allure of design, where creativity reigns supreme. Celebrate World Desig.jpg'),
-  SUNITA_WILLIAMS: safePath('/assets/Social Media Poster/Welcome back, Sunita Williams! 🌍 Your journey beyond the stars inspires us all. Heres to touc.webp'),
-  NOLEN_GUR: safePath('/assets/Social Media Poster/Winters in Bengal bring back the aroma of nostalgia! The sweetness of nolen gur,with the softne.webp'),
-  PONJIKA_POSTER: safePath('/assets/Social Media Poster/Pujo, parbon, biye-baari, ba notun kichu shuru—shob thik somoy-e korte hole, ekta Ponjika lagbe.webp'),
-  HOLI_SPLASH_FEST: safePath('/assets/Social Media Poster/Splash colors, spread joy—Holi is where art meets festivity! Let the vibrant shades tell a stor.webp'),
+  WORLD_CUP_2024: safePath('/assets/Social Media Poster/t20_world_cup.jpg'),
+  BANGLA_KONNECTION_HOLI: safePath('/assets/Social Media Poster/happy_holi.webp'),
+  HAPPY_HOLI: safePath('/assets/Social Media Poster/happy_holi.webp'),
+  EID_MUBARAK: safePath('/assets/Social Media Poster/eid_mubarak.webp'),
+  WORLD_DESIGN_DAY: safePath('/assets/Social Media Poster/world_design_day.jpg'),
+  SUNITA_WILLIAMS: safePath('/assets/Social Media Poster/sunita_williams.webp'),
+  NOLEN_GUR: safePath('/assets/Social Media Poster/nolen_gur.webp'),
+  PONJIKA_POSTER: safePath('/assets/Social Media Poster/ponjika.webp'),
+  HOLI_SPLASH_FEST: safePath('/assets/Social Media Poster/holi_splash.webp'),
 };
 
 // Aliases for compatibility
