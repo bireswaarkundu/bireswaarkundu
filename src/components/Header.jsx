@@ -26,6 +26,16 @@ export const Header = ({
     { name: 'Testimonials', href: '#testimonials' },
   ];
 
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    window.history.replaceState(null, '', window.location.pathname);
+  };
+
   return (
     <header
       id="main-header"
@@ -41,6 +51,11 @@ export const Header = ({
           <div className="flex items-center gap-4">
             <a
               href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.history.replaceState(null, '', window.location.pathname);
+              }}
               className="group flex items-center gap-2 text-left"
               aria-label="Bireswaar Kundu Homepage"
             >
@@ -65,6 +80,7 @@ export const Header = ({
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="text-xs font-mono-display uppercase tracking-wider text-[#1A1A1A]/70 hover:text-[#5D5CDE] transition-colors py-1 relative group"
               >
                 {link.name}
@@ -121,7 +137,10 @@ export const Header = ({
               <a
                 key={link.name}
                 href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => {
+                  handleNavClick(e, link.href);
+                  setMobileMenuOpen(false);
+                }}
                 className="text-lg font-syne-mono font-normal hover:text-[#5D5CDE] transition-colors py-1"
               >
                 {link.name}

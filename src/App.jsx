@@ -20,6 +20,12 @@ export default function App() {
   const [studioMode, setStudioMode] = useState(false);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
 
+  React.useEffect(() => {
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+  }, []);
+
   const handleToggleShortlist = (id) => {
     setShortlist((prev) =>
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]

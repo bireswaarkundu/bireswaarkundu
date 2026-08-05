@@ -42,6 +42,12 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
           <div className="flex items-center gap-4 pt-2">
             <a
               href="#work"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById('work');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+                window.history.replaceState(null, '', window.location.pathname);
+              }}
               className="inline-flex items-center gap-2 text-xs font-mono-display uppercase font-bold tracking-wider text-[#1A1A1A] hover:text-[#5D5CDE] transition-colors group"
             >
               <span>Explore Selected Work</span>
