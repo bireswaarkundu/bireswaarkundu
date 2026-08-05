@@ -95,15 +95,6 @@ export const TESTIMONIALS = [
     quote:
       'Working with Bireswaar Kundu was a very good and seamless experience. He is one of the most versatile people and a brilliant creative mind. I am very impressed by his work ethics and ability to deliver projects on a consistent level with most dedication. Highly recommend him for your design and marketing work. You will not just get an designer, you will get a reliable partner for your creative creations.',
   },
-  {
-    author: 'Ananya Roy',
-    role: 'Creative Director',
-    company: 'Aviation Media Partners',
-    projectRelation: 'IndiGo "Where You Belong" Campaign',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
-    quote:
-      'The attention to detail in the cabin window lighting, Gateway of India compositing, and crisp iconography elevated our nation-connecting message beautifully.',
-  },
 ];
 
 export const PROJECTS = [
