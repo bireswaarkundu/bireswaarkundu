@@ -36,13 +36,6 @@ export const Testimonials = () => {
         <Quote className="absolute top-6 right-8 w-24 h-24 text-white/5 pointer-events-none" />
 
         <div className="space-y-6 max-w-4xl relative z-10">
-          <div className="flex items-center gap-2">
-            <span className="px-2.5 py-1 bg-[#5D5CDE] text-white text-[10px] font-mono-display font-bold uppercase tracking-wider rounded-xs">
-              PROJECT: {current.projectRelation}
-            </span>
-            <span className="text-xs font-mono-display text-white/60">VERIFIED PARTNER</span>
-          </div>
-
           <p className="font-editorial text-base sm:text-lg text-white font-normal leading-relaxed italic">
             &ldquo;{current.quote}&rdquo;
           </p>

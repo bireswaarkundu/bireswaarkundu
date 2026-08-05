@@ -90,7 +90,6 @@ export const TESTIMONIALS = [
     author: 'Sourodeep Ghosh',
     role: 'Co-Founder',
     company: '@Agenc-E & Frikey',
-    projectRelation: 'Brand Identity & Marketing Assets',
     avatar: ASSET_PATHS.SOURODEEP_GHOSH,
     quote:
       'Working with Bireswaar Kundu was a very good and seamless experience. He is one of the most versatile people and a brilliant creative mind. I am very impressed by his work ethics and ability to deliver projects on a consistent level with most dedication. Highly recommend him for your design and marketing work. You will not just get an designer, you will get a reliable partner for your creative creations.',
