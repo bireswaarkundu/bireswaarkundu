@@ -84,13 +84,13 @@ export const BrandingBentoCanvas = ({
                 </div>
               </div>
 
-              {/* 4:5 ASPECT RATIO THUMBNAIL CONTAINER */}
-              <div className="relative cursor-pointer overflow-hidden bg-[#1A1A1A] aspect-[4/5] w-full flex items-center justify-center p-3 border-b border-[#1A1A1A]/10">
+              {/* LANDSCAPE 16:9 ASPECT RATIO THUMBNAIL CONTAINER FOR BRANDING */}
+              <div className="relative cursor-pointer overflow-hidden bg-[#1A1A1A] aspect-[16/9] w-full flex items-center justify-center border-b border-[#1A1A1A]/10">
                 <img
                   src={brand.thumbnail}
                   alt={brand.title}
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded-xs"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
 
                 <div className="absolute top-3 left-3 px-2.5 py-1 bg-[#1A1A1A]/85 backdrop-blur-md text-white text-[10px] font-mono-display uppercase tracking-wider rounded-xs font-bold">
