@@ -26,7 +26,7 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
               GRAPHIC &amp; BRAND DESIGNER // INDIA
             </span>
           </div>
-          <h1 className="font-syne text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-[#1A1A1A] leading-[0.95]">
+          <h1 className="font-syne-mono-italic text-5xl sm:text-7xl lg:text-8xl text-[#1A1A1A] font-normal leading-[0.95] tracking-wide">
             BIRESHWAR <br />
             <span className="font-serif-display italic font-normal text-[#5D5CDE]">
               KUNDU

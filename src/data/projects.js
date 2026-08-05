@@ -1,9 +1,8 @@
 import { ASSET_PATHS } from './projectImages.js';
 
 export const DOMAIN_CATEGORIES = [
-  { id: 'All', label: 'ALL WORKS', count: 20 },
   { id: 'Ad Campaign', label: 'AD CAMPAIGN', count: 3 },
-  { id: 'Branding', label: 'BRANDING IDENTITY', count: 3, subCategories: ['All Branding', 'Innofusion', 'Phoenix', 'Weld'] },
+  { id: 'Branding', label: 'BRANDING IDENTITY', count: 3, subCategories: ['Innofusion', 'Phoenix', 'Weld'] },
   { id: 'Concept-driven design', label: 'CONCEPT-DRIVEN DESIGN', count: 5 },
   { id: 'Social Media Poster', label: 'SOCIAL MEDIA POSTERS', count: 11 },
   { id: 'Digital Drawing', label: 'DIGITAL DRAWING', count: 0 },

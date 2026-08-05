@@ -32,6 +32,11 @@
   font-family: 'Syne Mono', monospace;
 }
 
+.font-syne-mono-italic {
+  font-family: 'Syne Mono', monospace;
+  font-style: italic;
+}
+
 .font-mono-display {
   font-family: 'Space Grotesk', monospace;
 }
