@@ -185,7 +185,7 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
                       </span>
                       <div className="flex items-center justify-between">
                         <span className="font-bold text-[#1A1A1A] group-hover:text-[#5D5CDE] transition-colors">Techscholars™</span>
-                        <span className="text-[10px] text-[#1A1A1A]/60 font-semibold">May–June 2024</span>
+                        <span className="text-[10px] text-[#1A1A1A]/60 font-semibold">May 2024</span>
                       </div>
                       <span className="text-[11px] text-[#1A1A1A]/70 block">Graphic Designer Intern</span>
                     </div>
