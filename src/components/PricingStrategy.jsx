@@ -478,10 +478,10 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
         </div>
 
         {/* View Mode Toggle Button (Single Service Tab View vs All 8 Services) */}
-        <div className="flex items-center gap-2 bg-[#1A1A1A]/5 p-1 rounded-full border border-[#1A1A1A]/10 text-xs font-mono-display">
+        <div className="flex items-center gap-1.5 bg-[#1A1A1A]/5 p-1 rounded-xs border border-[#1A1A1A]/15 text-xs font-mono-display">
           <button
             onClick={() => setViewMode('tabs')}
-            className={`px-3 py-1.5 rounded-full transition-all ${
+            className={`px-3.5 py-1.5 rounded-xs transition-all ${
               viewMode === 'tabs'
                 ? 'bg-[#1A1A1A] text-white font-bold shadow-xs'
                 : 'text-[#1A1A1A]/70 hover:text-[#1A1A1A]'
@@ -491,7 +491,7 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
           </button>
           <button
             onClick={() => setViewMode('all')}
-            className={`px-3 py-1.5 rounded-full transition-all ${
+            className={`px-3.5 py-1.5 rounded-xs transition-all ${
               viewMode === 'all'
                 ? 'bg-[#1A1A1A] text-white font-bold shadow-xs'
                 : 'text-[#1A1A1A]/70 hover:text-[#1A1A1A]'
@@ -954,7 +954,7 @@ const ServicePricingCard = ({ service, onSelectPackage }) => {
           >
             {/* Standard Tier Highlighted Badge */}
             {isStandard && (
-              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 bg-[#5D5CDE] text-white text-[10px] font-mono-display font-bold uppercase tracking-widest rounded-full shadow-md flex items-center gap-1.5 shrink-0 z-20">
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 bg-[#5D5CDE] text-white text-[10px] font-mono-display font-bold uppercase tracking-widest rounded-xs shadow-md flex items-center gap-1.5 shrink-0 z-20">
                 <Sparkles className="w-3 h-3 text-amber-300" />
                 <span>★ HIGHLIGHTED / MOST POPULAR</span>
               </div>
@@ -982,7 +982,7 @@ const ServicePricingCard = ({ service, onSelectPackage }) => {
                 </div>
 
                 <div
-                  className={`px-3 py-1 rounded-full flex items-center justify-center font-mono-display text-xs font-bold tracking-wider uppercase ${
+                  className={`px-3 py-1 rounded-xs flex items-center justify-center font-mono-display text-xs font-bold tracking-wider uppercase ${
                     isStandard ? 'bg-[#5D5CDE] text-white' : 'bg-[#1A1A1A]/5 text-[#1A1A1A] border border-[#1A1A1A]/10'
                   }`}
                 >
