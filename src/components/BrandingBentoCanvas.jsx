@@ -199,7 +199,14 @@ export const BrandingBentoCanvas = ({
             </div>
             <div className="bg-[#F7F4EE] rounded-xl p-3 border border-[#1A1A1A]/10 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <span className="w-5 h-5 rounded-md bg-[#F68B2E] text-white flex items-center justify-center font-bold text-xs font-mono-display">w</span>
+                <span className="w-5 h-5 rounded-md bg-[#F68B2E] p-1 flex items-center justify-center shadow-xs">
+                  <img
+                    src={ASSET_PATHS.WELD_ASSET_3 || ASSET_PATHS.WELD_SVG}
+                    alt="Weld Favicon"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-contain filter brightness-0 invert"
+                  />
+                </span>
                 <span className="font-mono-display text-xs font-bold text-[#1A1A1A]">weld.com</span>
               </div>
               <span className="text-[10px] font-mono-display text-[#1A1A1A]/50">HTTPS // SECURE</span>
@@ -295,10 +302,20 @@ export const BrandingBentoCanvas = ({
           </div>
 
           {/* Tile 9: Mobile App Icon (Cols 4-5) */}
-          <div className="md:col-span-2 bg-white rounded-2xl p-4 border border-[#1A1A1A]/15 shadow-xs flex flex-col items-center justify-center min-h-[170px] text-center">
-            <div className="w-14 h-14 rounded-2xl bg-[#F68B2E] text-white flex items-center justify-center font-bold text-2xl font-mono-display shadow-md relative mb-2">
-              w
-              <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#D71921] text-white text-[10px] flex items-center justify-center font-bold">2</span>
+          <div
+            onClick={() => onSelectProject(brand.id)}
+            className="md:col-span-2 bg-white rounded-2xl p-4 border border-[#1A1A1A]/15 shadow-xs flex flex-col items-center justify-center min-h-[170px] text-center cursor-pointer group"
+          >
+            <div className="w-16 h-16 rounded-2xl bg-[#F68B2E] p-3 shadow-md relative mb-2 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+              <img
+                src={ASSET_PATHS.WELD_ASSET_3 || ASSET_PATHS.WELD_SVG}
+                alt="Weld Original Vector Logo Mark"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain filter brightness-0 invert"
+              />
+              <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#D71921] text-white text-[10px] flex items-center justify-center font-bold font-mono-display border-2 border-white shadow-xs">
+                2
+              </span>
             </div>
             <span className="font-mono-display text-xs font-bold text-[#1A1A1A]">Weld App Icon</span>
             <span className="text-[10px] font-mono-display text-[#1A1A1A]/50">IOS / ANDROID</span>
