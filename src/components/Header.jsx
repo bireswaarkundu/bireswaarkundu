@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, Menu, X, ArrowUpRight, Bookmark } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Bookmark } from 'lucide-react';
 
 export const Header = ({
   shortlistCount,
@@ -75,19 +75,6 @@ export const Header = ({
 
           {/* Header Controls & CTAs */}
           <div className="flex items-center gap-3">
-            {/* Interactive Studio Mode Toggle */}
-            <button
-              onClick={() => setStudioMode(!studioMode)}
-              className={`hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-mono-display transition-all ${
-                studioMode
-                  ? 'bg-[#5D5CDE] text-white shadow-xs'
-                  : 'bg-[#1A1A1A]/5 hover:bg-[#1A1A1A]/10 text-[#1A1A1A] border border-[#1A1A1A]/15'
-              }`}
-              title="Toggle Interactive Studio Mode (Baseline Grid & Inspection)"
-            >
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>{studioMode ? 'Grid On' : 'Grid Off'}</span>
-            </button>
 
             {/* Shortlist Drawer Trigger */}
             <button
@@ -129,31 +116,18 @@ export const Header = ({
       {mobileMenuOpen && (
         <div className="md:hidden bg-[#1A1A1A] text-[#F5F5F0] border-b border-[#333336] px-6 py-6 shadow-xl animate-in slide-in-from-top duration-200">
           <div className="flex flex-col gap-4">
-            <div className="flex items-center justify-between pb-3 border-b border-white/10">
-              <span className="text-xs font-mono-display text-white/60">NAVIGATION</span>
-              <span className="text-xs font-mono-display text-[#5D5CDE]">● AVAILABLE FOR Q3/Q4</span>
-            </div>
+
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-lg font-syne font-bold hover:text-[#5D5CDE] transition-colors py-1"
+                className="text-lg font-syne-mono font-normal hover:text-[#5D5CDE] transition-colors py-1"
               >
                 {link.name}
               </a>
             ))}
-            <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
-              <button
-                onClick={() => {
-                  setStudioMode(!studioMode);
-                  setMobileMenuOpen(false);
-                }}
-                className="flex items-center justify-between px-4 py-2.5 rounded-xs bg-white/10 text-xs font-mono-display text-white"
-              >
-                <span>Interactive Studio Grid Mode</span>
-                <Sparkles className="w-4 h-4 text-[#5D5CDE]" />
-              </button>
+
               <button
                 onClick={() => {
                   onOpenInquiry();

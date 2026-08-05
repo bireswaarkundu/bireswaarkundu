@@ -9,6 +9,7 @@ import { Testimonials } from './components/Testimonials';
 import { InquiryForm } from './components/InquiryForm';
 import { ShortlistDrawer } from './components/ShortlistDrawer';
 import { Footer } from './components/Footer';
+import { BookingModal } from './components/BookingModal';
 
 export default function App() {
   const [shortlist, setShortlist] = useState(['weld-layers-happiness', 'happy-holi-color-picker']);
@@ -17,6 +18,7 @@ export default function App() {
   const [inquiryPreselectedProject, setInquiryPreselectedProject] = useState(null);
   const [shortlistDrawerOpen, setShortlistDrawerOpen] = useState(false);
   const [studioMode, setStudioMode] = useState(false);
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
 
   const handleToggleShortlist = (id) => {
     setShortlist((prev) =>
@@ -36,21 +38,12 @@ export default function App() {
     <div className={`min-h-screen relative font-sans text-[#1A1A1A] bg-[#F5F5F0] selection:bg-[#5D5CDE] selection:text-white transition-all ${
       studioMode ? 'bg-grid-pattern' : ''
     }`}>
-      {/* Studio Grid Mode Visual Indicator Bar */}
-      {studioMode && (
-        <div className="fixed top-0 left-0 right-0 z-50 bg-[#5D5CDE] text-white text-[10px] font-mono-display py-1 px-4 text-center font-bold tracking-widest uppercase">
-          ★ INTERACTIVE STUDIO GRID MODE ACTIVE — 32PX ARCHITECTURAL BASELINE GRID OVERLAY
-        </div>
-      )}
 
       {/* Main Header */}
       <Header
         shortlistCount={shortlist.length}
         onOpenShortlist={() => setShortlistDrawerOpen(true)}
-        onOpenInquiry={() => {
-          setInquiryPreselectedProject(null);
-          setInquiryModalOpen(true);
-        }}
+        onOpenInquiry={() => setBookingModalOpen(true)}
         studioMode={studioMode}
         setStudioMode={setStudioMode}
       />
@@ -119,6 +112,10 @@ export default function App() {
           setInquiryModalOpen(true);
         }}
       />
+      {/* Booking / Meeting Modal (triggered by header Inquire button) */}
+      {bookingModalOpen && (
+        <BookingModal onClose={() => setBookingModalOpen(false)} />
+      )}
     </div>
   );
 }
