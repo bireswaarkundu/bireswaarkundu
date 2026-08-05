@@ -27,9 +27,9 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
             </span>
           </div>
           <h1 className="font-syne-mono-italic text-5xl sm:text-7xl lg:text-8xl text-[#1A1A1A] font-normal leading-[0.95] tracking-wide">
-            BIRESWAAR <br />
+            DIPRAJIT <br />
             <span className="font-serif-display italic font-normal text-[#5D5CDE]">
-              KUNDU
+              CHAKRABORTY
             </span>
           </h1>
         </div>
