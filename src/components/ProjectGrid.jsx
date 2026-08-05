@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
 import { Bookmark, BookmarkCheck, ArrowUpRight, Sparkles, Filter } from 'lucide-react';
 import { PROJECTS, DOMAIN_CATEGORIES } from '../data/projects.js';
+import { BrandingBentoCanvas } from './BrandingBentoCanvas.jsx';
 
 export const ProjectGrid = ({
   onSelectProject,
   shortlist,
   onToggleShortlist
 }) => {
-  // Default to first domain category: 'Ad Campaign' (No 'ALL WORKS')
+  // Default to domain category: 'Ad Campaign'
   const [activeCategory, setActiveCategory] = useState('Ad Campaign');
   const [activeSubBrand, setActiveSubBrand] = useState('Innofusion');
 
-  // Filtering Logic
+  // Filtering Logic for Non-Branding Categories
   const filteredProjects = PROJECTS.filter((project) => {
-    if (activeCategory === 'Branding') {
-      return project.domain === 'Branding' && project.subDomain === activeSubBrand;
-    }
     return project.domain === activeCategory;
   });
 
@@ -40,7 +38,7 @@ export const ProjectGrid = ({
           </p>
         </div>
 
-        {/* Primary Domain Category Tabs (NO 'ALL WORKS') */}
+        {/* Primary Domain Category Tabs */}
         <div className="flex flex-wrap items-center gap-2" role="tablist" aria-label="Design Domains">
           {DOMAIN_CATEGORIES.map((cat) => {
             const isActive = activeCategory === cat.id;
@@ -51,7 +49,7 @@ export const ProjectGrid = ({
                   setActiveCategory(cat.id);
                   if (cat.id === 'Branding') setActiveSubBrand('Innofusion');
                 }}
-                className={`px-3 py-1.5 text-xs font-mono-display uppercase tracking-wider rounded-xs border transition-all flex items-center gap-1.5 ${
+                className={`px-3.5 py-2 text-xs font-mono-display uppercase tracking-wider rounded-xs border transition-all flex items-center gap-1.5 ${
                   isActive
                     ? 'bg-[#1A1A1A] text-white border-[#1A1A1A] font-bold shadow-[2px_2px_0px_#5D5CDE]'
                     : 'bg-white text-[#1A1A1A]/80 hover:bg-[#1A1A1A]/5 border-[#1A1A1A]/15 hover:border-[#1A1A1A]/40'
@@ -73,19 +71,19 @@ export const ProjectGrid = ({
 
       {/* Sub-Brand Filters for Branding Domain */}
       {activeCategory === 'Branding' && (
-        <div className="mb-8 p-3 bg-white rounded-xs border border-[#1A1A1A]/15 flex items-center gap-3 overflow-x-auto">
+        <div className="mb-6 p-3 bg-white rounded-2xl border border-[#1A1A1A]/15 flex items-center gap-3 overflow-x-auto shadow-xs">
           <div className="flex items-center gap-1.5 text-xs font-mono-display text-[#1A1A1A]/60 font-bold uppercase tracking-wider shrink-0 pl-2">
             <Filter className="w-3.5 h-3.5 text-[#5D5CDE]" />
-            <span>SUB-BRAND ARCHIVE:</span>
+            <span>SUB-BRAND BENTO CANVAS:</span>
           </div>
           <div className="flex items-center gap-2">
             {['Innofusion', 'Phoenix', 'Weld'].map((sub) => (
               <button
                 key={sub}
                 onClick={() => setActiveSubBrand(sub)}
-                className={`px-3 py-1 text-[11px] font-mono-display uppercase tracking-wider rounded-xs border transition-all ${
+                className={`px-4 py-1.5 text-xs font-mono-display uppercase tracking-wider rounded-xl border transition-all ${
                   activeSubBrand === sub
-                    ? 'bg-[#5D5CDE] text-white border-[#5D5CDE] font-bold'
+                    ? 'bg-[#5D5CDE] text-white border-[#5D5CDE] font-bold shadow-xs'
                     : 'bg-[#F5F5F0] text-[#1A1A1A]/80 hover:bg-white border-[#1A1A1A]/15'
                 }`}
               >
@@ -96,8 +94,16 @@ export const ProjectGrid = ({
         </div>
       )}
 
-      {/* Grid Showcase - UNIFORM 4:5 ASPECT RATIO FOR ALL FRAMES */}
-      {filteredProjects.length === 0 ? (
+      {/* RENDER MODE: BRANDING SINGLE-SCREEN BENTO CANVAS vs STANDARD 4:5 DOMAIN GRID */}
+      {activeCategory === 'Branding' ? (
+        /* SINGLE-SCREEN BENTO GRID CANVAS FOR BRANDING (NO SCROLLING) */
+        <BrandingBentoCanvas
+          activeSubBrand={activeSubBrand}
+          onSelectProject={onSelectProject}
+          shortlist={shortlist}
+          onToggleShortlist={onToggleShortlist}
+        />
+      ) : filteredProjects.length === 0 ? (
         /* Digital Drawing / Empty State Card */
         <div className="py-20 px-8 text-center bg-white rounded-xs border border-dashed border-[#1A1A1A]/30 shadow-[4px_4px_0px_#1A1A1A]">
           <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#5D5CDE]/10 text-[#5D5CDE] flex items-center justify-center font-bold text-xl font-mono-display">
@@ -120,7 +126,7 @@ export const ProjectGrid = ({
           </button>
         </div>
       ) : (
-        /* Uniform Grid with Identical 4:5 Aspect Ratio Cards */
+        /* Uniform Grid with 4:5 Aspect Ratio Cards for Other Domains */
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredProjects.map((project) => {
             const isBookmarked = shortlist.includes(project.id);
@@ -157,7 +163,7 @@ export const ProjectGrid = ({
                   </div>
                 </div>
 
-                {/* UNIFORM 4:5 ASPECT RATIO FRAME FOR ALL IMAGES */}
+                {/* UNIFORM 4:5 ASPECT RATIO FRAME FOR OTHER DOMAIN CARDS */}
                 <div
                   onClick={() => onSelectProject(project.id)}
                   className="relative cursor-pointer overflow-hidden bg-[#1A1A1A] aspect-[4/5] w-full flex items-center justify-center p-2.5 border-b border-[#1A1A1A]/10"
@@ -218,7 +224,6 @@ export const ProjectGrid = ({
                       <span>{project.year}</span>
                     </div>
 
-                    {/* Title in Syne Mono Graphical Italics (Not Bold) */}
                     <h3
                       onClick={() => onSelectProject(project.id)}
                       className="font-syne-mono-italic font-normal text-base text-[#1A1A1A] group-hover:text-[#5D5CDE] transition-colors cursor-pointer leading-snug mb-1.5 truncate"
