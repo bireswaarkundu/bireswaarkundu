@@ -243,16 +243,14 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
                   </div>
                 </div>
 
-                {/* Software Skills Badges */}
+                {/* Software Skills SVG Icons */}
                 <div className="pt-3 border-t border-[#1A1A1A]/10 space-y-1.5">
                   <span className="text-[#1A1A1A]/50 font-bold uppercase tracking-wider block">SOFTWARE SKILLS</span>
-                  <div className="flex items-center gap-2">
-                    <span className="px-2.5 py-1 bg-[#1A1A1A] text-white text-[11px] font-syne font-bold rounded-xs">Ps</span>
-                    <span className="px-2.5 py-1 bg-[#1A1A1A] text-white text-[11px] font-syne font-bold rounded-xs">Ai</span>
-                    <span className="px-2.5 py-1 bg-[#1A1A1A] text-white text-[11px] font-syne font-bold rounded-xs flex items-center gap-1">
-                      <span className="text-[#5D5CDE]">❖</span> Figma
-                    </span>
-                    <span className="px-2 py-1 bg-[#1A1A1A] text-white text-[10px] font-syne font-bold rounded-xs">Canva</span>
+                  <div className="flex items-center gap-3">
+                    <img src="/assets/software skills/2069a460dcf28295e231f3111e037552.svg" alt="Photoshop" className="w-8 h-8 rounded-xs hover:scale-110 transition-transform shadow-xs border border-black/20" title="Adobe Photoshop" />
+                    <img src="/assets/software skills/Group 13.svg" alt="Illustrator" className="w-8 h-8 rounded-xs hover:scale-110 transition-transform shadow-xs border border-black/20" title="Adobe Illustrator" />
+                    <img src="/assets/software skills/Group 14.svg" alt="Figma" className="w-8 h-8 rounded-xs hover:scale-110 transition-transform shadow-xs border border-black/20" title="Figma" />
+                    <img src="/assets/software skills/Group 15.svg" alt="Canva" className="w-8 h-8 rounded-xs hover:scale-110 transition-transform shadow-xs border border-black/20" title="Canva" />
                   </div>
                 </div>
               </div>
