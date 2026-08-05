@@ -134,37 +134,6 @@ export const ProjectGrid = ({
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-
-                  {/* Hover Details Overlay */}
-                  <div className="absolute inset-0 bg-[#1A1A1A]/90 text-white p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between backdrop-blur-xs">
-                    <div className="flex items-center justify-between font-mono-display text-[11px] text-white/70 border-b border-white/20 pb-2">
-                      <span className="font-bold text-[#5D5CDE] truncate">{project.client.toUpperCase()}</span>
-                      <span>{project.year}</span>
-                    </div>
-
-                    <div className="my-auto space-y-2">
-                      <h4 className="font-syne-mono-italic text-base text-white font-normal leading-snug">
-                        {project.title}
-                      </h4>
-                      <p className="font-editorial text-xs text-white/80 italic line-clamp-2 leading-relaxed">
-                        {project.shortDescription}
-                      </p>
-
-                      <div className="pt-1">
-                        <span className="block text-[9px] font-mono-display text-white/50 uppercase tracking-widest mb-1">
-                          DELIVERABLES:
-                        </span>
-                        <ul className="space-y-0.5 text-[11px] font-mono-display">
-                          {project.deliverables.slice(0, 3).map((item) => (
-                            <li key={item} className="flex items-center gap-1.5 text-white/90 truncate">
-                              <span className="w-1 h-1 bg-[#5D5CDE] rounded-full shrink-0"></span>
-                              <span className="truncate">{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
                 </div>
 
                 {/* Card Footer Info */}

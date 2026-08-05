@@ -53,11 +53,7 @@ export const ShortlistDrawer = ({
                 className="p-3 bg-white rounded-xs border border-[#1A1A1A]/15 flex items-center gap-3 group hover:border-[#1A1A1A] transition-colors"
               >
                 <div
-                  onClick={() => {
-                    onClose();
-                    onSelectProject(proj.id);
-                  }}
-                  className="w-16 h-16 rounded-xs overflow-hidden shrink-0 cursor-pointer bg-neutral-200"
+                  className="w-16 h-16 rounded-xs overflow-hidden shrink-0 bg-neutral-200"
                 >
                   <img
                     src={proj.thumbnail}
@@ -72,11 +68,7 @@ export const ShortlistDrawer = ({
                     {proj.category}
                   </span>
                   <h4
-                    onClick={() => {
-                      onClose();
-                      onSelectProject(proj.id);
-                    }}
-                    className="font-syne-mono font-normal text-xs text-[#1A1A1A] truncate cursor-pointer hover:text-[#5D5CDE]"
+                    className="font-syne-mono font-normal text-xs text-[#1A1A1A] truncate"
                   >
                     {proj.title}
                   </h4>
