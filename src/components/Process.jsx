@@ -29,7 +29,7 @@ export const Process = () => {
               METHODOLOGY & WORKFLOW
             </span>
           </div>
-          <h2 className="font-syne text-4xl sm:text-5xl font-extrabold tracking-tight text-[#1A1A1A]">
+          <h2 className="font-syne-mono text-4xl sm:text-5xl lg:text-6xl text-[#1A1A1A] font-normal leading-tight tracking-wide">
             How Projects Get Made
           </h2>
         </div>
@@ -38,7 +38,7 @@ export const Process = () => {
         </p>
       </div>
 
-      {/* Process Interactive Grid */}
+      {/* Process Interactive Grid with Smooth Motion Effects */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Step List Column */}
         <div className="lg:col-span-5 flex flex-col gap-3">
@@ -49,15 +49,15 @@ export const Process = () => {
               <button
                 key={step.number}
                 onClick={() => setActiveStep(idx)}
-                className={`p-5 rounded-xs text-left border transition-all flex items-start justify-between gap-4 ${
+                className={`p-5 rounded-xs text-left border transition-all duration-300 flex items-start justify-between gap-4 transform ${
                   isActive
-                    ? 'bg-[#1A1A1A] text-white border-[#1A1A1A] shadow-md translate-x-1'
-                    : 'bg-white hover:bg-neutral-50 text-[#1A1A1A] border-[#1A1A1A]/15'
+                    ? 'bg-[#1A1A1A] text-white border-[#1A1A1A] shadow-md translate-x-2'
+                    : 'bg-white hover:bg-neutral-50 text-[#1A1A1A] border-[#1A1A1A]/15 hover:translate-x-1 hover:border-[#1A1A1A]/40'
                 }`}
               >
                 <div className="flex items-start gap-4">
                   <span
-                    className={`font-mono-display text-xs font-bold ${
+                    className={`font-mono-display text-xs font-bold transition-colors ${
                       isActive ? 'text-[#5D5CDE]' : 'text-[#1A1A1A]/40'
                     }`}
                   >
@@ -66,14 +66,14 @@ export const Process = () => {
 
                   <div>
                     <h3
-                      className={`font-syne font-bold text-base ${
+                      className={`font-syne font-bold text-base transition-colors ${
                         isActive ? 'text-white' : 'text-[#1A1A1A]'
                       }`}
                     >
                       {step.title}
                     </h3>
                     <p
-                      className={`text-xs font-editorial italic ${
+                      className={`text-xs font-editorial italic transition-colors ${
                         isActive ? 'text-white/70' : 'text-[#1A1A1A]/60'
                       }`}
                     >
@@ -83,7 +83,7 @@ export const Process = () => {
                 </div>
 
                 <ChevronRight
-                  className={`w-4 h-4 mt-1 transition-transform ${
+                  className={`w-4 h-4 mt-1 transition-transform duration-300 ${
                     isActive ? 'text-[#5D5CDE] translate-x-1' : 'text-[#1A1A1A]/30'
                   }`}
                 />
@@ -92,12 +92,15 @@ export const Process = () => {
           })}
         </div>
 
-        {/* Step Deep Breakdown Panel */}
-        <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-xs border border-[#1A1A1A]/15 shadow-sm flex flex-col justify-between min-h-[420px]">
+        {/* Step Deep Breakdown Panel with Smooth Content Fade & Slide Motion */}
+        <div
+          key={activeStep}
+          className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-xs border border-[#1A1A1A]/15 shadow-sm flex flex-col justify-between min-h-[420px] transition-all duration-300 animate-in fade-in slide-in-from-bottom-2"
+        >
           <div className="space-y-6">
             <div className="flex items-center justify-between border-b border-[#1A1A1A]/10 pb-4">
               <div className="flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-[#5D5CDE]/10 flex items-center justify-center">
+                <span className="w-8 h-8 rounded-full bg-[#5D5CDE]/10 flex items-center justify-center animate-pulse">
                   {getIcon(PROCESS_STEPS[activeStep].iconName)}
                 </span>
                 <span className="font-mono-display text-xs font-bold text-[#5D5CDE] uppercase tracking-wider">
@@ -127,7 +130,7 @@ export const Process = () => {
                 {PROCESS_STEPS[activeStep].deliverables.map((del) => (
                   <div
                     key={del}
-                    className="p-3 bg-[#F5F5F0] rounded-xs border border-[#1A1A1A]/10 text-xs font-mono-display text-[#1A1A1A] flex items-center gap-2"
+                    className="p-3 bg-[#F5F5F0] rounded-xs border border-[#1A1A1A]/10 text-xs font-mono-display text-[#1A1A1A] flex items-center gap-2 transition-all duration-200 hover:border-[#5D5CDE]/40 hover:bg-[#5D5CDE]/5"
                   >
                     <Check className="w-3.5 h-3.5 text-[#5D5CDE] shrink-0" />
                     <span>{del}</span>
