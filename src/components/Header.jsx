@@ -22,7 +22,6 @@ export const Header = ({
   const navLinks = [
     { name: 'Selected Work', href: '#work' },
     { name: 'Case Studies', href: '#case-studies' },
-    { name: 'Start a Project', href: '#start-project' },
     { name: 'Process', href: '#process' },
     { name: 'Testimonials', href: '#testimonials' },
   ];

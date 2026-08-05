@@ -5,7 +5,6 @@ import { ProjectGrid } from './components/ProjectGrid';
 import { ProjectModal } from './components/ProjectModal';
 import { Process } from './components/Process';
 import { Testimonials } from './components/Testimonials';
-import { StartProjectSection } from './components/StartProjectSection';
 import { InquiryForm } from './components/InquiryForm';
 import { ShortlistDrawer } from './components/ShortlistDrawer';
 import { Footer } from './components/Footer';
@@ -74,8 +73,6 @@ export default function App() {
         <Process />
 
         <Testimonials />
-
-        <StartProjectSection shortlist={shortlist} />
       </main>
 
       {/* Footer */}
