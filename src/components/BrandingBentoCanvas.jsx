@@ -17,10 +17,11 @@ export const BrandingBentoCanvas = ({
           brandName: 'PHOENIX STUDIO',
           barcode: 'BK-2025-PHX-8802',
           logoImg: ASSET_PATHS.PHOENIX_LOGO,
-          mobileImg: ASSET_PATHS.PHOENIX_1,
-          signageImg: ASSET_PATHS.PHOENIX_3,
-          billboardImg: ASSET_PATHS.PHOENIX_6,
-          extraMockup: ASSET_PATHS.PHOENIX_4,
+          upMockup: ASSET_PATHS.PHOENIX_3,
+          leftMockup: ASSET_PATHS.PHOENIX_1,
+          rightMockup: ASSET_PATHS.PHOENIX_4,
+          downMockup: ASSET_PATHS.PHOENIX_6,
+          bottomRightMockup: ASSET_PATHS.PHOENIX_8,
           typefaceName: 'Syne & Playfair',
           colors: ['#111111', '#D4AF37', '#F5F5F0', '#5D5CDE'],
           missionStatement: 'Connecting Ideas, Empowering Innovation & Modern Sophistication',
@@ -34,10 +35,11 @@ export const BrandingBentoCanvas = ({
           brandName: 'WELD INDUSTRIAL',
           barcode: 'BK-2025-WELD-9914',
           logoImg: ASSET_PATHS.WELD_1,
-          mobileImg: ASSET_PATHS.WELD_2,
-          signageImg: ASSET_PATHS.WELD_3,
-          billboardImg: ASSET_PATHS.WELD_G,
-          extraMockup: ASSET_PATHS.WELD_ASSET_8,
+          upMockup: ASSET_PATHS.WELD_2,
+          leftMockup: ASSET_PATHS.WELD_3,
+          rightMockup: ASSET_PATHS.WELD_ASSET_7,
+          downMockup: ASSET_PATHS.WELD_G,
+          bottomRightMockup: ASSET_PATHS.WELD_ASSET_8,
           typefaceName: 'Syne & JetBrains Mono',
           colors: ['#121212', '#FF6B00', '#F9F9FB', '#5D5CDE'],
           missionStatement: 'Industrial Strength • Indestructible Packaging Architecture',
@@ -52,10 +54,11 @@ export const BrandingBentoCanvas = ({
           brandName: 'INNOFUSION CORP',
           barcode: 'BK-2025-INNO-4401',
           logoImg: ASSET_PATHS.INNOFUSION_1,
-          mobileImg: ASSET_PATHS.INNOFUSION_2,
-          signageImg: ASSET_PATHS.INNOFUSION_3,
-          billboardImg: ASSET_PATHS.INNOFUSION_4,
-          extraMockup: ASSET_PATHS.INNOFUSION_3,
+          upMockup: ASSET_PATHS.INNOFUSION_3,
+          leftMockup: ASSET_PATHS.INNOFUSION_2,
+          rightMockup: ASSET_PATHS.INNOFUSION_4,
+          downMockup: ASSET_PATHS.INNOFUSION_3,
+          bottomRightMockup: ASSET_PATHS.INNOFUSION_2,
           typefaceName: 'Plus Jakarta & Syne Mono',
           colors: ['#1A1A1A', '#5D5CDE', '#FFFFFF', '#4A90E2'],
           missionStatement: 'Empowering Innovation • Structured Geometric Identity System',
@@ -108,10 +111,12 @@ export const BrandingBentoCanvas = ({
         </div>
       </div>
 
-      {/* 3-COLUMN SINGLE-SCREEN BENTO CANVAS (ALL BOXES HAVE WHITE BACKGROUND) */}
+      {/* 3x3 SYMMETRIC BENTO GRID: MAIN LOGO IN CENTER, MOCKUPS SURROUNDING (UP/DOWN/LEFT/RIGHT), ALL IMAGES 100% VISIBLE WITH OBJECT-CONTAIN */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {/* ROW 1 — BOX 1: Barcode / Metadata Ticket (White Box) */}
-        <div className="bg-white rounded-2xl p-5 flex flex-col justify-between border border-[#1A1A1A]/15 shadow-xs min-h-[170px]">
+        
+        {/* ==================== ROW 1 ==================== */}
+        {/* ROW 1, COL 1: Barcode / Metadata Ticket Card */}
+        <div className="bg-white rounded-2xl p-5 flex flex-col justify-between border border-[#1A1A1A]/15 shadow-xs min-h-[190px]">
           <div>
             <span className="text-[10px] font-mono-display text-[#5D5CDE] font-bold uppercase tracking-widest block mb-1">
               BRAND SPECIFICATION
@@ -127,7 +132,6 @@ export const BrandingBentoCanvas = ({
           <div className="pt-3 border-t border-[#1A1A1A]/10 flex items-center justify-between">
             <div className="space-y-0.5">
               <span className="text-[9px] font-mono-display text-[#1A1A1A]/50 block">BARCODE SPEC</span>
-              {/* Simulated Barcode Lines */}
               <div className="flex items-center gap-0.5 h-5">
                 {[2,1,3,1,2,4,1,2,1,3,2,1,4,1,2,1].map((w, i) => (
                   <span key={i} className="bg-[#1A1A1A] h-full" style={{ width: `${w}px` }}></span>
@@ -140,8 +144,8 @@ export const BrandingBentoCanvas = ({
           </div>
         </div>
 
-        {/* ROW 1 — BOX 2: Type Specimen (White Box) */}
-        <div className="bg-white rounded-2xl p-5 flex flex-col justify-between border border-[#1A1A1A]/15 shadow-xs min-h-[170px]">
+        {/* ROW 1, COL 2: Type Specimen Card */}
+        <div className="bg-white rounded-2xl p-5 flex flex-col justify-between border border-[#1A1A1A]/15 shadow-xs min-h-[190px]">
           <div>
             <span className="text-[10px] font-mono-display text-[#5D5CDE] font-bold uppercase tracking-widest block mb-1">
               TYPE SPECIMEN
@@ -153,7 +157,6 @@ export const BrandingBentoCanvas = ({
 
           <div className="flex items-end justify-between">
             <span className="font-editorial text-5xl text-[#1A1A1A] italic leading-none">Aa</span>
-            {/* Color Palette Swatches */}
             <div className="flex items-center gap-1.5">
               {brand.colors.map((c, i) => (
                 <span
@@ -167,71 +170,92 @@ export const BrandingBentoCanvas = ({
           </div>
         </div>
 
-        {/* ROW 1 — BOX 3: Outdoor Signage Mockup (White Box Container) */}
+        {/* ROW 1, COL 3: UP Mockup Image Card */}
         <div
           onClick={() => onSelectProject(brand.id)}
-          className="group relative bg-white rounded-2xl p-2.5 cursor-pointer border border-[#1A1A1A]/15 shadow-xs min-h-[170px] flex items-center justify-center overflow-hidden"
+          className="group relative bg-white rounded-2xl p-3 cursor-pointer border border-[#1A1A1A]/15 shadow-xs min-h-[190px] flex items-center justify-center overflow-hidden"
         >
           <img
-            src={brand.signageImg}
-            alt="Outdoor Signage"
+            src={brand.upMockup}
+            alt="Up Brand Mockup"
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover rounded-xl group-hover:scale-[1.03] transition-transform duration-500 max-h-[160px]"
+            className="w-full h-full object-contain max-h-[170px] rounded-xl group-hover:scale-105 transition-transform duration-500"
           />
-          <div className="absolute top-4 left-4 px-2 py-0.5 bg-[#1A1A1A]/80 backdrop-blur-md text-white text-[9px] font-mono-display uppercase tracking-wider rounded-md">
-            SIGNAGE MOCKUP
+          <div className="absolute top-3 left-3 px-2 py-0.5 bg-[#1A1A1A]/80 backdrop-blur-md text-white text-[9px] font-mono-display uppercase tracking-wider rounded-md">
+            SIGNAGE / DISPLAY MOCKUP
           </div>
         </div>
 
-        {/* ROW 2 — BOX 4: Mobile UI Screen Mockup (White Box Container) */}
+        {/* ==================== ROW 2 (MAIN LOGO IN MIDDLE) ==================== */}
+        {/* ROW 2, COL 1: LEFT Mockup Image Card */}
         <div
           onClick={() => onSelectProject(brand.id)}
-          className="group relative bg-white rounded-2xl p-2.5 cursor-pointer border border-[#1A1A1A]/15 shadow-xs min-h-[220px] flex items-center justify-center overflow-hidden"
+          className="group relative bg-white rounded-2xl p-3 cursor-pointer border border-[#1A1A1A]/15 shadow-xs min-h-[220px] flex items-center justify-center overflow-hidden"
         >
           <img
-            src={brand.mobileImg}
-            alt="Mobile UI Interface"
+            src={brand.leftMockup}
+            alt="Left Brand Mockup"
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover rounded-xl group-hover:scale-[1.03] transition-transform duration-500 max-h-[210px]"
+            className="w-full h-full object-contain max-h-[200px] rounded-xl group-hover:scale-105 transition-transform duration-500"
           />
-          <div className="absolute bottom-4 left-4 px-2 py-0.5 bg-[#1A1A1A]/80 backdrop-blur-md text-white text-[9px] font-mono-display uppercase tracking-wider rounded-md">
-            MOBILE UI INTERFACE
+          <div className="absolute bottom-3 left-3 px-2 py-0.5 bg-[#1A1A1A]/80 backdrop-blur-md text-white text-[9px] font-mono-display uppercase tracking-wider rounded-md">
+            STATIONERY / MOBILE MOCKUP
           </div>
         </div>
 
-        {/* ROW 2 — BOX 5: Primary Logo Lockup (White Box Container - Spans 2 Columns) */}
+        {/* ROW 2, COL 2: MAIN LOGO LOCKUP IN THE EXACT CENTER */}
         <div
           onClick={() => onSelectProject(brand.id)}
-          className="group relative bg-white rounded-2xl p-6 cursor-pointer border border-[#1A1A1A]/15 shadow-xs md:col-span-2 min-h-[220px] flex items-center justify-center overflow-hidden"
+          className="group relative bg-white rounded-2xl p-6 cursor-pointer border-2 border-[#5D5CDE]/30 shadow-md min-h-[220px] flex flex-col items-center justify-center overflow-hidden text-center"
         >
           <img
             src={brand.logoImg}
             alt="Primary Logo Lockup"
             referrerPolicy="no-referrer"
-            className="max-h-[160px] w-auto object-contain group-hover:scale-105 transition-transform duration-500"
+            className="max-h-[150px] w-auto object-contain group-hover:scale-105 transition-transform duration-500 my-auto"
           />
-          <div className="absolute top-4 left-4 px-2.5 py-1 bg-[#5D5CDE] text-white text-[10px] font-mono-display uppercase tracking-wider rounded-lg font-bold">
+          <div className="absolute top-3 left-3 px-2.5 py-1 bg-[#5D5CDE] text-white text-[10px] font-mono-display uppercase tracking-wider rounded-lg font-bold shadow-xs">
             PRIMARY LOGO LOCKUP
+          </div>
+          <span className="text-[10px] font-mono-display text-[#1A1A1A]/60 uppercase tracking-widest mt-2">
+            MAIN BRAND MARK
+          </span>
+        </div>
+
+        {/* ROW 2, COL 3: RIGHT Mockup Image Card */}
+        <div
+          onClick={() => onSelectProject(brand.id)}
+          className="group relative bg-white rounded-2xl p-3 cursor-pointer border border-[#1A1A1A]/15 shadow-xs min-h-[220px] flex items-center justify-center overflow-hidden"
+        >
+          <img
+            src={brand.rightMockup}
+            alt="Right Brand Mockup"
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-contain max-h-[200px] rounded-xl group-hover:scale-105 transition-transform duration-500"
+          />
+          <div className="absolute bottom-3 left-3 px-2 py-0.5 bg-[#1A1A1A]/80 backdrop-blur-md text-white text-[9px] font-mono-display uppercase tracking-wider rounded-md">
+            PACKAGING / ASSET MOCKUP
           </div>
         </div>
 
-        {/* ROW 3 — BOX 6: OOH Billboard Poster (White Box Container - Spans 2 Columns) */}
+        {/* ==================== ROW 3 ==================== */}
+        {/* ROW 3, COL 1: DOWN Mockup Image Card */}
         <div
           onClick={() => onSelectProject(brand.id)}
-          className="group relative bg-white rounded-2xl p-2.5 cursor-pointer border border-[#1A1A1A]/15 shadow-xs md:col-span-2 min-h-[190px] flex items-center justify-center overflow-hidden"
+          className="group relative bg-white rounded-2xl p-3 cursor-pointer border border-[#1A1A1A]/15 shadow-xs min-h-[190px] flex items-center justify-center overflow-hidden"
         >
           <img
-            src={brand.billboardImg}
-            alt="OOH Billboard Poster"
+            src={brand.downMockup}
+            alt="Down Brand Mockup"
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover rounded-xl group-hover:scale-[1.03] transition-transform duration-500 max-h-[180px]"
+            className="w-full h-full object-contain max-h-[170px] rounded-xl group-hover:scale-105 transition-transform duration-500"
           />
-          <div className="absolute bottom-4 left-4 px-2.5 py-1 bg-[#1A1A1A]/80 backdrop-blur-md text-white text-[10px] font-mono-display uppercase tracking-wider rounded-lg">
+          <div className="absolute bottom-3 left-3 px-2.5 py-1 bg-[#1A1A1A]/80 backdrop-blur-md text-white text-[9px] font-mono-display uppercase tracking-wider rounded-lg">
             OOH BILLBOARD POSTER
           </div>
         </div>
 
-        {/* ROW 3 — BOX 7: Brand Slogan // Mission (White Box) */}
+        {/* ROW 3, COL 2: Brand Slogan // Mission Statement Card */}
         <div className="bg-white rounded-2xl p-5 flex flex-col justify-center border border-[#1A1A1A]/15 shadow-xs min-h-[190px]">
           <span className="text-[9px] font-mono-display text-[#5D5CDE] font-bold uppercase tracking-widest block mb-1">
             BRAND SLOGAN // MISSION
@@ -240,10 +264,27 @@ export const BrandingBentoCanvas = ({
             &ldquo;{brand.missionStatement}&rdquo;
           </p>
           <div className="mt-3 pt-2 border-t border-[#1A1A1A]/10 flex items-center justify-between text-[10px] font-mono-display text-[#1A1A1A]/60">
-            <span>VERIFIED IDENTITY</span>
+            <span>VERIFIED IDENTITY SYSTEM</span>
             <ArrowUpRight className="w-3.5 h-3.5 text-[#5D5CDE]" />
           </div>
         </div>
+
+        {/* ROW 3, COL 3: Bottom-Right Secondary Mockup Image Card */}
+        <div
+          onClick={() => onSelectProject(brand.id)}
+          className="group relative bg-white rounded-2xl p-3 cursor-pointer border border-[#1A1A1A]/15 shadow-xs min-h-[190px] flex items-center justify-center overflow-hidden"
+        >
+          <img
+            src={brand.bottomRightMockup}
+            alt="Bottom Right Brand Mockup"
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-contain max-h-[170px] rounded-xl group-hover:scale-105 transition-transform duration-500"
+          />
+          <div className="absolute bottom-3 left-3 px-2 py-0.5 bg-[#1A1A1A]/80 backdrop-blur-md text-white text-[9px] font-mono-display uppercase tracking-wider rounded-md">
+            BRAND COLLATERAL
+          </div>
+        </div>
+
       </div>
     </div>
   );
