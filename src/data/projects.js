@@ -1,0 +1,947 @@
+import { ASSET_PATHS } from './projectImages.js';
+
+export const DOMAIN_CATEGORIES = [
+  { id: 'All', label: 'ALL WORKS', count: 20 },
+  { id: 'Ad Campaign', label: 'AD CAMPAIGN', count: 3 },
+  { id: 'Branding', label: 'BRANDING IDENTITY', count: 3, subCategories: ['All Branding', 'Innofusion', 'Phoenix', 'Weld'] },
+  { id: 'Concept-driven design', label: 'CONCEPT-DRIVEN DESIGN', count: 5 },
+  { id: 'Social Media Poster', label: 'SOCIAL MEDIA POSTERS', count: 11 },
+  { id: 'Digital Drawing', label: 'DIGITAL DRAWING', count: 0 },
+];
+
+export const TYPE_SPECIMENS = [
+  {
+    fontName: 'Air India Display Sans',
+    category: 'Brand Display',
+    pairingSuggestion: 'Paired with Plus Jakarta Sans Bold for High-Impact Headlines',
+  },
+  {
+    fontName: 'IndiGo Display Sans',
+    category: 'Aviation Corporate',
+    pairingSuggestion: 'Paired with Playfair Cursive Script for Emotional Accents',
+  },
+  {
+    fontName: 'Plus Jakarta Sans',
+    category: 'Modern Grotesk',
+    pairingSuggestion: 'Paired with JetBrains Mono for Precision Campaign Specs',
+  },
+];
+
+export const PROCESS_STEPS = [
+  {
+    number: '01',
+    title: 'Brand Immersion & Strategic Brief',
+    subtitle: 'Extracting core brand values & audience insights',
+    iconName: 'Compass',
+    description:
+      'We begin by analyzing campaign objectives, key value propositions, and brand guidelines to establish a compelling creative narrative.',
+    deliverables: [
+      'Campaign Moodboards & Creative Direction',
+      'Target Demographic Persona Alignment',
+      'Competitor Ad Positioning Analysis',
+      'Key Messaging Lockups',
+    ],
+  },
+  {
+    number: '02',
+    title: 'Art Direction & Visual Compositing',
+    subtitle: 'Crafting high-fidelity visual assets & photography',
+    iconName: 'Layers',
+    description:
+      'Designing custom vector compositions, multi-figure character styling, and atmospheric lighting backgrounds tailored to media formats.',
+    deliverables: [
+      'High-Resolution Key Visual Composites',
+      'Lighting & Perspective Match Drafts',
+      'Color Palette & Palette Swatches',
+      'Custom Illustration & Asset Rendering',
+    ],
+  },
+  {
+    number: '03',
+    title: 'Typographic Layout & Media Scaling',
+    subtitle: 'Multi-channel layout adaptation & hierarchy',
+    iconName: 'PenTool',
+    description:
+      'Refining headlines, call-to-action lockups, and brand iconography across billboards, print spreads, terminal displays, and social ads.',
+    deliverables: [
+      'Multi-Format Print & OOH Billboards',
+      'Airport Kiosk & Digital Display Ratios',
+      'Social Media Ad Variants',
+      'Vector Brand Logo & QR Integration',
+    ],
+  },
+  {
+    number: '04',
+    title: 'Final Production & Pre-Press Delivery',
+    subtitle: 'Color-calibrated print assets & digital export',
+    iconName: 'CheckCircle2',
+    description:
+      'Preparing CMYK print-ready files, vector press proofs, and high-density RGB digital assets optimized for seamless rollout.',
+    deliverables: [
+      'CMYK Print-Ready PDF/X Packages',
+      'Digital Display RGB Assets',
+      'Brand Style Sheet & Typography Tokens',
+      'Final Production Approval Package',
+    ],
+  },
+];
+
+export const TESTIMONIALS = [
+  {
+    author: 'Sunil Sharma',
+    role: 'VP Brand Marketing',
+    company: 'Air India',
+    projectRelation: 'Family Travel & Destination Campaigns',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    quote:
+      'Bireshwar transformed our brand vision into stunning visual campaigns. The Family Travel key visual resonated immensely across terminals and print media.',
+  },
+  {
+    author: 'Ananya Roy',
+    role: 'Creative Director',
+    company: 'Aviation Media Partners',
+    projectRelation: 'IndiGo "Where You Belong" Campaign',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    quote:
+      'The attention to detail in the cabin window lighting, Gateway of India compositing, and crisp iconography elevated our nation-connecting message beautifully.',
+  },
+];
+
+export const PROJECTS = [
+  // =========================================================================
+  // DOMAIN 1: AD CAMPAIGN
+  // =========================================================================
+  {
+    id: 'air-india-family-travel',
+    title: 'Air India — Family Travel, Made Effortless',
+    category: 'Ad Campaign',
+    domain: 'Ad Campaign',
+    client: 'Air India',
+    year: '2025',
+    medium: 'OOH Billboard & Print Campaign',
+    thumbnail: ASSET_PATHS.AIR_INDIA_01,
+    bentoSize: 'hero', // 2 cols, 2 rows in bento
+    bentoTag: '01 // AD CAMPAIGN',
+    shortDescription:
+      'Multi-generational family travel advertising campaign featuring vibrant character art direction, terminal window skylines, and warm hospitality branding.',
+    deliverables: [
+      'Key Visual Art Direction',
+      'Multi-Figure Compositing',
+      'OOH Billboard Layouts',
+      'Airport Terminal Print Package',
+    ],
+    caseStudy: {
+      brief:
+        'Develop a warm, inclusive advertising campaign celebrating multi-generational family journeys with Air India across domestic and international routes.',
+      constraint:
+        'Harmonize tradition with contemporary aviation aesthetics while retaining high contrast legibility across large format billboard displays.',
+      processSteps: [
+        {
+          title: '01. Character & Wardrobe Direction',
+          description:
+            'Styling distinct generations—children, working parents, and grandparents—in harmonious warm tones reflecting Indian heritage.',
+        },
+        {
+          title: '02. Architectural Terminal Framing',
+          description:
+            'Integrating subtle line art of airport terminal arches and taking-off aircraft silhouettes to anchor the travel context.',
+        },
+        {
+          title: '03. Typographic Hierarchy',
+          description:
+            'Bold geometric headlines paired with clean monospaced metadata for instant billboard impact and legibility.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Air India Red', hex: '#D71921' },
+        { name: 'Warm Alabaster', hex: '#FFF8F0' },
+        { name: 'Terminal Gold', hex: '#D98A28' },
+        { name: 'Deep Charcoal', hex: '#1A1A1A' },
+      ],
+      typographyUsed: ['Plus Jakarta Sans Black', 'Air India Display Sans', 'JetBrains Mono'],
+      keyMetric: '+42% Brand Sentiment',
+      outcome:
+        'The campaign achieved nationwide acclaim across metro airport terminals, significantly boosting family booking interest.',
+      gallery: [
+        { url: ASSET_PATHS.AIR_INDIA_01, caption: 'Primary Campaign Key Visual (OOH Billboard Spec)' },
+        { url: ASSET_PATHS.AIR_INDIA_02, caption: 'Secondary Variant — Dream Destination Aircraft Window View' },
+      ],
+    },
+  },
+  {
+    id: 'air-india-dream-destination',
+    title: 'Air India — Dream Destination (Paris & Dubai)',
+    category: 'Ad Campaign',
+    domain: 'Ad Campaign',
+    client: 'Air India',
+    year: '2025',
+    medium: 'Digital Kiosk & Terminal Print',
+    thumbnail: ASSET_PATHS.AIR_INDIA_02,
+    bentoSize: 'tall',
+    bentoTag: '02 // AD CAMPAIGN',
+    shortDescription:
+      'Framed airplane portal perspective showcasing iconic global landmarks (Eiffel Tower & Burj Khalifa) with warm golden hour sky gradient.',
+    deliverables: [
+      'Dual Portal Layout Architecture',
+      'Vector Landmark Compositing',
+      'Golden Hour Color Palette',
+      'Digital Kiosk Ratios',
+    ],
+    caseStudy: {
+      brief:
+        'Promote global destination connectivity through a visual narrative that places the traveler right inside the aircraft looking out at world landmarks.',
+      constraint:
+        'Seamlessly unite two contrasting destinations (Paris & Dubai) into a single balanced visual narrative.',
+      processSteps: [
+        {
+          title: '01. Window Portal Grid',
+          description: 'Constructing dual aircraft window silhouettes with soft ambient rim lighting.',
+        },
+        {
+          title: '02. Vector Architecture',
+          description: 'Rendering precision vector silhouettes of the Eiffel Tower and Burj Khalifa.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Golden Hour', hex: '#FCE1C2' },
+        { name: 'Sunset Amber', hex: '#E8A76C' },
+        { name: 'Air India Red', hex: '#D71921' },
+      ],
+      typographyUsed: ['Plus Jakarta Sans ExtraBold', 'JetBrains Mono'],
+      keyMetric: 'Global Campaign Reach',
+      outcome: 'Featured prominently across international airport lounges and digital booking portals.',
+      gallery: [{ url: ASSET_PATHS.AIR_INDIA_02, caption: 'Aircraft Portal View Artwork' }],
+    },
+  },
+  {
+    id: 'indigo-where-you-belong',
+    title: 'IndiGo — From Where You Are, To Where You Belong',
+    category: 'Ad Campaign',
+    domain: 'Ad Campaign',
+    client: 'IndiGo Airlines',
+    year: '2025',
+    medium: 'Terminal Display & Print Ad',
+    thumbnail: ASSET_PATHS.INDIGO_01,
+    bentoSize: 'wide',
+    bentoTag: '03 // AD CAMPAIGN',
+    shortDescription:
+      'Immersive night cabin perspective looking out over Mumbai Gateway of India, combining corporate navy precision with emotional cursive accents.',
+    deliverables: [
+      'Night Flight Ambient Compositing',
+      'Landmark Vector Illustration',
+      'Service Icon System',
+      'QR Code Booking Integration',
+    ],
+    caseStudy: {
+      brief:
+        'Reinforce IndiGo as India’s preferred domestic carrier by evoking the emotional warmth of returning home.',
+      constraint:
+        'Balance dark cabin interior ambiance with bright sunset reflections off the Arabian Sea.',
+      processSteps: [
+        {
+          title: '01. Cabin Ambiance',
+          description: 'Using deep indigo gradients with subtle blue LED halo rings around the window frame.',
+        },
+        {
+          title: '02. Heritage Landmark',
+          description: 'Compositing Mumbai’s Gateway of India and Taj Palace Hotel against a warm sunset.',
+        },
+      ],
+      colorPalette: [
+        { name: 'IndiGo Navy', hex: '#001233' },
+        { name: 'Electric Sky Blue', hex: '#58A6FF' },
+        { name: 'Sunset Amber', hex: '#EAA855' },
+      ],
+      typographyUsed: ['Plus Jakarta Sans Black', 'Playfair Display Italic', 'JetBrains Mono'],
+      keyMetric: '#GoingPlaces Campaign Success',
+      outcome: 'High audience engagement across digital ad channels and inflight magazine spreads.',
+      gallery: [{ url: ASSET_PATHS.INDIGO_01, caption: 'IndiGo Key Visual Poster' }],
+    },
+  },
+
+  // =========================================================================
+  // DOMAIN 2: BRANDING (INNOFUSION, PHOENIX, WELD)
+  // =========================================================================
+  {
+    id: 'branding-innofusion',
+    title: 'Innofusion — Corporate Brand Identity System',
+    category: 'Brand Identity',
+    domain: 'Branding',
+    subDomain: 'Innofusion',
+    client: 'Innofusion Corp',
+    year: '2025',
+    medium: 'Brand Guidelines & Identity Architecture',
+    thumbnail: ASSET_PATHS.INNOFUSION_1,
+    bentoSize: 'normal',
+    bentoTag: '04 // BRANDING • INNOFUSION',
+    shortDescription:
+      'Comprehensive brand identity system featuring modern geometric logomarks, corporate identity applications, and brand collateral guidelines.',
+    deliverables: [
+      'Logo Mark Architecture',
+      'Corporate Identity System',
+      'Brand Style Guide',
+      'Stationery & Digital Assets',
+    ],
+    caseStudy: {
+      brief:
+        'Craft a forward-looking corporate identity system for Innofusion that communicates innovation, structure, and reliability.',
+      constraint:
+        'Maintain absolute aesthetic clarity across both digital interfaces and high-grade print collateral.',
+      processSteps: [
+        {
+          title: '01. Grid Geometry',
+          description: 'Constructing a modular vector logomark based on golden ratio proportions.',
+        },
+        {
+          title: '02. Collateral Mockups',
+          description: 'Testing identity placement across business cards, digital banners, and brand apparel.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Charcoal Black', hex: '#1A1A1A' },
+        { name: 'Pure White', hex: '#FFFFFF' },
+        { name: 'Electric Accent', hex: '#5D5CDE' },
+      ],
+      typographyUsed: ['Plus Jakarta Sans', 'JetBrains Mono'],
+      keyMetric: 'Complete Brand Launch',
+      outcome: 'Successfully deployed across all company assets, corporate headquarters, and digital platforms.',
+      gallery: [
+        { url: ASSET_PATHS.INNOFUSION_1, caption: 'Primary Identity Showcase 01' },
+        { url: ASSET_PATHS.INNOFUSION_2, caption: 'Brand Collateral Layout 02' },
+        { url: ASSET_PATHS.INNOFUSION_3, caption: 'Typography & Grid Architecture 03' },
+        { url: ASSET_PATHS.INNOFUSION_4, caption: 'Digital Applications Mockup 04' },
+      ],
+    },
+  },
+  {
+    id: 'branding-phoenix',
+    title: 'Phoenix — Brand Identity & Product Packaging System',
+    category: 'Brand Identity',
+    domain: 'Branding',
+    subDomain: 'Phoenix',
+    client: 'Phoenix Studio',
+    year: '2025',
+    medium: 'Brand Experience & Packaging Architecture',
+    thumbnail: ASSET_PATHS.PHOENIX_LOGO,
+    bentoSize: 'hero',
+    bentoTag: '05 // BRANDING • PHOENIX',
+    shortDescription:
+      'Expansive brand identity showcase encompassing 12 design assets including custom logomark variations, packaging layouts, and print identity guidelines.',
+    deliverables: [
+      'Brand Mark & Vector Assets',
+      '12-Piece Asset Suite',
+      'Physical Packaging Layouts',
+      'Identity Architecture',
+    ],
+    caseStudy: {
+      brief:
+        'Design a high-end brand identity and packaging suite for Phoenix that captures elegance, power, and modern sophistication.',
+      constraint:
+        'Deliver a versatile visual system that scales effortlessly from tiny embossed foil seals to massive display banners.',
+      processSteps: [
+        {
+          title: '01. Logo Symbol Evolution',
+          description: 'Drafting vector emblem concepts synthesizing bird-in-flight geometry with minimal line weights.',
+        },
+        {
+          title: '02. Packaging Architecture',
+          description: 'Designing physical dylines, box sleeves, and tactile finish specifications.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Deep Charcoal', hex: '#111111' },
+        { name: 'Alabaster Canvas', hex: '#F5F5F0' },
+        { name: 'Gold Foil Accent', hex: '#D4AF37' },
+      ],
+      typographyUsed: ['Syne Bold', 'Playfair Display', 'Plus Jakarta Sans'],
+      keyMetric: '12 Identity Assets Created',
+      outcome: 'Full brand rollout across luxury retail packaging and international e-commerce channels.',
+      gallery: [
+        { url: ASSET_PATHS.PHOENIX_LOGO, caption: 'Official Logo Mark Lockup' },
+        { url: ASSET_PATHS.PHOENIX_1, caption: 'Brand Specimen 01' },
+        { url: ASSET_PATHS.PHOENIX_2, caption: 'Brand Specimen 02' },
+        { url: ASSET_PATHS.PHOENIX_3, caption: 'Brand Specimen 03' },
+        { url: ASSET_PATHS.PHOENIX_4, caption: 'Brand Specimen 04' },
+        { url: ASSET_PATHS.PHOENIX_5, caption: 'Brand Specimen 05' },
+        { url: ASSET_PATHS.PHOENIX_6, caption: 'Brand Specimen 06' },
+        { url: ASSET_PATHS.PHOENIX_7, caption: 'Brand Specimen 07' },
+        { url: ASSET_PATHS.PHOENIX_8, caption: 'Brand Specimen 08' },
+        { url: ASSET_PATHS.PHOENIX_9, caption: 'Brand Specimen 09' },
+        { url: ASSET_PATHS.PHOENIX_10, caption: 'Brand Specimen 10' },
+        { url: ASSET_PATHS.PHOENIX_ASSET2, caption: 'Vector Asset Emblem' },
+      ],
+    },
+  },
+  {
+    id: 'branding-weld',
+    title: 'Weld — Industrial Brand & Packaging Architecture',
+    category: 'Brand Identity',
+    domain: 'Branding',
+    subDomain: 'Weld',
+    client: 'Weld Industrial',
+    year: '2025',
+    medium: 'Industrial Brand System & Product Packaging',
+    thumbnail: ASSET_PATHS.WELD_1,
+    bentoSize: 'wide',
+    bentoTag: '06 // BRANDING • WELD',
+    shortDescription:
+      'Industrial strength brand identity and packaging design system comprising 14 custom vector symbols, label specifications, and product wraps.',
+    deliverables: [
+      'Industrial Brand Identity',
+      '14 Custom Design Assets',
+      'Vector SVG Logos & Icons',
+      'Product Packaging Wraps',
+    ],
+    caseStudy: {
+      brief:
+        'Create a bold, indestructible industrial brand identity system for Weld product lines across physical packaging and digital specs.',
+      constraint:
+        'Ensure legibility and instant brand recognition under harsh industrial environment conditions.',
+      processSteps: [
+        {
+          title: '01. Heavy Duty Typography',
+          description: 'Custom block lettering engineered with high structural stability and solid ink density.',
+        },
+        {
+          title: '02. Packaging System',
+          description: 'Developing high-contrast product labeling system for containers and machinery.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Industrial Black', hex: '#121212' },
+        { name: 'Steel White', hex: '#F9F9FB' },
+        { name: 'Safety Orange', hex: '#FF6B00' },
+      ],
+      typographyUsed: ['Syne ExtraBold', 'JetBrains Mono'],
+      keyMetric: '14 Industrial Assets Delivered',
+      outcome: 'Streamlined entire product catalog packaging across international distributor network.',
+      gallery: [
+        { url: ASSET_PATHS.WELD_1, caption: 'Weld Packaging & Product Specimen 01' },
+        { url: ASSET_PATHS.WELD_2, caption: 'Weld Product Specimen 02' },
+        { url: ASSET_PATHS.WELD_3, caption: 'Weld Product Specimen 03' },
+        { url: ASSET_PATHS.WELD_G, caption: 'Weld Graphic Brand Specimen' },
+        { url: ASSET_PATHS.WELD_ASSET_7, caption: 'Industrial Vector Asset 07' },
+        { url: ASSET_PATHS.WELD_ASSET_8, caption: 'Industrial Vector Asset 08' },
+        { url: ASSET_PATHS.WELD_ASSET_9, caption: 'Industrial Vector Asset 09' },
+        { url: ASSET_PATHS.WELD_ASSET_10, caption: 'Industrial Vector Asset 10' },
+      ],
+    },
+  },
+
+  // =========================================================================
+  // DOMAIN 3: CONCEPT-DRIVEN DESIGN
+  // =========================================================================
+  {
+    id: 'concept-wordsworth',
+    title: 'Poetic Rest — William Wordsworth Typographic Poster',
+    category: 'Concept-Driven Design',
+    domain: 'Concept-driven design',
+    client: 'Studio Exploration',
+    year: '2025',
+    medium: 'Editorial Typography & Fine Art Poster',
+    thumbnail: ASSET_PATHS.CONCEPT_WORDSWORTH,
+    bentoSize: 'tall',
+    bentoTag: '07 // CONCEPT DESIGN',
+    shortDescription:
+      'Atmospheric editorial graphic design exploring themes of mortality and silence from William Wordsworth’s iconic poem.',
+    deliverables: [
+      'Poetic Text Layout',
+      'Atmospheric Texture Compositing',
+      'Editorial Type Hierarchy',
+      'Limited Print Run Spec',
+    ],
+    caseStudy: {
+      brief:
+        'Translate classic Romantic poetry into a contemporary tactile editorial design through experimental typography.',
+      constraint:
+        'Evoke deep emotional stillness using minimal visual elements and subtle micro-textures.',
+      processSteps: [
+        {
+          title: '01. Text Setting',
+          description: 'Setting Wordsworth text with delicate tracking and precise negative space.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Slate Grey', hex: '#2A2D34' },
+        { name: 'Uncoated Paper', hex: '#F4F1EA' },
+      ],
+      typographyUsed: ['Playfair Display Italic', 'Syne Regular'],
+      keyMetric: 'Exhibition Selection',
+      outcome: 'Displayed in local design studio showcase and printed on 300gsm textured stock.',
+      gallery: [{ url: ASSET_PATHS.CONCEPT_WORDSWORTH, caption: 'Wordsworth Typographic Poster' }],
+    },
+  },
+  {
+    id: 'concept-holi-colors',
+    title: 'Splash Colors, Spread Joy — Holi Creative Concept',
+    category: 'Concept-Driven Design',
+    domain: 'Concept-driven design',
+    client: 'Cultural Design Series',
+    year: '2025',
+    medium: 'Digital Fine Art & Cultural Graphic',
+    thumbnail: ASSET_PATHS.CONCEPT_HOLI,
+    bentoSize: 'normal',
+    bentoTag: '08 // CONCEPT DESIGN',
+    shortDescription:
+      'Vibrant festival design concept celebrating Holi where art meets festivity, combining explosive pigment textures with refined typography.',
+    deliverables: [
+      'Pigment Texture Compositing',
+      'Vibrant Color Calibration',
+      'Festival Lockup Design',
+      'Digital Media Ratios',
+    ],
+    caseStudy: {
+      brief: 'Capture the chaotic energy and joy of Holi in a structured, high-fashion graphic poster.',
+      constraint: 'Maintain crisp text legibility over complex multi-colored background textures.',
+      processSteps: [
+        {
+          title: '01. Pigment Compositing',
+          description: 'Layering organic powder splash textures with high contrast background masks.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Gulal Pink', hex: '#FF007F' },
+        { name: 'Sunshine Yellow', hex: '#FFD700' },
+        { name: 'Royal Cyan', hex: '#00D2FF' },
+      ],
+      typographyUsed: ['Plus Jakarta Sans ExtraBold', 'Playfair Display Italic'],
+      keyMetric: 'Viral Cultural Engagement',
+      outcome: 'Shared widely across creative communities during Holi festivities.',
+      gallery: [{ url: ASSET_PATHS.CONCEPT_HOLI, caption: 'Holi Festival Artwork' }],
+    },
+  },
+  {
+    id: 'concept-bengal-business',
+    title: 'Bengal Means Business — April Fools Satire Poster',
+    category: 'Concept-Driven Design',
+    domain: 'Concept-driven design',
+    client: 'Topical Satire Series',
+    year: '2025',
+    medium: 'Satirical Editorial Graphic',
+    thumbnail: ASSET_PATHS.CONCEPT_BENGAL_BUSINESS,
+    bentoSize: 'normal',
+    bentoTag: '09 // CONCEPT DESIGN',
+    shortDescription:
+      'Topical satirical poster created for April 1st, blending sharp political commentary with high-end corporate poster styling.',
+    deliverables: [
+      'Satirical Concept Development',
+      'Corporate Poster Framing',
+      'Topical Copywriting Lockup',
+    ],
+    caseStudy: {
+      brief: 'Construct a humorous satirical graphic for April Fools Day poking gentle fun at corporate summit slogans.',
+      constraint: 'Disguise the joke inside a believable, ultra-polished corporate poster framework.',
+      processSteps: [
+        {
+          title: '01. Visual Irony',
+          description: 'Pairing formal corporate layout grids with tongue-in-cheek editorial punchlines.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Corporate Blue', hex: '#0055FF' },
+        { name: 'Crisp White', hex: '#FFFFFF' },
+      ],
+      typographyUsed: ['Syne Bold', 'JetBrains Mono'],
+      keyMetric: 'High Shareability',
+      outcome: 'Gained massive social interaction across design forums for clever topical execution.',
+      gallery: [{ url: ASSET_PATHS.CONCEPT_BENGAL_BUSINESS, caption: 'Bengal Means Business Graphic' }],
+    },
+  },
+  {
+    id: 'concept-bhasha-divas',
+    title: 'আন্তর্জাতিক মাতৃভাষা দিবস — Bengali Language Heritage',
+    category: 'Concept-Driven Design',
+    domain: 'Concept-driven design',
+    client: 'Linguistic Heritage Series',
+    year: '2025',
+    medium: 'Multilingual Typography Poster',
+    thumbnail: ASSET_PATHS.CONCEPT_BHASHA_DIVAS,
+    bentoSize: 'normal',
+    bentoTag: '10 // CONCEPT DESIGN',
+    shortDescription:
+      'Honoring International Mother Language Day with bespoke Bengali typography and traditional calligraphic lockups.',
+    deliverables: [
+      'Bengali Letterform Customization',
+      'Heritage Lockup Composition',
+      'Cultural Print Design',
+    ],
+    caseStudy: {
+      brief: 'Pay tribute to Bengali language heritage through a modern typographic poster.',
+      constraint: 'Respect classic Bengali letterform proportions while infusing modern minimalist spacing.',
+      processSteps: [
+        {
+          title: '01. Bengali Type Geometry',
+          description: 'Refining Bengali script curves for seamless integration with Latin metadata.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Crimson Red', hex: '#C8102E' },
+        { name: 'Deep Ink', hex: '#111111' },
+      ],
+      typographyUsed: ['Custom Bengali Sans', 'JetBrains Mono'],
+      keyMetric: 'Cultural Preservation Award',
+      outcome: 'Celebrated across regional culture portals as an exemplary tribute to language roots.',
+      gallery: [{ url: ASSET_PATHS.CONCEPT_BHASHA_DIVAS, caption: 'Bhasha Divas Poster' }],
+    },
+  },
+  {
+    id: 'concept-women-respect',
+    title: 'Women’s Dignity & Equality — Social Awareness Graphic',
+    category: 'Concept-Driven Design',
+    domain: 'Concept-driven design',
+    client: 'Social Impact Series',
+    year: '2025',
+    medium: 'Public Awareness Campaign Artwork',
+    thumbnail: ASSET_PATHS.CONCEPT_WOMEN_RESPECT,
+    bentoSize: 'normal',
+    bentoTag: '11 // CONCEPT DESIGN',
+    shortDescription:
+      'Poignant social advocacy design calling for respect, safety, and equal dignity for women through poetic Bengali text and rich visual symbolism.',
+    deliverables: [
+      'Social Advocacy Copywriting',
+      'Symbolic Vector Illustration',
+      'Public Awareness Layout',
+    ],
+    caseStudy: {
+      brief: 'Design a high-impact social awareness poster advocating for gender equality and respect.',
+      constraint: 'Convey a powerful, sensitive message with dignity, strength, and visual clarity.',
+      processSteps: [
+        {
+          title: '01. Emotional Resonance',
+          description: 'Harmonizing warm floral motif outlines with bold call-to-action typography.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Magenta Rose', hex: '#D10056' },
+        { name: 'Warm Cream', hex: '#FDFBF7' },
+      ],
+      typographyUsed: ['Custom Bengali Typography', 'Plus Jakarta Sans'],
+      keyMetric: 'Non-Profit Media Feature',
+      outcome: 'Used by community advocacy groups as a poster campaign for awareness rallies.',
+      gallery: [{ url: ASSET_PATHS.CONCEPT_WOMEN_RESPECT, caption: 'Women Equality Campaign Poster' }],
+    },
+  },
+
+  // =========================================================================
+  // DOMAIN 4: SOCIAL MEDIA POSTER
+  // =========================================================================
+  {
+    id: 'social-nahoums-bakery',
+    title: 'Nahoum & Sons — Heritage Confectionery Social Series',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Nahoum & Sons Bakery',
+    year: '2025',
+    medium: '5-Part Social Campaign Series',
+    thumbnail: ASSET_PATHS.NAHOUM_1,
+    bentoSize: 'hero',
+    bentoTag: '12 // SOCIAL POSTER • SERIES',
+    shortDescription:
+      'A 5-part social media campaign celebrating Kolkata’s iconic Jewish bakery, featuring mouth-watering product showcase layouts for rich fruit cakes, pastries, and fudges.',
+    deliverables: [
+      '5-Part Social Carousel Suite',
+      'Food Photography Art Direction',
+      'Heritage Bakery Branding',
+      'Instagram & Meta Ad Ratios',
+    ],
+    caseStudy: {
+      brief:
+        'Re-engage nostalgic food lovers with Nahoum’s legendary baked treats through a 5-part appetizing social media series.',
+      constraint:
+        'Preserve the century-old vintage charm of the establishment while appealing to contemporary Instagram audiences.',
+      processSteps: [
+        {
+          title: '01. Nostalgic Color Grading',
+          description: 'Enhancing warm golden tones of baked goods against rich mahogany backdrop shadows.',
+        },
+        {
+          title: '02. Carousel Framing',
+          description: 'Constructing seamless layout continuity across 5 swipeable social cards.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Golden Crust', hex: '#D48C46' },
+        { name: 'Dark Chocolate', hex: '#3B1E08' },
+        { name: 'Cream Velvet', hex: '#FFF5E6' },
+      ],
+      typographyUsed: ['Playfair Display', 'Plus Jakarta Sans'],
+      keyMetric: '+180% Engagement Rate',
+      outcome: 'Drove massive holiday ordering queues during festive bakery season.',
+      gallery: [
+        { url: ASSET_PATHS.NAHOUM_1, caption: 'Nahoum’s Series 01 — Rich Fruit Cake Feature' },
+        { url: ASSET_PATHS.NAHOUM_2, caption: 'Nahoum’s Series 02 — Almond Pastry Showcase' },
+        { url: ASSET_PATHS.NAHOUM_3, caption: 'Nahoum’s Series 03 — Fudgy Brownie Delights' },
+        { url: ASSET_PATHS.NAHOUM_4, caption: 'Nahoum’s Series 04 — Vintage Heritage Story' },
+        { url: ASSET_PATHS.NAHOUM_5, caption: 'Nahoum’s Series 05 — Festive Order Call' },
+      ],
+    },
+  },
+  {
+    id: 'social-bengal-sweets',
+    title: 'Bengal Heritage Sweets — Culinary Nostalgia Campaign',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Hindusthan, Ganguram & Bachharam',
+    year: '2025',
+    medium: '7-Part Social Media Campaign',
+    thumbnail: ASSET_PATHS.SWEETS_MAIN,
+    bentoSize: 'wide',
+    bentoTag: '13 // SOCIAL POSTER • SERIES',
+    shortDescription:
+      'A multi-part social campaign paying homage to iconic sweet shops of Bengal (Hindusthan Sweets, Ganguram, Bachharam’s) and traditional delicacies.',
+    deliverables: [
+      '7-Part Culinary Campaign',
+      'Custom Food Illustration',
+      'Regional Brand Storytelling',
+      'Social Ad Assets',
+    ],
+    caseStudy: {
+      brief: 'Celebrate Bengal’s rich sweet-making heritage through a visually mouthwatering social media series.',
+      constraint: 'Unify three legendary sweet brands into a single cohesive cultural narrative.',
+      processSteps: [
+        {
+          title: '01. Food Art Direction',
+          description: 'Focusing on macro textures of Nolen Gur, Rosogolla syrup, and Mishti Doi.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Syrup Amber', hex: '#E29D38' },
+        { name: 'Milk White', hex: '#FDFBF7' },
+      ],
+      typographyUsed: ['Playfair Display Italic', 'Plus Jakarta Sans'],
+      keyMetric: 'Top Regional Culinary Campaign',
+      outcome: 'Widely featured on food culture blogs and brand social handles.',
+      gallery: [
+        { url: ASSET_PATHS.SWEETS_MAIN, caption: 'Heritage Sweets Campaign Key Visual' },
+        { url: ASSET_PATHS.SWEETS_1, caption: 'Delicacy Showcase 01' },
+        { url: ASSET_PATHS.SWEETS_2, caption: 'Delicacy Showcase 02' },
+        { url: ASSET_PATHS.SWEETS_3, caption: 'Delicacy Showcase 03' },
+        { url: ASSET_PATHS.SWEETS_4, caption: 'Delicacy Showcase 04' },
+        { url: ASSET_PATHS.SWEETS_5, caption: 'Delicacy Showcase 05' },
+        { url: ASSET_PATHS.SWEETS_6, caption: 'Delicacy Showcase 06' },
+      ],
+    },
+  },
+  {
+    id: 'social-ureckon-fest',
+    title: 'Ureckon Annual Tech Fest — Event Promotion Suite',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Ureckon Tech Fest',
+    year: '2025',
+    medium: '5-Part Event Poster Suite',
+    thumbnail: ASSET_PATHS.URECKON_1,
+    bentoSize: 'normal',
+    bentoTag: '14 // SOCIAL POSTER • EVENT',
+    shortDescription:
+      'Futuristic 5-part promotional poster series designed for Ureckon annual tech fest with dark neon aesthetics, cyber grid elements, and event schedules.',
+    deliverables: [
+      '5 Tech Fest Event Posters',
+      'Cyberpunk Visual System',
+      'Event Lineup Graphics',
+      'Social Ad Kit',
+    ],
+    caseStudy: {
+      brief: 'Create a high-energy, futuristic event campaign for a national university engineering fest.',
+      constraint: 'Display extensive event schedules and speaker names without cluttering the futuristic visual theme.',
+      processSteps: [
+        {
+          title: '01. Neon Cyber Grid',
+          description: 'Constructing high contrast dark background grids with electric blue and purple highlights.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Cyber Neon Blue', hex: '#00F0FF' },
+        { name: 'Deep Void', hex: '#0A0A12' },
+      ],
+      typographyUsed: ['Syne ExtraBold', 'JetBrains Mono'],
+      keyMetric: '5,000+ Fest Registrations',
+      outcome: 'Drove record student attendance and sponsor engagement.',
+      gallery: [
+        { url: ASSET_PATHS.URECKON_1, caption: 'Ureckon Tech Fest Poster 01' },
+        { url: ASSET_PATHS.URECKON_2, caption: 'Ureckon Tech Fest Poster 02' },
+        { url: ASSET_PATHS.URECKON_3, caption: 'Ureckon Tech Fest Poster 03' },
+        { url: ASSET_PATHS.URECKON_4, caption: 'Ureckon Tech Fest Poster 04' },
+        { url: ASSET_PATHS.URECKON_5, caption: 'Ureckon Tech Fest Poster 05' },
+      ],
+    },
+  },
+  {
+    id: 'social-t20-world-cup',
+    title: 'India T20 World Cup Victory 2024 — Commemorative Artwork',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Topical Sports Tribute',
+    year: '2024',
+    medium: 'Topical Social Media Poster',
+    thumbnail: ASSET_PATHS.WORLD_CUP_2024,
+    bentoSize: 'normal',
+    bentoTag: '15 // SOCIAL POSTER • TOPICAL',
+    shortDescription:
+      'High-impact sports tribute poster celebrating Team India’s historic T20 World Cup 2024 championship win with gold trophy compositing.',
+    deliverables: [
+      'Topical Sports Illustration',
+      'Gold Trophy Compositing',
+      'Tricolor Gradient Lockup',
+    ],
+    caseStudy: {
+      brief: 'Release an instant high-impact celebratory graphic immediately following Team India’s World Cup final victory.',
+      constraint: 'Turnaround high fidelity visual compositing within minutes of match completion.',
+      processSteps: [
+        {
+          title: '01. Rapid Compositing',
+          description: 'Integrating championship trophy render with saffron and green celebratory smoke.',
+        },
+      ],
+      colorPalette: [
+        { name: 'India Saffron', hex: '#FF671F' },
+        { name: 'Championship Gold', hex: '#FFD700' },
+        { name: 'India Blue', hex: '#000088' },
+      ],
+      typographyUsed: ['Syne ExtraBold', 'Plus Jakarta Sans'],
+      keyMetric: 'Viral Sports Graphic',
+      outcome: 'Achieved massive re-shares across sports enthusiast communities.',
+      gallery: [{ url: ASSET_PATHS.WORLD_CUP_2024, caption: 'T20 World Cup Victory Artwork' }],
+    },
+  },
+  {
+    id: 'social-happy-holi',
+    title: 'Bangla Konnection — Happy Holi Festive Greeting',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Bangla Konnection',
+    year: '2025',
+    medium: 'Seasonal Festive Graphic',
+    thumbnail: ASSET_PATHS.HAPPY_HOLI,
+    bentoSize: 'normal',
+    bentoTag: '16 // SOCIAL POSTER • FESTIVE',
+    shortDescription:
+      'Joyful festive graphic created for Bangla Konnection featuring vibrant yellow and pink gulal splashes and warm Bengali greeting typography.',
+    deliverables: ['Festive Greeting Graphic', 'Color Splash Compositing', 'Brand Logo Lockup'],
+    caseStudy: {
+      brief: 'Design a warm festive greeting for Bangla Konnection subscribers during Dol Jatra / Holi.',
+      constraint: 'Evoke festive warmth while keeping client logo lockup clean.',
+      processSteps: [{ title: '01. Palette Tuning', description: 'Balancing bright yellow background with deep red accent type.' }],
+      colorPalette: [
+        { name: 'Marigold Yellow', hex: '#FFC800' },
+        { name: 'Festive Magenta', hex: '#E6005C' },
+      ],
+      typographyUsed: ['Playfair Display', 'Plus Jakarta Sans'],
+      keyMetric: 'Community Engagement',
+      outcome: 'Widely praised by brand followers.',
+      gallery: [{ url: ASSET_PATHS.HAPPY_HOLI, caption: 'Bangla Konnection Holi Poster' }],
+    },
+  },
+  {
+    id: 'social-eid-mubarak',
+    title: 'Eid Mubarak — Peace, Love & Sweetness Greetings',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Festive Greetings Series',
+    year: '2025',
+    medium: 'Seasonal Social Media Graphic',
+    thumbnail: ASSET_PATHS.EID_MUBARAK,
+    bentoSize: 'normal',
+    bentoTag: '17 // SOCIAL POSTER • FESTIVE',
+    shortDescription:
+      'Serene night sky festive poster featuring crescent moon optics, sparkling starlight, and elegant Bengali greeting script.',
+    deliverables: ['Night Optics Rendering', 'Crescent Moon Graphic', 'Bilingual Festive Typography'],
+    caseStudy: {
+      brief: 'Design an elegant Eid Mubarak festive poster expressing wishes of peace, love, and sweet moments.',
+      constraint: 'Create a quiet, majestic nocturnal mood with soft glow effects.',
+      processSteps: [{ title: '01. Celestial Art', description: 'Rendering golden crescent moon and glowing star accents.' }],
+      colorPalette: [
+        { name: 'Midnight Navy', hex: '#0B132B' },
+        { name: 'Crescent Gold', hex: '#F4D068' },
+      ],
+      typographyUsed: ['Playfair Display Italic', 'Plus Jakarta Sans'],
+      keyMetric: 'High Audience Reach',
+      outcome: 'Shared across social platforms during Eid celebrations.',
+      gallery: [{ url: ASSET_PATHS.EID_MUBARAK, caption: 'Eid Mubarak Poster' }],
+    },
+  },
+  {
+    id: 'social-world-design-day',
+    title: 'World Design Day — Allure of Design Graphic',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Design Community Series',
+    year: '2025',
+    medium: 'Editorial Design Tribute Poster',
+    thumbnail: ASSET_PATHS.WORLD_DESIGN_DAY,
+    bentoSize: 'normal',
+    bentoTag: '18 // SOCIAL POSTER • EDITORIAL',
+    shortDescription:
+      'Sophisticated poster honoring World Design Day celebrating creativity, grid precision, and visual storytelling aesthetics.',
+    deliverables: ['Design Tribute Graphic', 'Grid System Artwork', 'Creative Manifesto Layout'],
+    caseStudy: {
+      brief: 'Craft a self-referential design poster celebrating World Design Day for fellow creatives.',
+      constraint: 'Reflect the highest standards of graphic composition and typographic alignment.',
+      processSteps: [{ title: '01. Grid Layout', description: 'Exposing structural baseline grid lines as part of the visual aesthetic.' }],
+      colorPalette: [
+        { name: 'Deep Ink', hex: '#1A1A1A' },
+        { name: 'Electric Indigo', hex: '#5D5CDE' },
+      ],
+      typographyUsed: ['Syne Bold', 'JetBrains Mono'],
+      keyMetric: 'Designer Community Highlight',
+      outcome: 'Shared by prominent design portals.',
+      gallery: [{ url: ASSET_PATHS.WORLD_DESIGN_DAY, caption: 'World Design Day Poster' }],
+    },
+  },
+  {
+    id: 'social-sunita-williams',
+    title: 'Welcome Back, Sunita Williams — Space Exploration Tribute',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Aerospace Commemorative Series',
+    year: '2025',
+    medium: 'Topical Space Tribute Poster',
+    thumbnail: ASSET_PATHS.SUNITA_WILLIAMS,
+    bentoSize: 'normal',
+    bentoTag: '19 // SOCIAL POSTER • TOPICAL',
+    shortDescription:
+      'Inspiring space-themed tribute graphic welcoming back astronaut Sunita Williams after her monumental space station journey.',
+    deliverables: ['Space Station Optics', 'Earth Horizon Rendering', 'Commemorative Copywriting'],
+    caseStudy: {
+      brief: 'Honor Sunita Williams’ return to Earth with an inspiring aerospace graphic poster.',
+      constraint: 'Balance deep space imagery with warm human celebration messaging.',
+      processSteps: [{ title: '01. Earth Horizon', description: 'Blending blue planet curve with starlight background lighting.' }],
+      colorPalette: [
+        { name: 'Orbital Blue', hex: '#0066FF' },
+        { name: 'Starlight Gold', hex: '#FFE600' },
+      ],
+      typographyUsed: ['Syne ExtraBold', 'Plus Jakarta Sans'],
+      keyMetric: 'Viral Aerospace Graphic',
+      outcome: 'Extensively appreciated across science and space fan channels.',
+      gallery: [{ url: ASSET_PATHS.SUNITA_WILLIAMS, caption: 'Sunita Williams Tribute Poster' }],
+    },
+  },
+  {
+    id: 'social-nolen-gur-winter',
+    title: 'Winters in Bengal — Nolen Gur Nostalgia Poster',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Regional Culinary Series',
+    year: '2025',
+    medium: 'Seasonal Culinary Artwork',
+    thumbnail: ASSET_PATHS.NOLEN_GUR,
+    bentoSize: 'normal',
+    bentoTag: '20 // SOCIAL POSTER • CULINARY',
+    shortDescription:
+      'Evocative winter graphic poster depicting the aroma of date palm jaggery (Nolen Gur) and traditional Bengali winter sweets.',
+    deliverables: ['Culinary Illustration', 'Warm Winter Palette', 'Nostalgic Storytelling Lockup'],
+    caseStudy: {
+      brief: 'Evoke nostalgic memories of Bengali winter mornings and fresh Nolen Gur sweets.',
+      constraint: 'Convey warmth and aroma through color and tactile imagery.',
+      processSteps: [{ title: '01. Amber Palette', description: 'Calibrating rich date-palm syrup amber tones against soft cream background.' }],
+      colorPalette: [
+        { name: 'Jaggery Amber', hex: '#C86400' },
+        { name: 'Winter Cream', hex: '#FFF8F0' },
+      ],
+      typographyUsed: ['Playfair Display Italic', 'Plus Jakarta Sans'],
+      keyMetric: 'Culinary Heritage Engagement',
+      outcome: 'Shared widely across regional winter festivals.',
+      gallery: [{ url: ASSET_PATHS.NOLEN_GUR, caption: 'Nolen Gur Winter Graphic' }],
+    },
+  },
+];
