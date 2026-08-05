@@ -111,7 +111,7 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
                   <div className="grid grid-cols-2 gap-2 pt-1 text-[11px]">
                     <div>
                       <span className="text-[#1A1A1A]/50 block">Instagram</span>
-                      <a href="https://instagram.com/bireshwarkundu" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#1A1A1A] hover:text-[#5D5CDE]">
+                      <a href="https://www.instagram.com/bireswaarkundu/" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#1A1A1A] hover:text-[#5D5CDE]">
                         @bireswaarkundu
                       </a>
                     </div>
