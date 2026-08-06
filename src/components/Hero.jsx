@@ -37,24 +37,22 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
         {/* Positioning Statement & Short Bio Hook */}
         <div className="max-w-md flex flex-col gap-4">
           <p className="font-editorial text-2xl sm:text-3xl text-[#1A1A1A] leading-snug italic">
-            &ldquo;Crafting high-impact Ad Campaigns, Social Media Systems, Brand Identities, and Concept Driven Designs for forward-thinking brands.&rdquo;
+            &ldquo;Building strategic Brand Identities, Ad Campaigns, and Visual Systems that drive business growth.&rdquo;
           </p>
           <div className="flex items-center gap-4 pt-2">
             <a
               href="#work"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById('work');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+                window.history.replaceState(null, '', window.location.pathname);
+              }}
               className="inline-flex items-center gap-2 text-xs font-mono-display uppercase font-bold tracking-wider text-[#1A1A1A] hover:text-[#5D5CDE] transition-colors group"
             >
               <span>Explore Selected Work</span>
               <ArrowDownRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:translate-y-0.5 transition-transform" />
             </a>
-            <span className="text-[#1A1A1A]/30">•</span>
-            <button
-              onClick={onOpenInquiry}
-              className="inline-flex items-center gap-1.5 text-xs font-mono-display uppercase font-bold tracking-wider text-[#5D5CDE] hover:underline"
-            >
-              <span>Estimate Project</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </button>
           </div>
         </div>
       </div>
@@ -117,8 +115,8 @@ export const Hero = ({ onOpenInquiry, onSelectProject }) => {
                     </div>
                     <div>
                       <span className="text-[#1A1A1A]/50 block">Behance</span>
-                      <a href="https://behance.net/bireshwarkundu" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#1A1A1A] hover:text-[#5D5CDE] truncate block">
-                        behance.net/bireshwarkundu
+                      <a href="https://behance.net/bireswaarkundu" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#1A1A1A] hover:text-[#5D5CDE] truncate block">
+                        behance.net/bireswaarkundu
                       </a>
                     </div>
                     <div className="col-span-2">

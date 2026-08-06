@@ -133,134 +133,33 @@ export const ProjectModal = ({
             </div>
           )}
 
-          {/* Process Breakdown & Gallery */}
-          {caseStudy && caseStudy.processSteps && (
-            <div className="space-y-6">
-              <div className="border-b border-[#1A1A1A]/10 pb-3">
-                <h3 className="font-syne font-bold text-2xl text-[#1A1A1A]">
-                  Process &amp; Visual Execution
-                </h3>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {caseStudy.processSteps.map((step, idx) => (
-                  <div key={step.title} className="p-5 bg-white rounded-xs border border-[#1A1A1A]/15 space-y-2">
-                    <span className="text-xs font-mono-display text-[#1A1A1A]/50 font-bold">
-                      PHASE 0{idx + 1}
-                    </span>
-                    <h4 className="font-syne font-bold text-base text-[#1A1A1A]">{step.title}</h4>
-                    <p className="text-xs font-mono-display text-[#1A1A1A]/70 leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Visual Gallery */}
-              <div className="space-y-8 pt-4">
-                {caseStudy.gallery.map((imgItem, idx) => {
-                  const imgSrc = typeof imgItem === 'string' ? imgItem : imgItem.url;
-                  const imgCaption = typeof imgItem === 'string' ? `Final Campaign Artwork 0${idx + 1}` : imgItem.caption;
-                  return (
-                    <figure key={idx} className="space-y-2">
-                      <div className="rounded-xs overflow-hidden border border-[#1A1A1A]/10 bg-[#1A1A1A] p-4 shadow-sm flex items-center justify-center">
-                        <img
-                          src={imgSrc}
-                          alt={imgCaption}
-                          referrerPolicy="no-referrer"
-                          className="max-h-[700px] w-auto h-auto object-contain mx-auto rounded-xs shadow-md"
-                        />
-                      </div>
-                      <figcaption className="text-xs font-mono-display text-[#1A1A1A]/60 italic flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-[#5D5CDE] rounded-full"></span>
-                        <span>FIG 0{idx + 1}: {imgCaption}</span>
-                      </figcaption>
-                    </figure>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
-          {/* Color Palette & Typography Specifications */}
-          {caseStudy && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-[#1A1A1A]/10">
-              {/* Color Swatches */}
-              <div className="space-y-3">
-                <span className="text-xs font-mono-display font-bold text-[#1A1A1A] uppercase tracking-wider">
-                  COLOR PALETTE SYSTEM
-                </span>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                  {caseStudy.colorPalette.map((color) => (
-                    <button
-                      key={color.hex}
-                      onClick={() => handleCopyHex(color.hex)}
-                      className="group p-2 bg-white rounded-xs border border-[#1A1A1A]/15 text-left hover:border-[#1A1A1A] transition-colors"
-                      title="Click to copy HEX code"
-                    >
-                      <div
-                        className="w-full h-12 rounded-xs border border-black/10 mb-2 shadow-inner"
-                        style={{ backgroundColor: color.hex }}
+          {/* Visual Gallery */}
+          {caseStudy && caseStudy.gallery && (
+            <div className="space-y-8 pt-4">
+              {caseStudy.gallery.map((imgItem, idx) => {
+                const imgSrc = typeof imgItem === 'string' ? imgItem : imgItem.url;
+                const imgCaption = typeof imgItem === 'string' ? `Final Campaign Artwork 0${idx + 1}` : imgItem.caption;
+                return (
+                  <figure key={idx} className="space-y-2">
+                    <div className="rounded-xs overflow-hidden border border-[#1A1A1A]/10 bg-[#1A1A1A] p-2 sm:p-3 shadow-sm flex items-center justify-center aspect-[4/5] max-w-2xl mx-auto w-full">
+                      <img
+                        src={imgSrc}
+                        alt={imgCaption}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover rounded-xs shadow-md"
                       />
-                      <span className="block text-[11px] font-mono-display font-bold text-[#1A1A1A]">
-                        {color.hex}
-                      </span>
-                      <span className="block text-[10px] font-mono-display text-[#1A1A1A]/60 truncate">
-                        {copiedHex === color.hex ? 'Copied!' : color.name}
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Typography Used */}
-              <div className="space-y-3">
-                <span className="text-xs font-mono-display font-bold text-[#1A1A1A] uppercase tracking-wider">
-                  TYPOGRAPHY PAIRINGS
-                </span>
-                <div className="p-4 bg-white rounded-xs border border-[#1A1A1A]/15 space-y-2">
-                  {caseStudy.typographyUsed.map((font) => (
-                    <div key={font} className="flex items-center justify-between text-xs font-mono-display py-1 border-b border-[#1A1A1A]/10 last:border-0">
-                      <span className="font-bold text-[#1A1A1A]">{font}</span>
-                      <span className="text-[#1A1A1A]/60 text-[10px]">PRIMARY TYPE SPECIMEN</span>
                     </div>
-                  ))}
-                </div>
-              </div>
+                    <figcaption className="text-xs font-mono-display text-[#1A1A1A]/60 italic flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#5D5CDE] rounded-full"></span>
+                      <span>FIG 0{idx + 1}: {imgCaption}</span>
+                    </figcaption>
+                  </figure>
+                );
+              })}
             </div>
           )}
 
-          {/* Outcome & Impact Callout Card */}
-          {caseStudy && (
-            <div className="p-8 bg-[#5D5CDE] text-white rounded-xs shadow-lg space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-mono-display font-bold uppercase tracking-wider text-white/80">
-                  VERIFIED OUTCOME
-                </span>
-                <span className="px-3 py-1 bg-white text-[#5D5CDE] text-xs font-mono-display font-bold uppercase rounded-full">
-                  {caseStudy.keyMetric}
-                </span>
-              </div>
-              <p className="font-editorial text-2xl sm:text-3xl text-white font-normal leading-snug">
-                &ldquo;{caseStudy.outcome}&rdquo;
-              </p>
-            </div>
-          )}
 
-          {/* Deliverables Checklist */}
-          <div className="p-6 bg-white rounded-xs border border-[#1A1A1A]/15 space-y-3">
-            <span className="text-xs font-mono-display font-bold text-[#1A1A1A] uppercase tracking-wider">
-              SCOPE OF DELIVERABLES INCLUDED
-            </span>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-              {project.deliverables.map((del) => (
-                <div key={del} className="flex items-center gap-2 text-xs font-mono-display text-[#1A1A1A]">
-                  <CheckCircle2 className="w-4 h-4 text-[#5D5CDE] shrink-0" />
-                  <span>{del}</span>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Modal Bottom Footer Navigation */}

@@ -20,6 +20,12 @@ export default function App() {
   const [studioMode, setStudioMode] = useState(false);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
 
+  React.useEffect(() => {
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+  }, []);
+
   const handleToggleShortlist = (id) => {
     setShortlist((prev) =>
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
@@ -66,12 +72,12 @@ export default function App() {
 
         <Process />
 
-        <PricingStrategy
+        {/* <PricingStrategy
           onOpenInquiry={() => {
             setInquiryPreselectedProject(null);
             setInquiryModalOpen(true);
           }}
-        />
+        /> */}
 
         <Testimonials />
       </main>
@@ -79,15 +85,15 @@ export default function App() {
       {/* Footer */}
       <Footer />
 
-      {/* Case Study Modal */}
-      <ProjectModal
+      {/* Case Study Modal (Disabled as requested) */}
+      {/* <ProjectModal
         projectId={selectedProjectId}
         onClose={() => setSelectedProjectId(null)}
         onSelectProject={(id) => setSelectedProjectId(id)}
         shortlist={shortlist}
         onToggleShortlist={handleToggleShortlist}
         onOpenInquiryWithProject={handleOpenInquiryWithProject}
-      />
+      /> */}
 
       {/* Freelance Inquiry Studio Modal */}
       {inquiryModalOpen && (
@@ -99,8 +105,8 @@ export default function App() {
         />
       )}
 
-      {/* Saved Projects Shortlist Drawer */}
-      <ShortlistDrawer
+      {/* Saved Projects Shortlist Drawer (Disabled) */}
+      {/* <ShortlistDrawer
         isOpen={shortlistDrawerOpen}
         onClose={() => setShortlistDrawerOpen(false)}
         shortlist={shortlist}
@@ -111,7 +117,7 @@ export default function App() {
           setShortlistDrawerOpen(false);
           setInquiryModalOpen(true);
         }}
-      />
+      /> */}
       {/* Custom Quote Modal (triggered by header Inquire button) */}
       {bookingModalOpen && (
         <CustomQuoteModal onClose={() => setBookingModalOpen(false)} />
