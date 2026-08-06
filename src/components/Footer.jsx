@@ -7,6 +7,7 @@ export const Footer = () => {
   };
 
   const socialLinks = [
+    { name: 'Dribbble', url: 'https://dribbble.com/bireswaarkundu', icon: Dribbble },
     { name: 'Instagram', url: 'https://www.instagram.com/bireswaarkundu/', icon: Instagram },
     { name: 'Behance', url: 'https://behance.net/bireswaarkundu', icon: Globe },
     { name: 'LinkedIn', url: 'https://linkedin.com/in/bireswaarkundu', icon: Linkedin }
