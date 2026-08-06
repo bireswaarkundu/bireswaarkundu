@@ -1,7 +1,7 @@
 import { ASSET_PATHS } from './projectImages.js';
 
 export const DOMAIN_CATEGORIES = [
-  { id: 'Ad Campaign', label: 'AD CAMPAIGN', count: 3 },
+  { id: 'Ad Campaign', label: 'AD CAMPAIGN', count: 4 },
   { id: 'Branding', label: 'BRANDING IDENTITY', count: 3, subCategories: ['Innofusion', 'Phoenix', 'Weld'] },
   { id: 'Concept-driven design', label: 'CONCEPT-DRIVEN DESIGN', count: 5 },
   { id: 'Social Media Poster', label: 'SOCIAL MEDIA POSTERS', count: 17 },
@@ -244,6 +244,44 @@ export const PROJECTS = [
       keyMetric: '#GoingPlaces Campaign Success',
       outcome: 'High audience engagement across digital ad channels and inflight magazine spreads.',
       gallery: [{ url: ASSET_PATHS.INDIGO_01, caption: 'IndiGo Key Visual Poster' }],
+    },
+  },
+  {
+    id: 'air-india-fly-high',
+    title: 'Air India — Elevate Your Journey',
+    category: 'Ad Campaign',
+    domain: 'Ad Campaign',
+    client: 'Air India',
+    year: '2025',
+    medium: 'OOH & Digital Campaign',
+    thumbnail: ASSET_PATHS.AIR_INDIA_03,
+    bentoSize: 'normal',
+    bentoTag: '04 // AD CAMPAIGN',
+    shortDescription:
+      'High-impact advertising artwork showcasing Air India modern brand aesthetics, luxury travel positioning, and vibrant campaign visuals.',
+    deliverables: [
+      'Key Visual Poster Design',
+      'Brand Positioning Layout',
+      'OOH & Digital Ad Ratios',
+    ],
+    caseStudy: {
+      brief: 'Design a striking print and digital campaign poster capturing modern aviation elegance and comfort.',
+      constraint: 'Maintain consistent brand colors and strong typographic contrast.',
+      processSteps: [
+        {
+          title: '01. Art Direction & Compositing',
+          description: 'Harmonizing warm brand color accents with bold headlines and aviation motifs.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Air India Red', hex: '#D71921' },
+        { name: 'Warm Alabaster', hex: '#FFF8F0' },
+        { name: 'Deep Charcoal', hex: '#1A1A1A' },
+      ],
+      typographyUsed: ['Plus Jakarta Sans ExtraBold', 'Air India Display Sans'],
+      keyMetric: 'Campaign Expansion',
+      outcome: 'Successfully integrated into nationwide airport terminal and print campaign package.',
+      gallery: [{ url: ASSET_PATHS.AIR_INDIA_03, caption: 'Air India Campaign Artwork' }],
     },
   },
 

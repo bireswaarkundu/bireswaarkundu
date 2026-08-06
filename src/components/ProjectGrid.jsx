@@ -81,7 +81,9 @@ export const ProjectGrid = ({
       ) : (
         /* Uniform Grid with 4:5 Aspect Ratio Cards for Other Domains */
         <div className={`grid gap-6 ${
-          filteredProjects.length === 3
+          filteredProjects.length === 4
+            ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
+            : filteredProjects.length === 3
             ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
             : filteredProjects.length === 2
             ? 'grid-cols-1 sm:grid-cols-2'
