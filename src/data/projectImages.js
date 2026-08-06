@@ -43,6 +43,7 @@ export const ASSET_PATHS = {
   CONCEPT_WOMEN_RESPECT: safePath('/assets/Concept-driven design/women_respect.webp'),
 
   // SOCIAL MEDIA POSTERS - FEATURED LAUNCH SERIES
+  ROAD_DRESS: safePath('/assets/Social Media Poster/Road Dress.png'),
   COMING_SOON: safePath('/assets/Social Media Poster/coming soon.png'),
   INTRO_POST: safePath('/assets/Social Media Poster/intro post.png'),
   WEBSITE_IS_LIVE: safePath('/assets/Social Media Poster/website is live.png'),

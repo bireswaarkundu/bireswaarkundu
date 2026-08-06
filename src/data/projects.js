@@ -4,7 +4,7 @@ export const DOMAIN_CATEGORIES = [
   { id: 'Ad Campaign', label: 'AD CAMPAIGN', count: 3 },
   { id: 'Branding', label: 'BRANDING IDENTITY', count: 3, subCategories: ['Innofusion', 'Phoenix', 'Weld'] },
   { id: 'Concept-driven design', label: 'CONCEPT-DRIVEN DESIGN', count: 5 },
-  { id: 'Social Media Poster', label: 'SOCIAL MEDIA POSTERS', count: 16 },
+  { id: 'Social Media Poster', label: 'SOCIAL MEDIA POSTERS', count: 17 },
 ];
 
 export const TYPE_SPECIMENS = [
@@ -613,6 +613,43 @@ export const PROJECTS = [
   // =========================================================================
   // DOMAIN 4: SOCIAL MEDIA POSTER
   // =========================================================================
+  {
+    id: 'social-road-dress',
+    title: 'Road Dress — Social Media Poster',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Bireswaar Kundu Studio',
+    year: '2026',
+    medium: 'Social Media Poster Design',
+    thumbnail: ASSET_PATHS.ROAD_DRESS,
+    bentoSize: 'normal',
+    bentoTag: '01 // SOCIAL POSTER • CREATIVE',
+    shortDescription:
+      'Creative social media poster design featuring Road Dress artwork with vibrant visual compositing.',
+    deliverables: [
+      'Social Media Poster Design',
+      'High-Resolution Digital Asset',
+      'Instagram Story & Feed Layouts',
+    ],
+    caseStudy: {
+      brief: 'Create a visually striking poster for Road Dress showcasing bold creative direction and styling.',
+      constraint: 'Ensure balance between artistic expression and promotional digital media standards.',
+      processSteps: [
+        {
+          title: '01. Creative Direction',
+          description: 'Compositing high-impact visuals with refined typographic hierarchy.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Studio Dark', hex: '#1A1A1A' },
+        { name: 'Vibrant Accent', hex: '#5D5CDE' },
+      ],
+      typographyUsed: ['Syne ExtraBold', 'Plus Jakarta Sans'],
+      keyMetric: 'Featured Creative Poster',
+      outcome: 'Added to portfolio social poster collection as a flagship creative piece.',
+      gallery: [{ url: ASSET_PATHS.ROAD_DRESS, caption: 'Road Dress Poster' }],
+    },
+  },
   {
     id: 'social-coming-soon',
     title: 'Coming Soon — Teaser Poster',
