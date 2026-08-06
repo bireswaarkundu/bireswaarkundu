@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Send, CheckCircle2, Bookmark, ArrowRight, Sparkles, X, Download, FileText, Check } from 'lucide-react';
-import emailjs from '@emailjs/browser';
 import { PROJECTS } from '../data/projects.js';
 
 export const InquiryForm = ({

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
 import { X, Send, CheckCircle2, Mail, Phone } from 'lucide-react';
 
 export const CustomQuoteModal = ({ onClose }) => {

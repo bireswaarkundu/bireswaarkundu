@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
 import { Check, Clock, RefreshCw, Zap, Sparkles, ArrowRight, ShieldCheck, Mail, Phone, MessageSquare, X, Send, CheckCircle2, Calendar } from 'lucide-react';
 
 export const PRICING_SERVICES = [
@@ -656,29 +655,35 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
             {/* Quick Custom Quote Brief Form */}
             {!customSubmitted ? (
               <form
-                onSubmit={(e) => {
+                onSubmit={async (e) => {
                   e.preventDefault();
-                  emailjs.send(
-                    import.meta.env.VITE_EMAILJS_SERVICE_ID, 
-                    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-                    {
-                      name: cqName,
-                      email: cqEmail,
-                      title: 'Custom Quote Request',
-                      message: cqMessage,
-                      date: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
-                    },
-                    import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-                  )
-                  .then((response) => {
-                    console.log('SUCCESS!', response.status, response.text);
+                  
+                  try {
+                    const response = await fetch(import.meta.env.VITE_WORKER_URL, {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+                      body: JSON.stringify({
+                        name: cqName,
+                        email: cqEmail,
+                        message: cqMessage,
+                      }),
+                    });
+
+                    if (!response.ok) {
+                      throw new Error('Network response was not ok');
+                    }
+
+                    const data = await response.json();
+                    console.log('SUCCESS!', data);
+                    
+                    // Only show success screen if the request actually worked
                     setCustomSubmitted(true);
-                  })
-                  .catch((error) => {
+                  } catch (error) {
                     console.error('FAILED...', error);
                     alert('Failed to send the request. Please try again later.');
-                  })
-                  .finally(() => setCustomSubmitted(true));
+                  }
                 }}
                 className="space-y-4 bg-white p-5 rounded-xs border border-[#1A1A1A]/15 shadow-xs"
               >
