@@ -86,6 +86,7 @@ export const ASSET_PATHS = {
   SUNITA_WILLIAMS: safePath('/assets/Social Media Poster/sunita_williams.webp'),
   NOLEN_GUR: safePath('/assets/Social Media Poster/nolen_gur.webp'),
   PONJIKA_POSTER: safePath('/assets/Social Media Poster/ponjika.webp'),
+  RATH_YATRA: safePath('/assets/Social Media Poster/rath yata.jpeg'),
   HOLI_SPLASH_FEST: safePath('/assets/Social Media Poster/holi_splash.webp'),
 };
 

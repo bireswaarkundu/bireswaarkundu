@@ -4,7 +4,7 @@ export const DOMAIN_CATEGORIES = [
   { id: 'Ad Campaign', label: 'AD CAMPAIGN', count: 4 },
   { id: 'Branding', label: 'BRANDING IDENTITY', count: 3, subCategories: ['Innofusion', 'Phoenix', 'Weld'] },
   { id: 'Concept-driven design', label: 'CONCEPT-DRIVEN DESIGN', count: 5 },
-  { id: 'Social Media Poster', label: 'SOCIAL MEDIA POSTERS', count: 17 },
+  { id: 'Social Media Poster', label: 'SOCIAL MEDIA POSTERS', count: 18 },
 ];
 
 export const TYPE_SPECIMENS = [
@@ -982,6 +982,43 @@ export const PROJECTS = [
       keyMetric: 'Pure Ingredient Campaign',
       outcome: 'Strengthened brand trust and customer loyalty.',
       gallery: [{ url: ASSET_PATHS.WELD_POSTER_3, caption: 'Weld Bakery — Made With Love Poster' }],
+    },
+  },
+  {
+    id: 'social-rath-yatra',
+    title: 'Rath Yatra — Festive Cultural Poster',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Cultural Festival Series',
+    year: '2025',
+    medium: 'Festive Social Media Poster',
+    thumbnail: ASSET_PATHS.RATH_YATRA,
+    bentoSize: 'normal',
+    bentoTag: '09 // SOCIAL POSTER • FESTIVAL',
+    shortDescription:
+      'Vibrant cultural festival social media poster celebrating Lord Jagannath Rath Yatra with rich festive graphics and typography.',
+    deliverables: [
+      'Festive Social Media Poster',
+      'Cultural Graphics Compositing',
+      'High-Resolution Digital Asset',
+    ],
+    caseStudy: {
+      brief: 'Design a festive social poster celebrating Rath Yatra capturing spiritual energy and cultural tradition.',
+      constraint: 'Harmonize traditional festival motifs with modern social media aesthetic standards.',
+      processSteps: [
+        {
+          title: '01. Cultural Visual Direction',
+          description: 'Compositing divine festive colors with elegant headline typography.',
+        },
+      ],
+      colorPalette: [
+        { name: 'Divine Red', hex: '#D71921' },
+        { name: 'Sacred Gold', hex: '#FFD700' },
+      ],
+      typographyUsed: ['Syne ExtraBold', 'Plus Jakarta Sans'],
+      keyMetric: 'Cultural Festival Reach',
+      outcome: 'Widely shared across social channels during Rath Yatra festivities.',
+      gallery: [{ url: ASSET_PATHS.RATH_YATRA, caption: 'Rath Yatra Festive Poster' }],
     },
   },
   {
