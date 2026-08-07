@@ -7,19 +7,35 @@ export const CustomQuoteModal = ({ onClose }) => {
   const [message, setMessage]   = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    emailjs.send(
-      'service_bireswaarkundu15',
-      'template_e9ekdah',
-      {
-        name,
-        email,
-        title: 'Custom Quote Request',
-        message,
-        date: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+
+    try {
+      const response = await fetch(import.meta.env.VITE_GSHEET_URL, {
+        method: 'POST',
+        // Using text/plain;charset=utf-8 avoids CORS preflight issues with Google Apps Script
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          title: 'Custom Quote Request',
+          message,
+          date: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+        }),
+      });
+
+      const data = await response.json();
+      if (data.result !== 'success') {
+        console.error('Script error:', data.error);
       }
-    ).finally(() => setSubmitted(true));
+    } catch (error) {
+      console.error('Submission failed:', error);
+      alert('Failed to send request. Please try again.');
+    } finally {
+      setSubmitted(true);
+    }
   };
 
   return (
