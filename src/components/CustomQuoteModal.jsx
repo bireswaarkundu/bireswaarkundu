@@ -11,10 +11,9 @@ export const CustomQuoteModal = ({ onClose }) => {
     e.preventDefault();
 
     try {
-      const response = await fetch(import.meta.env.VITE_GSHEET_URL, {
+      await fetch(import.meta.env.VITE_GSHEET_URL, {
         method: 'POST',
         mode: 'no-cors',
-        // Using text/plain;charset=utf-8 avoids CORS preflight issues with Google Apps Script
         headers: {
           'Content-Type': 'text/plain;charset=utf-8',
         },
@@ -27,15 +26,12 @@ export const CustomQuoteModal = ({ onClose }) => {
         }),
       });
 
-      const data = await response.json();
-      if (data.result !== 'success') {
-        console.error('Script error:', data.error);
-      }
-    } catch (error) {
-      console.error('Submission failed:', error);
-      alert('Failed to send request. Please try again.');
-    } finally {
+      console.log('Successfully saved to Google Sheets!');
       setSubmitted(true);
+
+    } catch (error) {
+      console.error('Network error during submission:', error);
+      alert('Failed to send request. Please check your internet connection and try again.');
     }
   };
 
