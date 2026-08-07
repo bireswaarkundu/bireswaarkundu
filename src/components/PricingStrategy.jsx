@@ -659,10 +659,11 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
                   e.preventDefault();
                   
                   try {
-                    const response = await fetch(import.meta.env.VITE_WORKER_URL, {
+                    const response = await fetch(import.meta.env.VITE_GSHEET_URL, {
                       method: 'POST',
+                      // IMPORTANT: Use text/plain to prevent CORS preflight errors with Google Apps Script
                       headers: {
-                        'Content-Type': 'application/json',
+                        'Content-Type': 'text/plain;charset=utf-8',
                       },
                       body: JSON.stringify({
                         name: cqName,
@@ -671,15 +672,15 @@ export const PricingStrategy = ({ onOpenInquiry }) => {
                       }),
                     });
 
-                    if (!response.ok) {
-                      throw new Error('Network response was not ok');
+                    const data = await response.json();
+                    
+                    if (data.result === 'success') {
+                      console.log('Successfully saved to Google Sheets!');
+                      setCustomSubmitted(true);
+                    } else {
+                      throw new Error('Script failed to append row');
                     }
 
-                    const data = await response.json();
-                    console.log('SUCCESS!', data);
-                    
-                    // Only show success screen if the request actually worked
-                    setCustomSubmitted(true);
                   } catch (error) {
                     console.error('FAILED...', error);
                     alert('Failed to send the request. Please try again later.');
