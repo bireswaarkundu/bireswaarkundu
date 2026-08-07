@@ -13,6 +13,7 @@ export const CustomQuoteModal = ({ onClose }) => {
     try {
       const response = await fetch(import.meta.env.VITE_GSHEET_URL, {
         method: 'POST',
+        mode: 'no-cors',
         // Using text/plain;charset=utf-8 avoids CORS preflight issues with Google Apps Script
         headers: {
           'Content-Type': 'text/plain;charset=utf-8',
