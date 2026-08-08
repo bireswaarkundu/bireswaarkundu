@@ -4,7 +4,7 @@ export const DOMAIN_CATEGORIES = [
   { id: 'Ad Campaign', label: 'AD CAMPAIGN', count: 4 },
   { id: 'Branding', label: 'BRANDING IDENTITY', count: 3, subCategories: ['Innofusion', 'Phoenix', 'Weld'] },
   { id: 'Concept-driven design', label: 'CONCEPT-DRIVEN DESIGN', count: 5 },
-  { id: 'Social Media Poster', label: 'SOCIAL MEDIA POSTERS', count: 18 },
+  { id: 'Social Media Poster', label: 'SOCIAL MEDIA POSTERS', count: 19 },
 ];
 
 export const TYPE_SPECIMENS = [
@@ -682,10 +682,44 @@ export const PROJECTS = [
         { name: 'Studio Dark', hex: '#1A1A1A' },
         { name: 'Vibrant Accent', hex: '#5D5CDE' },
       ],
+      gallery: [{ url: ASSET_PATHS.ROAD_DRESS, caption: 'Road Dress Poster' }],
+    },
+  },
+  {
+    id: 'social-poster-02',
+    title: 'Social Media Poster — 02',
+    category: 'Social Media Design',
+    domain: 'Social Media Poster',
+    client: 'Bireswaar Kundu Studio',
+    year: '2026',
+    medium: 'Social Media Poster Design',
+    thumbnail: ASSET_PATHS.SOCIAL_MEDIA_02,
+    bentoSize: 'normal',
+    bentoTag: '02 // SOCIAL POSTER • CREATIVE',
+    shortDescription:
+      'Creative social media poster design featuring vibrant visual compositing and typography.',
+    deliverables: [
+      'Social Media Poster Design',
+      'High-Resolution Digital Asset',
+      'Instagram Story & Feed Layouts',
+    ],
+    caseStudy: {
+      brief: 'Create a striking creative social media poster showcasing bold visual art direction.',
+      constraint: 'Ensure balance between artistic expression and promotional digital media standards.',
+      processSteps: [
+        {
+          title: '01. Creative Direction',
+          description: 'Compositing high-impact visuals with refined typographic hierarchy.',
+        },
+        ],
+      colorPalette: [
+        { name: 'Studio Dark', hex: '#1A1A1A' },
+        { name: 'Vibrant Accent', hex: '#5D5CDE' },
+      ],
       typographyUsed: ['Syne ExtraBold', 'Plus Jakarta Sans'],
       keyMetric: 'Featured Creative Poster',
       outcome: 'Added to portfolio social poster collection as a flagship creative piece.',
-      gallery: [{ url: ASSET_PATHS.ROAD_DRESS, caption: 'Road Dress Poster' }],
+      gallery: [{ url: ASSET_PATHS.SOCIAL_MEDIA_02, caption: 'Social Media Poster 02' }],
     },
   },
   {

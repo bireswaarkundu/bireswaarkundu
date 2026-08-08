@@ -45,6 +45,7 @@ export const ASSET_PATHS = {
 
   // SOCIAL MEDIA POSTERS - FEATURED LAUNCH SERIES
   ROAD_DRESS: safePath('/assets/Social Media Poster/Road Dress.png'),
+  SOCIAL_MEDIA_02: safePath('/assets/Social Media Poster/02.png'),
   COMING_SOON: safePath('/assets/Social Media Poster/coming soon.png'),
   INTRO_POST: safePath('/assets/Social Media Poster/intro post.png'),
   WEBSITE_IS_LIVE: safePath('/assets/Social Media Poster/website is live.png'),
